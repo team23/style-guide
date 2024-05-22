@@ -1,0 +1,31 @@
+{
+    "name": "@team23/eslint-config-team23-standard",
+    "version": "9.0.0",
+    "description": "A set of eslint rules used by TEAM23 for standard js projects",
+    "keywords": [
+        "eslint",
+        "TEAM23",
+        "js"
+    ],
+    "author": "TEAM23 GmbH",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/team23/style-guide.git",
+        "directory": "libs/java-script"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.3.0",
+        "@types/eslint": "^8.56.10",
+        "@types/eslint__js": "^8.42.3",
+        "eslint": "^9.3.0",
+        "eslint-plugin-import": "^2.29.1",
+        "eslint-plugin-jsdoc": "^48.2.5",
+        "jest": "^29.7.0",
+        "tslib": "^2.6.2",
+        "@stylistic/eslint-plugin-js": "^2.1.0"
+    },
+    "peerDependencies": {
+        "eslint": "^9.3.0"
+    }
+}
