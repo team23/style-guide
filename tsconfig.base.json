@@ -1,0 +1,38 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "rootDir": ".",
+        "sourceMap": true,
+        "declaration": false,
+        "moduleResolution": "node",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "importHelpers": true,
+        "target": "es2015",
+        "module": "esnext",
+        "lib": ["es2020", "dom"],
+        "skipLibCheck": true,
+        "skipDefaultLibCheck": true,
+        "baseUrl": ".",
+        "paths": {
+            "@team23/eslint-config-team23-a11y": ["libs/a11y/src/index.ts"],
+            "@team23/eslint-config-team23-angular": ["libs/angular/src/index.ts"],
+            "@team23/eslint-config-team23-ngrx": ["libs/ngrx/src/index.ts"],
+            "@team23/eslint-config-team23-standard": ["libs/java-script/src/index.ts"],
+            "@team23/eslint-config-team23-ts": ["libs/type-script/src/index.ts"],
+            "@team23/eslint-config-team23-vue": ["libs/vue/src/index.ts"],
+            "@team23/stylelint-config-team23-standard": ["libs/css/src/index.ts"],
+            "@team23/stylelint-config-team23-standard-scss": ["libs/scss/src/index.ts"],
+            "a11y": ["libs/a11y/src/index.ts"],
+            "angular": ["libs/angular/src/index.ts"],
+            "code-style": ["libs/code-style/src/index.ts"],
+            "css": ["libs/css/src/index.ts"],
+            "java-script-standard": ["libs/java-script/src/index.ts"],
+            "ngrx": ["libs/ngrx/src/index.ts"],
+            "scss": ["libs/scss/src/index.ts"],
+            "type-script": ["libs/type-script/src/index.ts"],
+            "vue": ["libs/vue/src/index.ts"]
+        }
+    },
+    "exclude": ["node_modules", "tmp"]
+}
