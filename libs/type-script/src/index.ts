@@ -154,6 +154,7 @@ const notConfigRelatedOrContained = tseslint.config({
                 leadingUnderscore: "require",
             },
         ],
+        "no-magic-numbers": "off",
         "@typescript-eslint/no-magic-numbers": [
             "error",
             {
@@ -165,12 +166,14 @@ const notConfigRelatedOrContained = tseslint.config({
             },
         ],
         "@typescript-eslint/no-require-imports": "error",
+        "no-shadow": "off",
         "@typescript-eslint/no-shadow": [
             "error",
             {
                 hoist: "all",
             },
         ],
+        "no-unused-expression": "off",
         "@typescript-eslint/no-unused-expressions": [
             "error",
             {
@@ -182,17 +185,25 @@ const notConfigRelatedOrContained = tseslint.config({
         "@typescript-eslint/promise-function-async": "error",
         "@typescript-eslint/typedef": "error",
 
+        "@typescript-eslint/consistent-type-imports": "error",
         "@typescript-eslint/consistent-type-exports": "error",
+        "default-param-last": "off",
+        "@typescript-eslint/default-param-last": "error",
+        "@typescript-eslint/no-unnecessary-qualifier": "error",
+        "init-declarations": "off",
         "@typescript-eslint/init-declarations": "error",
         "@typescript-eslint/no-import-type-side-effects": "error",
+        "no-loop-func": "off",
         "@typescript-eslint/no-loop-func": "error",
         "@typescript-eslint/no-unsafe-unary-minus": "error",
+        "no-use-before-define": "off",
         "@typescript-eslint/no-use-before-define": "error",
         "@typescript-eslint/no-useless-empty-export": "error",
         "@typescript-eslint/prefer-enum-initializers": "error",
         "@typescript-eslint/prefer-find": "error",
         "@typescript-eslint/prefer-regexp-exec": "error",
         "@typescript-eslint/require-array-sort-compare": "error",
+        "return-await": "off",
         "@typescript-eslint/return-await": "error",
         "@typescript-eslint/switch-exhaustiveness-check": "error",
     },
@@ -229,7 +240,6 @@ const tseslintConfig = tseslint.config(
     {
         files: ["cypress.config.ts", "cypress.**.config.ts"],
         rules: {
-            "import/no-default-export": "off",
             "no-console": "off",
         },
     },
@@ -250,8 +260,3 @@ export default [
     stylisticConfig,
     tseslintConfig,
 ]
-
-
-// TODO:
-//  check if we still need to disable base rules
-// eslint-plugin-import
