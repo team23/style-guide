@@ -5,20 +5,20 @@ This package includes a combination of stylistic and rigorous rule sets to ensur
 
 ## Installation
 
-Add the library to your project as a `devDependency`:
+Add the library to your `package.json` as a `devDependency`:
 
 ```bash
 npm i --save-dev @team23/eslint-config-team23-ts
 ```
 
-To use the shareable config, import the package inside an eslint.config.js file and add it to the exported array:
+To use the shareable config, import the package inside an `eslint.config.js` file and add it to the exported array:
 
 ```js
 // eslint.config.js
 import team23TypeScript from "@team23/eslint-config-team23-ts";
 
 export default [
-    ...team23TypeScript
+    ...team23TypeScript,
 ];
 ```
 
