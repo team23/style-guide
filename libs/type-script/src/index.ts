@@ -249,6 +249,24 @@ const tseslintConfig = tseslint.config(
             "@typescript-eslint/explicit-function-return-type": "off",
         },
     },
+    {
+        files: ['*.spec.ts', '*.spec.tsx'],
+        rules: {
+            '@typescript-eslint/no-magic-numbers': 'off',
+            'max-lines': 'off',
+        }
+    },
+    {
+        files: [
+            '*.spec.ts',
+            '*.spec.tsx',
+            '**/__mocks__/**/*.ts',
+            '**/__mocks__/**/*.tsx',
+        ],
+        rules: {
+            '@typescript-eslint/no-empty-function': 'off',
+        },
+    },
 );
 
 const stylisticConfig = stylistic.configs.customize({
