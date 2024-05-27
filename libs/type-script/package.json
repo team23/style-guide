@@ -17,16 +17,15 @@
         "directory": "libs/type-script"
     },
     "dependencies": {
-        "eslint": "^8.56.0",
-        "tslib": "^2.6.2",
+        "@stylistic/eslint-plugin": "^2.1.0",
         "typescript-eslint": "^7.10.0"
     },
     "devDependencies": {
-        "@stylistic/eslint-plugin": "^2.1.0",
+        "tslib": "^2.6.2",
         "@types/eslint": "^8.56.10",
         "@types/eslint__js": "^8.42.3"
     },
     "peerDependencies": {
-        "eslint": ">=^8.56.0"
+        "eslint": "^8.56.0"
     }
 }
