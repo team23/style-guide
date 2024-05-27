@@ -2,15 +2,17 @@
 
 ## v9.0.0
 
-### Changes
-
-- Order rule declarations alphabetically
-- use ESLint Stylistic for formatting rules
-
 ### Breaking Change
 
 - Migrate eslint config format to flat config
+- Update linting dependencies to latest
 - Update peer dependencies
+
+### Other changes
+
+- Split eslint configuration into different files
+- Removed duplicate rule declarations which were defined in recommended ruleset
+- use ESLint Stylistic for formatting rules
 
 ## v8.3.1
 
