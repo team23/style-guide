@@ -56,7 +56,7 @@ const stylisticTypeCheckedOverwrites = tseslint.config(
 
 const stylisticOverwrites = tseslint.config({
     rules: {
-        // causes performance issues with large codebase
+        // may cause performance issues with large codebase
         "@stylistic/indent": "off",
         "@stylistic/multiline-ternary": ["error", "always-multiline"],
         "@stylistic/quotes": [
@@ -82,14 +82,14 @@ const stylisticOptional = tseslint.config({
         "@stylistic/max-len": "error",
         "@stylistic/multiline-comment-style": "error",
         "@stylistic/newline-per-chained-call": "error",
-        "@stylistic/no-confusing-arrow": "error", // maybe need to adjust this
+        "@stylistic/no-confusing-arrow": "error",
         "@stylistic/no-extra-semi": "error",
         "@stylistic/object-curly-newline": "error",
         "@stylistic/object-property-newline": "error",
-        "@stylistic/padding-line-between-statements": "error", // need to check if we should use this
-        "@stylistic/semi-style": "error", // may need to review
+        "@stylistic/padding-line-between-statements": "error",
+        "@stylistic/semi-style": "error",
         "@stylistic/switch-colon-spacing": "error",
-        "@stylistic/ts/func-call-spacing": "error",
+        "@stylistic/func-call-spacing": "error",
         "@stylistic/wrap-regex": "error",
     },
 });
