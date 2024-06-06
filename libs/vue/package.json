@@ -1,0 +1,30 @@
+{
+    "name": "@team23/eslint-config-team23-vue",
+    "version": "5.0.0",
+    "description": "A set of eslint rules used by TEAM23 for Vue 3 TypeScript projects",
+    "keywords": [
+        "eslint",
+        "eslintconfig",
+        "TEAM23",
+        "vue"
+    ],
+    "author": "TEAM23 GmbH",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/team23/style-guide.git",
+        "directory": "libs/vue"
+    },
+    "dependencies": {
+        "@team23/eslint-config-team23-ts": "file:../../dist/libs/type-script",
+        "@team23/eslint-config-team23-standard": "file:../../dist/libs/java-script",
+        "eslint-plugin-vue": "^9.26.0",
+        "eslint-plugin-vuejs-accessibility": "^2.3.0"
+    },
+    "devDependencies": {
+        "tslib": "^2.3.0"
+    },
+    "peerDependencies": {
+        "eslint": ">=8.56.0"
+    }
+}
