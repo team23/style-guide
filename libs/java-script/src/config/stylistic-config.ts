@@ -3,13 +3,13 @@ import { Linter } from "eslint";
 import stylisticJs from "@stylistic/eslint-plugin-js";
 import FlatConfig = Linter.FlatConfig;
 
-const stylisticConfig: FlatConfig = {
+const stylisticBaseConfig: FlatConfig = {
     plugins: {
         "@stylistic/js": stylisticJs,
     },
 };
 
-const stylisticModificationConfig: FlatConfig = {
+const stylisticRecommendedModificationConfig: FlatConfig = {
     rules: {
         "@stylistic/js/array-bracket-spacing": ["error", "never"],
         "@stylistic/js/arrow-parens": ["error", "as-needed"],
@@ -125,8 +125,8 @@ const stylisticOptionalConfig: FlatConfig<ESLintRules> = {
     },
 };
 
-export {
-    stylisticConfig,
-    stylisticModificationConfig,
+export default [
+    stylisticBaseConfig,
+    stylisticRecommendedModificationConfig,
     stylisticOptionalConfig,
-};
+];
