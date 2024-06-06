@@ -45,7 +45,7 @@ export default [
 
 ## Development
 
-### Creating a New Version After Rule Changes
+### Creating a new version after rule changes
 
 1. Update CHANGELOG.md.
 2. Run npm version [<newversion> | major | minor | patch] -m "feat(core): <versionmessage>".
