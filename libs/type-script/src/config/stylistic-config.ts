@@ -1,29 +1,31 @@
-import tseslint from "typescript-eslint";
-import stylistic from "@stylistic/eslint-plugin";
+import stylistic, { RuleOptions } from '@stylistic/eslint-plugin';
+import { Linter } from 'eslint';
+import FlatConfig = Linter.FlatConfig;
+import { UnprefixedRuleOptions } from '@stylistic/eslint-plugin/dist/dts/rule-options';
 
 const stylisticRecommendedConfig = stylistic.configs.customize({
     indent: 4,
     semi: true,
-});
+}) as FlatConfig;
 
-const stylisticModificationConfig = tseslint.config({
+const stylisticModificationConfig: FlatConfig = {
     rules: {
         // may cause performance issues with large codebase
         "@stylistic/indent": "off",
         "@stylistic/multiline-ternary": ["error", "always-multiline"],
-        "@stylistic/quotes": [
+        /*"@stylistic/quotes": [
             "error",
             {
-                avoidEscape: true,
+                "avoidEscape": true,
             },
-        ],
+        ],*/
         "@stylistic/space-infix-ops": ["error", { int32Hint: true }],
     },
-});
+};
 
-const stylisticOptionalConfig = tseslint.config({
+const stylisticOptionalConfig: FlatConfig = {
     rules: {
-        "@stylistic/line-comment-position": "error",
+        "@stylistic/line-comment-position": ["error"],
         "@stylistic/array-bracket-newline": "error",
         "@stylistic/array-bracket-spacing": "error",
         "@stylistic/function-paren-newline": "error",
@@ -44,10 +46,10 @@ const stylisticOptionalConfig = tseslint.config({
         "@stylistic/func-call-spacing": "error",
         "@stylistic/wrap-regex": "error",
     },
-});
+};
 
 export default [
     stylisticRecommendedConfig,
-    ...stylisticModificationConfig,
-    ...stylisticOptionalConfig
+    stylisticModificationConfig,
+    stylisticOptionalConfig
 ];

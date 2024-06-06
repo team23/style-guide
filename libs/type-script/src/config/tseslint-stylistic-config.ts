@@ -1,6 +1,8 @@
 import tseslint from "typescript-eslint";
+import { Linter } from 'eslint';
+import FlatConfig = Linter.FlatConfig;
 
-const stylisticTypeCheckedModificationConfig = tseslint.config({
+const stylisticTypeCheckedModificationConfig: FlatConfig = {
     rules: {
         "@typescript-eslint/array-type": [
             "error",
@@ -22,9 +24,9 @@ const stylisticTypeCheckedModificationConfig = tseslint.config({
             },
         ],
     },
-});
+};
 
 export default [
     ...tseslint.configs.stylisticTypeChecked,
-    ...stylisticTypeCheckedModificationConfig,
+    stylisticTypeCheckedModificationConfig,
 ];

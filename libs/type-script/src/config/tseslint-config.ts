@@ -1,6 +1,8 @@
 import tseslint from "typescript-eslint";
+import { Linter } from 'eslint';
+import FlatConfig = Linter.FlatConfig;
 
-const strictTypeCheckedModificationConfig = tseslint.config({
+const strictTypeCheckedModificationConfig: FlatConfig = {
     rules: {
         "@typescript-eslint/no-floating-promises": "off",
         "@typescript-eslint/no-namespace": "off",
@@ -22,9 +24,9 @@ const strictTypeCheckedModificationConfig = tseslint.config({
         ],
         "@typescript-eslint/no-extraneous-class": "off",
     },
-});
+};
 
-const optionalConfig = tseslint.config({
+const optionalConfig: FlatConfig = {
     rules: {
         "@typescript-eslint/explicit-function-return-type": [
             "error",
@@ -137,10 +139,10 @@ const optionalConfig = tseslint.config({
         "@typescript-eslint/return-await": "error",
         "@typescript-eslint/switch-exhaustiveness-check": "error",
     },
-});
+};
 
 export default [
     ...tseslint.configs.strictTypeChecked,
-    ...strictTypeCheckedModificationConfig,
-    ...optionalConfig,
+    strictTypeCheckedModificationConfig,
+    optionalConfig,
 ];

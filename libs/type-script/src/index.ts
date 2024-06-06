@@ -1,11 +1,13 @@
 import tseslint from "typescript-eslint";
 import globals from "globals";
-import stylisticConfig from "./config/stylistic-config";
-import tseslintConfig from "./config/tseslint-config";
-import tseslintStylisticConfig from "./config/tseslint-stylistic-config";
+import tseslintConfig from './config/tseslint-config.js';
+import stylisticConfig from './config/stylistic-config.js';
+import tseslintStylisticConfig from './config/tseslint-stylistic-config.js';
+import { Linter } from 'eslint';
+import FlatConfig = Linter.FlatConfig;
 
-const globalConfig = tseslint.config({
-    ignores: ["polyfills.ts", "jest.config.ts", "dist/**", "node_modules/**", "*.min.js"],
+const baseConfig = tseslint.config({
+    ignores: ["polyfills.ts", "jest.config.ts", "dist/**", "node_modules/**"],
     languageOptions: {
         globals: {
             ...globals.browser,
@@ -47,10 +49,12 @@ const modificationConfig = tseslint.config(
     }
 );
 
-export default [
-    ...globalConfig,
+const combinedConfig = tseslint.config(
+    ...baseConfig,
     ...tseslintConfig,
     ...tseslintStylisticConfig,
     ...stylisticConfig,
     ...modificationConfig,
-];
+);
+
+export default combinedConfig as Array<FlatConfig>;
