@@ -1,13 +1,12 @@
-import js from "@eslint/js";
 import { Linter } from "eslint";
 import globals from "globals";
-import { stylisticConfig, stylisticModificationConfig, stylisticOptionalConfig } from "./config/stylistic-config";
-import { jsOptionalConfig } from "./config/js-config";
-import { importConfig, importModificationConfig } from "./config/import-config";
-import { jsdocConfig, jsdocModificationConfig } from "./config/jsdoc-config";
+import stylisticConfig from "./config/stylistic-config.js";
+import importConfig from "./config/import-config.js";
+import jsdocConfig from "./config/jsdoc-config.js";
 import FlatConfig = Linter.FlatConfig;
+import jsConfig from './config/js-config.js';
 
-const globalConfig: FlatConfig = {
+const baseConfig: FlatConfig = {
     ignores: ["dist/**", "node_modules/**", "*.min.js"],
     languageOptions: {
         globals: {
@@ -21,15 +20,12 @@ const globalConfig: FlatConfig = {
     },
 };
 
-export default [
-    globalConfig,
-    js.configs.recommended,
-    jsOptionalConfig,
-    stylisticConfig,
-    stylisticModificationConfig,
-    stylisticOptionalConfig,
-    importConfig,
-    importModificationConfig,
-    jsdocConfig,
-    jsdocModificationConfig,
+const combinedConfig: Array<FlatConfig> = [
+    baseConfig,
+    ...jsConfig,
+    ...stylisticConfig,
+    ...importConfig,
+    ...jsdocConfig,
 ];
+
+export default combinedConfig;

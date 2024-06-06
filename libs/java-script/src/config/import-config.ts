@@ -3,7 +3,7 @@ import { Linter } from "eslint";
 import importPlugin from "eslint-plugin-import";
 import FlatConfig = Linter.FlatConfig;
 
-const importConfig: FlatConfig = {
+const importBaseConfig: FlatConfig = {
     plugins: {
         import: importPlugin,
     },
@@ -25,7 +25,7 @@ const importModificationConfig: FlatConfig = {
     },
 };
 
-export {
+export default [
+    importBaseConfig,
     importModificationConfig,
-    importConfig,
-};
+];

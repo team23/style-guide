@@ -1,6 +1,7 @@
 import { ESLintRules } from "eslint/rules";
 import { Linter } from "eslint";
 import FlatConfig = Linter.FlatConfig;
+import js from '@eslint/js';
 
 const jsOptionalConfig: FlatConfig<ESLintRules> = {
     rules: {
@@ -119,4 +120,7 @@ const jsOptionalConfig: FlatConfig<ESLintRules> = {
     },
 };
 
-export { jsOptionalConfig };
+export default [
+    js.configs.recommended,
+    jsOptionalConfig
+];
