@@ -18,7 +18,7 @@ const baseConfig: FlatConfig = {
 };
 
 const combinedConfig: Array<FlatConfig> = [
-    ...baseConfig,
+    baseConfig,
     ...jsConfig,
     ...stylisticConfig,
     ...importConfig,
