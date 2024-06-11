@@ -3,6 +3,11 @@ import { Linter } from "eslint";
 import FlatConfig = Linter.FlatConfig;
 import js from '@eslint/js';
 
+const jsRecommendedConfig: FlatConfig<ESLintRules> = {
+    name: 'team23/java-script/core/recommended',
+    ...js.configs.recommended
+};
+
 const jsOptionalConfig: FlatConfig<ESLintRules> = {
     rules: {
         "arrow-body-style": "error",
@@ -27,7 +32,6 @@ const jsOptionalConfig: FlatConfig<ESLintRules> = {
         "newline-per-chained-call": "error",
         "no-bitwise": "error",
         "no-caller": "error",
-        "no-cond-assign": "error",
         "no-console": [
             "error",
             {
@@ -52,17 +56,10 @@ const jsOptionalConfig: FlatConfig<ESLintRules> = {
                 ],
             },
         ],
-        "no-debugger": "error",
-        "no-delete-var": "error",
-        "no-duplicate-case": "error",
         "no-duplicate-imports": "error",
-        "no-empty": "error",
         "no-eval": "error",
         "no-extra-bind": "error",
-        "no-extra-boolean-cast": "error",
-        "no-fallthrough": "error",
         "no-invalid-this": "off",
-        "no-irregular-whitespace": "error",
         "no-magic-numbers": [
             "error",
             {
@@ -85,14 +82,11 @@ const jsOptionalConfig: FlatConfig<ESLintRules> = {
                 hoist: "all",
             },
         ],
-        "no-sparse-arrays": "error",
         "no-template-curly-in-string": "error",
         "no-throw-literal": "error",
         "no-undef-init": "error",
         "no-underscore-dangle": "off",
         "no-unneeded-ternary": "error",
-        "no-unsafe-finally": "error",
-        "no-unused-labels": "error",
         "no-use-before-define": "off",
         "no-var": "error",
         "no-void": "error",
@@ -104,23 +98,15 @@ const jsOptionalConfig: FlatConfig<ESLintRules> = {
                 allowNamedFunctions: true,
             },
         ],
-        "prefer-arrow/prefer-arrow-functions": [
-            "error",
-            {
-                allowStandaloneDeclarations: true,
-            },
-        ],
         "prefer-const": "error",
         "prefer-object-spread": "error",
         "prefer-template": "error",
         radix: "error",
-        "use-isnan": "error",
-        "valid-typeof": "error",
         yoda: "error",
     },
 };
 
 export default [
-    js.configs.recommended,
+    jsRecommendedConfig,
     jsOptionalConfig
 ];
