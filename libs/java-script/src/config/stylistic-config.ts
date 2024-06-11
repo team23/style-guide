@@ -4,12 +4,14 @@ import stylisticJs from "@stylistic/eslint-plugin-js";
 import FlatConfig = Linter.FlatConfig;
 
 const stylisticBaseConfig: FlatConfig = {
+    name: 'team23/java-script/stylisticJs/recommended',
     plugins: {
         "@stylistic/js": stylisticJs,
     },
 };
 
 const stylisticRecommendedModificationConfig: FlatConfig = {
+    name: 'team23/javascript/stylisticJs/recommended-modifications',
     rules: {
         "@stylistic/js/array-bracket-spacing": ["error", "never"],
         "@stylistic/js/arrow-parens": ["error", "as-needed"],

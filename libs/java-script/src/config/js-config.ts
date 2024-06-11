@@ -9,6 +9,7 @@ const jsRecommendedConfig: FlatConfig<ESLintRules> = {
 };
 
 const jsOptionalConfig: FlatConfig<ESLintRules> = {
+    name: 'team23/java-script/core/optional',
     rules: {
         "arrow-body-style": "error",
         complexity: ["error", 10],

@@ -2,20 +2,16 @@ import jsdoc from "eslint-plugin-jsdoc";
 import { Linter } from "eslint";
 import FlatConfig = Linter.FlatConfig;
 
-const jsdocBaseConfig: FlatConfig = {
-    files: ["**/*.js"],
+const jsdocRecommendedConfig: FlatConfig = {
+    name: 'team23/javascript/jsdoc/recommended',
     plugins: {
         jsdoc,
     },
+    ...jsdoc.configs["flat/recommended"],
 };
 
-const jsdocRecommendedConfig: FlatConfig = {
-    ...jsdocBaseConfig,
-    ...jsdoc.configs["flat/recommended"],
-}
-
 const jsdocRecommendedModificationConfig: FlatConfig = {
-    ...jsdocBaseConfig,
+    name: 'team23/javascript/jsdoc/recommended-modification',
     rules: {
         "jsdoc/check-alignment": "error",
         "jsdoc/check-indentation": "error",
