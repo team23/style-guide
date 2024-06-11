@@ -13,10 +13,6 @@ const baseConfig: FlatConfig = {
             ...globals.browser,
             ...globals.es2021,
         },
-        parserOptions: {
-            ecmaVersion: "latest",
-            sourceType: "module",
-        },
     },
 };
 
