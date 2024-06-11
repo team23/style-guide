@@ -11,7 +11,7 @@ const stylisticBaseConfig: FlatConfig = {
 };
 
 const stylisticRecommendedModificationConfig: FlatConfig = {
-    name: 'team23/javascript/stylisticJs/recommended-modifications',
+    name: 'team23/java-script/stylisticJs/recommended-modifications',
     rules: {
         "@stylistic/js/array-bracket-spacing": ["error", "never"],
         "@stylistic/js/arrow-parens": ["error", "as-needed"],
@@ -46,7 +46,7 @@ const stylisticRecommendedModificationConfig: FlatConfig = {
 };
 
 const stylisticOptionalConfig: FlatConfig<ESLintRules> = {
-    name: 'team23/javascript/stylisticJs/optional',
+    name: 'team23/java-script/stylisticJs/optional',
     rules: {
         "@stylistic/js/array-bracket-newline": "error",
         "@stylistic/js/function-paren-newline": "error",
