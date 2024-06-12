@@ -14,7 +14,7 @@
     "homepage": "https://github.com/team23/style-guide/libs/java-script",
     "repository": {
         "type": "git",
-        "url": "https://github.com/team23/style-guide.git",
+        "url": "git+https://github.com/team23/style-guide.git",
         "directory": "libs/java-script"
     },
     "dependencies": {
