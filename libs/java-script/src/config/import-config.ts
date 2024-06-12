@@ -13,6 +13,15 @@ const importRecommendedConfig: FlatConfig = {
     }
 };
 
+const importOptionalConfig: FlatConfig = {
+    name: 'team23/java-script/import/optional',
+    rules: {
+        "import-x/no-default-export": "error",
+        "import-x/no-deprecated": "error",
+    },
+}
+
 export default [
-    importConfig,
+    importRecommendedConfig,
+    importOptionalConfig,
 ];
