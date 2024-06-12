@@ -18,7 +18,7 @@ To use the shareable config, import the package inside an `eslint.config.js` fil
 ```ts
 import team23Standard from "@team23/eslint-config-team23-standard";
 
-export default config = [
+export default [
     ...team23Standard,
 ];
 ```
@@ -31,7 +31,7 @@ file after importing the shareable config. For example:
 ```ts
 import team23Standard from "@team23/eslint-config-team23-standard";
 
-export default config = [
+export default [
     team23Standard,
     {
         files: ['*.js'],
