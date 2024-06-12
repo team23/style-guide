@@ -1,57 +1,36 @@
-import { ESLintRules } from "eslint/rules";
 import { Linter } from "eslint";
-import stylisticJs from "@stylistic/eslint-plugin-js";
+import stylisticJs, { RuleOptions } from '@stylistic/eslint-plugin-js';
 import FlatConfig = Linter.FlatConfig;
 
-const stylisticBaseConfig: FlatConfig = {
-    name: 'team23/java-script/stylisticJs/recommended',
+const stylisticConfig: FlatConfig | { rules: RuleOptions } = {
+    name: "team23/java-script/stylisticJs/optional",
     plugins: {
         "@stylistic/js": stylisticJs,
     },
-};
-
-const stylisticRecommendedModificationConfig: FlatConfig = {
-    name: 'team23/java-script/stylisticJs/recommended-modifications',
-    rules: {
-        "@stylistic/js/array-bracket-spacing": ["error", "never"],
-        "@stylistic/js/arrow-parens": ["error", "as-needed"],
-        "@stylistic/js/brace-style": ["error", "1tbs", { allowSingleLine: true }],
-        "@stylistic/js/comma-dangle": ["error", "always-multiline"],
-        "@stylistic/js/computed-property-spacing": ["error", "never"],
-        "@stylistic/js/eol-last": "error",
-        "@stylistic/js/no-multi-spaces": "error",
-        "@stylistic/js/no-multiple-empty-lines": [
-            "error",
-            {
-                max: 2,
-            },
-        ],
-        "@stylistic/js/no-trailing-spaces": "error",
-        "@stylistic/js/no-whitespace-before-property": "error",
-        "@stylistic/js/object-curly-spacing": ["error", "always"],
-        "@stylistic/js/quote-props": ["error", "as-needed"],
-        "@stylistic/js/quotes": ["error", "single"],
-        "@stylistic/js/semi": ["error", "always"],
-        "@stylistic/js/space-before-function-paren": [
-            "error",
-            {
-                anonymous: "never",
-                named: "never",
-                asyncArrow: "always",
-            },
-        ],
-        "@stylistic/js/space-in-parens": ["error", "never"],
-        "@stylistic/js/template-curly-spacing": ["error", "always"],
-    },
-};
-
-const stylisticOptionalConfig: FlatConfig<ESLintRules> = {
-    name: 'team23/java-script/stylisticJs/optional',
     rules: {
         "@stylistic/js/array-bracket-newline": "error",
+        "@stylistic/js/array-bracket-spacing": ["error", "never"],
+        "@stylistic/js/array-element-newline": ["error", "consistent"],
+        "@stylistic/js/arrow-parens": ["error", "as-needed"],
+        "@stylistic/js/arrow-spacing": "error",
+        "@stylistic/js/block-spacing": "error",
+        "@stylistic/js/brace-style": ["error", "1tbs", { allowSingleLine: true }],
+        "@stylistic/js/comma-dangle": ["error", "always-multiline"],
+        "@stylistic/js/comma-spacing": "error",
+        "@stylistic/js/comma-style": "error",
+        "@stylistic/js/computed-property-spacing": ["error", "never"],
+        "@stylistic/js/eol-last": "error",
+        "@stylistic/js/func-call-spacing": "error",
+        "@stylistic/js/function-call-argument-newline": ["error", "consistent"],
+        "@stylistic/js/function-call-spacing": "error",
         "@stylistic/js/function-paren-newline": "error",
         "@stylistic/js/generator-star-spacing": "error",
         "@stylistic/js/implicit-arrow-linebreak": "error",
+        "@stylistic/js/indent": "error",
+        "@stylistic/js/jsx-quotes": "error",
+        "@stylistic/js/key-spacing": "error",
+        "@stylistic/js/keyword-spacing": "error",
+        "@stylistic/js/line-comment-position": "error",
         "@stylistic/js/linebreak-style": "error",
         "@stylistic/js/lines-around-comment": "error",
         "@stylistic/js/max-len": [
@@ -61,12 +40,30 @@ const stylisticOptionalConfig: FlatConfig<ESLintRules> = {
                 code: 140,
             },
         ],
+        "@stylistic/js/max-statements-per-line": "error",
         "@stylistic/js/multiline-comment-style": "error",
+        "@stylistic/js/new-parens": "error",
         "@stylistic/js/newline-per-chained-call": "error",
         "@stylistic/js/no-confusing-arrow": "error",
+        "@stylistic/js/no-extra-parens": "error",
         "@stylistic/js/no-extra-semi": "error",
+        "@stylistic/js/no-floating-decimal": "error",
+        "@stylistic/js/no-mixed-operators": ["error", "never"],
+        "@stylistic/js/no-multi-spaces": "error",
+        "@stylistic/js/no-multiple-empty-lines": [
+            "error",
+            {
+                max: 2,
+            },
+        ],
+        "@stylistic/js/no-tabs": "error",
+        "@stylistic/js/no-trailing-spaces": "error",
+        "@stylistic/js/no-whitespace-before-property": "error",
         "@stylistic/js/object-curly-newline": "error",
+        "@stylistic/js/object-curly-spacing": ["error", "always"],
         "@stylistic/js/object-property-newline": "error",
+        "@stylistic/js/operator-linebreak": "error",
+        "@stylistic/js/padded-blocks": ["error", "never"],
         "@stylistic/js/padding-line-between-statements": [
             2,
             {
@@ -120,14 +117,32 @@ const stylisticOptionalConfig: FlatConfig<ESLintRules> = {
                 next: "return",
             },
         ],
+        "@stylistic/js/quote-props": ["error", "as-needed"],
+        "@stylistic/js/quotes": ["error", "single"],
+        "@stylistic/js/rest-spread-spacing": "error",
+        "@stylistic/js/semi": ["error", "always"],
+        "@stylistic/js/semi-spacing": "error",
         "@stylistic/js/semi-style": "error",
+        "@stylistic/js/space-before-blocks": "error",
+        "@stylistic/js/space-before-function-paren": [
+            "error",
+            {
+                anonymous: "never",
+                named: "never",
+                asyncArrow: "always",
+            },
+        ],
+        "@stylistic/js/space-in-parens": ["error", "never"],
+        "@stylistic/js/space-infix-ops": "error",
+        "@stylistic/js/space-unary-ops": "error",
+        "@stylistic/js/spaced-comment": "error",
         "@stylistic/js/switch-colon-spacing": "error",
+        "@stylistic/js/template-curly-spacing": ["error", "always"],
         "@stylistic/js/wrap-regex": "error",
+        "@stylistic/js/yield-star-spacing": "error",
     },
 };
 
 export default [
-    stylisticBaseConfig,
-    stylisticRecommendedModificationConfig,
-    stylisticOptionalConfig,
+    stylisticConfig,
 ];
