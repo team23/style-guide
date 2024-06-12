@@ -1,16 +1,16 @@
 import { Linter } from "eslint";
-import pluginImport from 'eslint-plugin-import-x';
+import pluginImport, { configs } from 'eslint-plugin-import-x';
 import FlatConfig = Linter.FlatConfig;
 
-const importConfig: FlatConfig = {
+const importRecommendedConfig: FlatConfig = {
     name: 'team23/java-script/import/recommended',
     plugins: {
-        import: pluginImport,
+        // @ts-expect-error
+        'import-x': pluginImport,
     },
     rules: {
-        "import/no-default-export": "error",
-        "import/no-deprecated": "error",
-    },
+        ...configs.recommended.rules,
+    }
 };
 
 export default [
