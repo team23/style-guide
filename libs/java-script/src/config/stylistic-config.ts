@@ -48,7 +48,6 @@ const stylisticConfig: FlatConfig | { rules: RuleOptions } = {
         "@stylistic/js/no-extra-parens": "error",
         "@stylistic/js/no-extra-semi": "error",
         "@stylistic/js/no-floating-decimal": "error",
-        "@stylistic/js/no-mixed-operators": ["error", "never"],
         "@stylistic/js/no-multi-spaces": "error",
         "@stylistic/js/no-multiple-empty-lines": [
             "error",
