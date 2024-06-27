@@ -13,7 +13,7 @@ const basicConfig: FlatConfig = {
         "jest.config.ts",
         "dist/**",
         "node_modules/**",
-        "*.min.js"
+        "*.min.js",
     ],
     languageOptions: {
         globals: {

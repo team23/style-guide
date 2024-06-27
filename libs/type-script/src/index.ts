@@ -8,7 +8,12 @@ import FlatConfig = Linter.FlatConfig;
 
 const baseConfig = tseslint.config({
     name: 'team23/type-script/core/base',
-    ignores: ["polyfills.ts", "jest.config.ts", "dist/**", "node_modules/**"],
+    ignores: [
+        "polyfills.ts",
+        "jest.config.ts",
+        "dist/**",
+        "node_modules/**",
+    ],
     languageOptions: {
         globals: {
             ...globals.browser,
