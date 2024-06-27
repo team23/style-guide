@@ -3,6 +3,7 @@ import { Linter } from 'eslint';
 import FlatConfig = Linter.FlatConfig;
 
 const stylisticTypeCheckedModificationConfig: FlatConfig = {
+    name: 'team23/type-script/stylistic/type-checked-modification',
     rules: {
         "@typescript-eslint/array-type": [
             "error",

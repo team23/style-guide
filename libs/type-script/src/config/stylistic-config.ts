@@ -3,12 +3,16 @@ import { Linter } from 'eslint';
 import FlatConfig = Linter.FlatConfig;
 import { UnprefixedRuleOptions } from '@stylistic/eslint-plugin/dist/dts/rule-options';
 
-const stylisticRecommendedConfig = stylistic.configs.customize({
-    indent: 4,
-    semi: true,
-}) as FlatConfig;
+const stylisticRecommendedConfig = {
+    name: 'team23/type-script/stylistic/recommended',
+    ...stylistic.configs.customize({
+        indent: 4,
+        semi: true,
+    }) as FlatConfig,
+};
 
 const stylisticModificationConfig: FlatConfig = {
+    name: 'team23/type-script/stylistic/modification',
     rules: {
         // may cause performance issues with large codebase
         "@stylistic/indent": "off",
@@ -24,6 +28,7 @@ const stylisticModificationConfig: FlatConfig = {
 };
 
 const stylisticOptionalConfig: FlatConfig = {
+    name: 'team23/type-script/stylistic/optional',
     rules: {
         "@stylistic/line-comment-position": ["error"],
         "@stylistic/array-bracket-newline": "error",

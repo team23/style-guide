@@ -20,6 +20,12 @@ bun build ./src/index.ts --target=node --outfile eslint.config.js
 npx @eslint/config-inspector
 ```
 
+You may need to install bun:
+
+```shell
+npm install --global bun
+```
+
 ### Use --print-config
 
 You can additionally use the `--print-config` CLI option to view the final configuration that will be used for a file. Note that only
