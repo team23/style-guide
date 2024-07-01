@@ -1,0 +1,14 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "outDir": "../../dist/out-tsc",
+        "types": [
+            "node"
+        ],
+        "declaration": true,
+        "declarationMap": true
+    },
+    "include": [
+        "src/**/*.ts"
+    ]
+}
