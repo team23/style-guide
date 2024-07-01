@@ -16,10 +16,12 @@
         "skipDefaultLibCheck": true,
         "baseUrl": ".",
         "paths": {
+            "@team23/eslint-config-team23-angular": ["libs/angular/src/index.ts"],
             "@team23/eslint-config-team23-standard": ["libs/java-script/src/index.ts"],
             "@team23/eslint-config-team23-ts": ["libs/type-script/src/index.ts"],
             "@team23/eslint-config-team23-vue": ["libs/vue/src/index.ts"],
             "code-style": ["libs/code-style/src/index.ts"],
+            "angular": ["libs/angular/src/index.ts"],
             "java-script-standard": ["libs/java-script/src/index.ts"],
             "type-script": ["libs/type-script/src/index.ts"],
             "vue": ["libs/vue/src/index.ts"]
