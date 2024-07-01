@@ -53,12 +53,15 @@ const fileBasedModificationConfig = tseslint.config(
     },
 );
 
-const combinedConfig = tseslint.config(
-    ...baseConfig,
-    ...tseslintConfig,
-    ...tseslintStylisticConfig,
-    ...stylisticConfig,
-    ...fileBasedModificationConfig,
-);
+const combinedConfig = tseslint.config({
+    files: ['**/*.ts', '**/*.tsx'],
+    extends: [
+        ...baseConfig,
+        ...tseslintConfig,
+        ...tseslintStylisticConfig,
+        ...stylisticConfig,
+        ...fileBasedModificationConfig,
+    ]
+});
 
 export default combinedConfig as Array<FlatConfig>;
