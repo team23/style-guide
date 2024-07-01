@@ -15,6 +15,7 @@ const stylisticModificationConfig: FlatConfig = {
     rules: {
         // may cause performance issues with large codebase
         "@stylistic/indent": "off",
+        "@stylistic/padded-blocks": "off",
         "@stylistic/multiline-ternary": ["error", "always-multiline"],
         /*"@stylistic/quotes": [
             "error",
@@ -37,7 +38,10 @@ const stylisticOptionalConfig: FlatConfig = {
         "@stylistic/implicit-arrow-linebreak": "error",
         "@stylistic/linebreak-style": "error",
         "@stylistic/lines-around-comment": "error",
-        "@stylistic/max-len": "error",
+        "@stylistic/max-len": [
+            "error",
+            140,
+        ],
         "@stylistic/multiline-comment-style": "error",
         "@stylistic/newline-per-chained-call": "error",
         "@stylistic/no-confusing-arrow": "error",
