@@ -1,9 +1,8 @@
 import stylistic, { RuleOptions } from '@stylistic/eslint-plugin';
 import { Linter } from 'eslint';
 import FlatConfig = Linter.FlatConfig;
-import { UnprefixedRuleOptions } from '@stylistic/eslint-plugin/dist/dts/rule-options';
 
-const stylisticRecommendedConfig = {
+const stylisticRecommendedConfig: FlatConfig = {
     name: 'team23/type-script/stylistic/recommended',
     ...stylistic.configs.customize({
         indent: 4,
