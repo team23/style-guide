@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import tseslint from 'typescript-eslint';
 import globals from 'globals';
 import tseslintConfig from './config/tseslint-config.js';
@@ -61,7 +63,7 @@ const combinedConfig = tseslint.config({
         ...tseslintStylisticConfig,
         ...stylisticConfig,
         ...fileBasedModificationConfig,
-    ]
+    ],
 });
 
 export default combinedConfig as Array<FlatConfig>;

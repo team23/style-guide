@@ -1,22 +1,20 @@
-import tseslint from "typescript-eslint";
-import angulareslint from "angular-eslint";
+import tseslint from 'typescript-eslint';
+import angulareslint from 'angular-eslint';
 
 const typescriptConfig = tseslint.config({
     name: 'team23/angular/core/typescript',
     files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx'],
-    extends: [
-        ...angulareslint.configs.tsRecommended,
-    ],
+    extends: angulareslint.configs.tsRecommended,
     processor: {
         ...angulareslint.processInlineTemplates,
         // Eslint flat config processors fail without a meta.name property
         meta: {
             name: 'angular-eslint-process-inline-templates',
-        }
+        },
     },
     languageOptions: {
         parserOptions: {
-            project: ["tsconfig.?*.json"],
+            project: ['tsconfig.?*.json'],
             createDefaultProgram: true,
         },
     },
@@ -53,9 +51,7 @@ const typescriptConfig = tseslint.config({
 const templateConfig = tseslint.config({
     name: 'team23/angular/core/template',
     files: ['**/*.html'],
-    extends: [
-        ...angulareslint.configs.templateRecommended,
-    ],
+    extends: angulareslint.configs.templateRecommended,
     rules: {
         '@angular-eslint/template/i18n': 'off',
         '@angular-eslint/template/no-positive-tabindex': 'error',
