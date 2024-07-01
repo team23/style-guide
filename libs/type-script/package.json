@@ -2,6 +2,8 @@
     "name": "@team23/eslint-config-team23-ts",
     "version": "9.0.0",
     "description": "A set of eslint rules used by TEAM23 for standard ts projects",
+    "main": "./dist/index.js",
+    "type": "module",
     "keywords": [
         "eslint",
         "eslintconfig",
