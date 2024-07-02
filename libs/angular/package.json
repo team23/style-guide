@@ -15,7 +15,8 @@
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "https://github.com/team23/eslint-config-team23-angular"
+        "url": "https://github.com/team23/style-guide.git",
+        "directory": "libs/angular"
     },
     "dependencies": {
         "angular-eslint": "^18.1.0",
