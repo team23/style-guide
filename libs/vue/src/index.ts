@@ -11,10 +11,12 @@ const basicConfig: FlatConfig = {
         "polyfills.ts",
         "jest.config.ts",
         "dist/**",
-        "node_modules/**",
-        "*.min.js",
     ],
     languageOptions: {
+        parser: vueParser,
+        parserOptions: {
+            parser: tseslint.parser
+        },
         globals: {
             ...globals.browser,
             ...globals.es2021,
