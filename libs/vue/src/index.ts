@@ -1,13 +1,12 @@
 import { Linter } from 'eslint';
 import FlatConfig = Linter.FlatConfig;
-
-import pluginVueA11y from 'eslint-plugin-vuejs-accessibility';
 import globals from "globals";
 import vueConfig from './config/vue-config.js';
-import team23Standard from '@team23/eslint-config-team23-standard';
-import team23TypeScript from '@team23/eslint-config-team23-ts';
+import vueParser from 'vue-eslint-parser';
+import tseslint from 'typescript-eslint';
 
 const basicConfig: FlatConfig = {
+    name: 'team23/vue/base',
     ignores: [
         "polyfills.ts",
         "jest.config.ts",
@@ -23,7 +22,8 @@ const basicConfig: FlatConfig = {
     },
 }
 
-const modificationConfig: FlatConfig = {
+const fileBasedModificationConfig: FlatConfig = {
+    name: 'team23/type-script/core/file-based/vite',
     files: [
         'vite.config.ts',
         'vitest.config.ts',
@@ -33,14 +33,10 @@ const modificationConfig: FlatConfig = {
     },
 };
 
-
 const combinedConfig: Array<FlatConfig> = [
     basicConfig,
-    ...team23Standard,
-    ...team23TypeScript,
     ...vueConfig,
-    ...pluginVueA11y.configs["flat/recommended"] as Array<FlatConfig>,
-    modificationConfig,
+    fileBasedModificationConfig,
 ];
 
 export default combinedConfig;

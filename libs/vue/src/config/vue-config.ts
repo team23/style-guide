@@ -4,12 +4,14 @@ import FlatConfig = Linter.FlatConfig;
 import pluginVue from 'eslint-plugin-vue';
 
 const vueModificationConfig: FlatConfig = {
+    name: 'team23/vue/core/modification',
     rules: {
         'vue/html-indent': ['error', 4],
     }
 }
 
 const vueOptionalConfig: FlatConfig = {
+    name: 'team23/vue/core/optional',
     rules: {
         'vue/block-lang': ['error', {
             script: { lang: 'ts' },
@@ -53,7 +55,7 @@ const vueOptionalConfig: FlatConfig = {
 }
 
 export default [
-    ...pluginVue.configs['flat/recommended'] as Array<FlatConfig>,
+    ...(pluginVue.configs['flat/recommended'] as Array<FlatConfig>),
     vueModificationConfig,
     vueOptionalConfig,
 ];
