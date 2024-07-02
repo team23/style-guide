@@ -3,7 +3,6 @@
     "version": "17.1.0-rc1",
     "description": "A set of eslint rules used by TEAM23 for standard angular projects",
     "main": "./dist/libs/angular/src/index.js",
-    "type": "module",
     "scripts": {
         "lint": "eslint test/* --no-ignore"
     },
