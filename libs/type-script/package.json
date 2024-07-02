@@ -3,7 +3,6 @@
     "version": "9.0.0-rc2",
     "description": "A set of eslint rules used by TEAM23 for standard ts projects",
     "main": "./dist/libs/type-script/src/index.js",
-    "type": "module",
     "keywords": [
         "eslint",
         "eslintconfig",
