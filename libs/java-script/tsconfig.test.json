@@ -2,15 +2,15 @@
     "extends": "./tsconfig.json",
     "compilerOptions": {
         "module": "ESNext",
-        "outDir": "./dist",
         "types": [
             "node"
         ],
         "declaration": true,
         "declarationMap": true,
-        "composite": true
+        "composite": true,
+        "strict": true
     },
     "include": [
-        "src/**/*.ts"
+        "test/**/*.ts"
     ],
 }
