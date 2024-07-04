@@ -23,7 +23,6 @@
         "typescript-eslint": "^7.10.0"
     },
     "devDependencies": {
-        "tslib": "^2.6.2",
         "@types/eslint": "^8.56.10",
         "@types/eslint__js": "^8.42.3"
     },
