@@ -2,8 +2,6 @@
     "name": "@team23/eslint-config-team23-ts",
     "version": "9.0.0-rc3",
     "description": "A set of eslint rules used by TEAM23 for standard ts projects",
-    "main": "./dist/libs/type-script/src/index.js",
-    "type": "module",
     "keywords": [
         "eslint",
         "eslintconfig",
@@ -18,8 +16,27 @@
         "url": "https://github.com/team23/style-guide.git",
         "directory": "libs/type-script"
     },
+    "scripts": {
+        "compile": "rm -rf ./dist/* && npx tsc-multi --force"
+    },
+    "files": [
+        "./dist/**/*",
+        "./*.md",
+        "./package.json",
+        "./LICENSE",
+        "!./tsconfig*.json",
+        "!./dist/**/*.tsbuildinfo"
+    ],
+    "type": "module",
+    "exports": {
+        "types": "./dist/types/index.d.ts",
+        "import": "./dist/mjs/index.mjs",
+        "require": "./dist/cjs/index.cjs",
+        "default": "./dist/mjs/index.cjs"
+    },
     "dependencies": {
         "@stylistic/eslint-plugin": "^2.1.0",
+        "tsc-multi": "^1.1.0",
         "typescript-eslint": "^7.10.0"
     },
     "devDependencies": {
@@ -28,7 +45,7 @@
     },
     "peerDependencies": {
         "@stylistic/eslint-plugin": "^2.1.0",
-        "typescript-eslint": "^7.10.0",
-        "eslint": "^8.56.0"
+        "eslint": "^8.56.0",
+        "typescript-eslint": "^7.10.0"
     }
 }

@@ -1,6 +1,6 @@
-import team23angular from './libs/angular/dist/libs/angular/src/index.js';
-import team23standard from './libs/java-script/dist/libs/java-script/src/index.js';
-import tseslint from './libs/type-script/dist/libs/type-script/src/index.js';
+import team23angular from './libs/angular/dist/esm/index.mjs';
+import team23standard from './libs/java-script/dist/esm/index.mjs';
+import tseslint from './libs/type-script/dist/esm/index.mjs';
 
 export default [
     {

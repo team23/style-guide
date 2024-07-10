@@ -1,0 +1,21 @@
+{
+    "targets": [
+        {
+            "extname": ".cjs",
+            "module": "commonjs",
+            "outDir": "./dist/cjs"
+        },
+        {
+            "extname": ".mjs",
+            "module": "esnext",
+            "outDir": "./dist/mjs"
+        },
+        {
+            "outDir": "./dist/types",
+            "emitDeclarationOnly": true
+        }
+    ],
+    "projects": [
+        "./tsconfig.lib.json"
+    ]
+}

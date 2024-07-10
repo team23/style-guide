@@ -10,6 +10,24 @@
     ],
     "author": "TEAM23 GmbH",
     "license": "MIT",
+    "scripts": {
+        "compile": "rm -rf ./dist/* && npx tsc-multi --force"
+    },
+    "files": [
+        "./dist/**/*",
+        "./*.md",
+        "./package.json",
+        "./LICENSE",
+        "!./tsconfig*.json",
+        "!./dist/**/*.tsbuildinfo"
+    ],
+    "type": "module",
+    "exports": {
+        "types": "./dist/types/index.d.ts",
+        "import": "./dist/mjs/index.mjs",
+        "require": "./dist/cjs/index.cjs",
+        "default": "./dist/mjs/index.cjs"
+    },
     "repository": {
         "type": "git",
         "url": "https://github.com/team23/style-guide.git",
@@ -21,6 +39,7 @@
         "typescript-eslint": "^7.15.0"
     },
     "devDependencies": {
+        "tsc-multi": "^1.1.0",
         "tslib": "^2.3.0"
     },
     "peerDependencies": {
