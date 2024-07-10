@@ -11,7 +11,7 @@
     "author": "TEAM23 GmbH",
     "license": "MIT",
     "scripts": {
-        "compile": "rm -rf ./dist/* && npx tsc-multi --force"
+        "build": "rm -rf ./dist/* && npx tsc-multi --force"
     },
     "files": [
         "./dist/**/*",

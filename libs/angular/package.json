@@ -16,7 +16,7 @@
         "directory": "libs/angular"
     },
     "scripts": {
-        "compile": "rm -rf ./dist/* && npx tsc-multi --force"
+        "build": "rm -rf ./dist/* && npx tsc-multi --force"
     },
     "files": [
         "./dist/**/*",
