@@ -13,12 +13,21 @@ npm i --save-dev @team23/eslint-config-team23-vue
 
 To use the shareable config, import the package inside an `eslint.config.js` file and add it to the exported array:
 
-```js
-// eslint.config.js
+```ts
+// eslint.config.js (ES Module)
 import team23Vue from "@team23/eslint-config-team23-vue";
 
 export default [
     ...team23Vue,
+];
+```
+
+```js
+// eslint.config.js (CommonJS)
+const team23Vue = require('@team23/eslint-config-team23-vue');
+
+module.exports = [
+    ...team23Vue.default,
 ];
 ```
 

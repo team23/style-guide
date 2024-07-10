@@ -13,12 +13,21 @@ npm i --save-dev @team23/eslint-config-team23-ts
 
 To use the shareable config, import the package inside an `eslint.config.js` file and add it to the exported array:
 
-```js
-// eslint.config.js
+```ts
+// eslint.config.js (ES Module)
 import team23TypeScript from "@team23/eslint-config-team23-ts";
 
 export default [
     ...team23TypeScript,
+];
+```
+
+```js
+// eslint.config.js (CommonJS)
+const team23TypeScript = require('@team23/eslint-config-team23-ts');
+
+module.exports = [
+    ...team23TypeScript.default,
 ];
 ```
 
