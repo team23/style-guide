@@ -8,9 +8,10 @@ import tseslint from 'typescript-eslint';
 const basicConfig: FlatConfig = {
     name: 'team23/vue/base',
     ignores: [
-        "polyfills.ts",
-        "jest.config.ts",
-        "dist/**",
+        'polyfills.ts',
+        'jest.config.ts',
+        'dist/**',
+        'node_modules/**',
     ],
     languageOptions: {
         parser: vueParser,
@@ -35,7 +36,7 @@ const basicConfig: FlatConfig = {
     },
 }
 
-const fileBasedModificationConfig: FlatConfig = {
+const fileBasedModificationConfig = tseslint.config({
     name: 'team23/type-script/core/file-based/vite',
     files: [
         'vite.config.ts',
@@ -44,12 +45,15 @@ const fileBasedModificationConfig: FlatConfig = {
     rules: {
         'import/no-default-export': 'off',
     },
-};
+});
 
-const combinedConfig: Array<FlatConfig> = [
-    basicConfig,
-    ...vueConfig,
-    fileBasedModificationConfig,
-];
+const combinedConfig = tseslint.config({
+    files: ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.cts', '**/*.vue'],
+    extends: [
+        basicConfig,
+        ...vueConfig,
+    ],
+    ...fileBasedModificationConfig,
+});
 
-export default combinedConfig;
+export default combinedConfig as Array<FlatConfig>;
