@@ -47,13 +47,15 @@ const fileBasedModificationConfig = tseslint.config({
     },
 });
 
-const combinedConfig = tseslint.config({
-    files: ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.cts', '**/*.vue'],
-    extends: [
-        basicConfig,
-        ...vueConfig,
-    ],
-    ...fileBasedModificationConfig,
-});
+const combinedConfig = tseslint.config(
+    {
+        files: ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.cts', '**/*.vue'],
+        extends: [
+            basicConfig,
+            ...vueConfig,
+        ]
+    },
+    ...fileBasedModificationConfig
+);
 
 export default combinedConfig as Array<FlatConfig>;
