@@ -35,7 +35,6 @@
     },
     "dependencies": {
         "eslint-plugin-vue": "^9.27.0",
-        "eslint-plugin-vuejs-accessibility": "^2.3.0",
         "typescript-eslint": "^7.15.0"
     },
     "devDependencies": {
