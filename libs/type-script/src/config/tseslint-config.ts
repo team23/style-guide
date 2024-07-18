@@ -24,6 +24,10 @@ const strictTypeCheckedModificationConfig: FlatConfig = {
             },
         ],
         '@typescript-eslint/no-extraneous-class': 'off',
+        '@typescript-eslint/restrict-template-expressions': 'off',
+        '@typescript-eslint/no-confusing-void-expression': 'off',
+        '@typescript-eslint/no-unsafe-enum-comparison': 'off',
+        '@typescript-eslint/non-nullable-type-assertion-style': 'off',
     },
 };
 
@@ -40,6 +44,7 @@ const optionalConfig: FlatConfig = {
                 allowConciseArrowFunctionExpressionsStartingWithVoid: false,
             },
         ],
+        '@typescript-eslint/no-non-null-assertion': 'error',
         '@typescript-eslint/explicit-member-accessibility': [
             'error',
             {
@@ -124,8 +129,6 @@ const optionalConfig: FlatConfig = {
         'default-param-last': 'off',
         '@typescript-eslint/default-param-last': 'error',
         '@typescript-eslint/no-unnecessary-qualifier': 'error',
-        'init-declarations': 'off',
-        '@typescript-eslint/init-declarations': 'error',
         '@typescript-eslint/no-import-type-side-effects': 'error',
         'no-loop-func': 'off',
         '@typescript-eslint/no-loop-func': 'error',

@@ -17,6 +17,9 @@ const stylisticModificationConfig: FlatConfig = {
         '@stylistic/indent': 'off',
         '@stylistic/padded-blocks': 'off',
         '@stylistic/multiline-ternary': ['error', 'always-multiline'],
+        '@stylistic/template-curly-spacing': ['error', 'always'],
+        '@stylistic/arrow-parens': ['error', 'as-needed'],
+        '@stylistic/brace-style': ['error', '1tbs', { 'allowSingleLine': true }],
 
         /**
          *'@stylistic/quotes': [
@@ -35,9 +38,9 @@ const stylisticOptionalConfig: FlatConfig = {
     name: 'team23/type-script/stylistic/optional',
     rules: {
         '@stylistic/line-comment-position': ['error'],
-        '@stylistic/array-bracket-newline': 'error',
+        '@stylistic/array-bracket-newline': ['error', 'consistent'],
         '@stylistic/array-bracket-spacing': 'error',
-        '@stylistic/function-paren-newline': 'error',
+        '@stylistic/function-paren-newline': ['error', 'consistent'],
         '@stylistic/generator-star-spacing': 'error',
         '@stylistic/implicit-arrow-linebreak': 'error',
         '@stylistic/linebreak-style': 'error',
@@ -46,12 +49,11 @@ const stylisticOptionalConfig: FlatConfig = {
             'error',
             140,
         ],
-        '@stylistic/multiline-comment-style': 'error',
         '@stylistic/newline-per-chained-call': 'error',
         '@stylistic/no-confusing-arrow': 'error',
         '@stylistic/no-extra-semi': 'error',
         '@stylistic/object-curly-newline': 'error',
-        '@stylistic/object-property-newline': 'error',
+        '@stylistic/object-property-newline': ['error', { 'allowAllPropertiesOnSameLine': true }],
         '@stylistic/padding-line-between-statements': 'error',
         '@stylistic/semi-style': 'error',
         '@stylistic/switch-colon-spacing': 'error',
