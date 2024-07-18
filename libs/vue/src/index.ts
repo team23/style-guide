@@ -15,7 +15,18 @@ const basicConfig: FlatConfig = {
     languageOptions: {
         parser: vueParser,
         parserOptions: {
-            parser: tseslint.parser
+            extraFileExtensions: ['.vue'],
+            parser: {
+                js: 'espree',
+                jsx: 'espree',
+                ts: tseslint.parser,
+                tsx: tseslint.parser,
+            },
+            sourceType: 'module',
+            ecmaFeatures: {
+                jsx: true,
+            },
+            project: ['tsconfig.?*.json'],
         },
         globals: {
             ...globals.browser,
