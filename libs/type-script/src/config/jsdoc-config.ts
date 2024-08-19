@@ -3,7 +3,7 @@ import { Linter } from 'eslint';
 import FlatConfig = Linter.FlatConfig;
 
 const jsdocRecommendedConfig: FlatConfig = {
-    name: 'team23/java-script/jsdoc/recommended',
+    name: 'team23/type-script/jsdoc/recommended',
     plugins: {
         jsdoc,
     },
@@ -11,7 +11,7 @@ const jsdocRecommendedConfig: FlatConfig = {
 };
 
 const jsdocRecommendedModificationConfig: FlatConfig = {
-    name: 'team23/java-script/jsdoc/recommended-modification',
+    name: 'team23/type-script/jsdoc/recommended-modification',
     rules: {
         'jsdoc/check-alignment': 'error',
         'jsdoc/check-indentation': 'error',
