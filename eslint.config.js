@@ -1,14 +1,7 @@
-import team23angular from './libs/angular/dist/esm/index.mjs';
-import team23standard from './libs/java-script/dist/esm/index.mjs';
-import tseslint from './libs/type-script/dist/esm/index.mjs';
+import team23TypeScript from "@team23/eslint-config-team23-ts";
 
 export default [
-    {
-        ignores: ['**/node_modules/**/*', '**/dist/**/*'],
-    },
-    ...team23standard,
-    ...tseslint,
-    ...team23angular,
+    ...team23TypeScript,
     {
         files: ['**/eslint.config.js', '**/src/**/*.ts'],
         rules: {
