@@ -1,9 +1,10 @@
 {
     "name": "@team23/eslint-config-team23-angular",
-    "version": "17.1.0-rc3",
-    "description": "A set of eslint rules used by TEAM23 for standard angular projects",
+    "version": "18.0.0-rc1",
+    "description": "A set of eslint rules used by TEAM23 for angular projects",
     "keywords": [
         "eslint",
+        "eslintconfig",
         "angular",
         "TEAM23"
     ],
@@ -34,17 +35,17 @@
         "default": "./dist/mjs/index.cjs"
     },
     "dependencies": {
-        "angular-eslint": "^18.1.0",
-        "typescript-eslint": "^8.0.0-alpha.20"
+        "angular-eslint": "^18.3.0",
+        "typescript-eslint": "^8.1.0"
     },
     "devDependencies": {
-        "@angular/core": "^17.2.1",
-        "@types/eslint": "^8.56.10",
-        "@types/eslint__eslintrc": "^2.1.1",
+        "@angular/core": "^18.2.0",
+        "@types/eslint": "^8.56.11",
+        "@types/eslint__eslintrc": "^2.1.2",
         "@types/eslint__js": "^8.42.3",
         "tsc-multi": "^1.1.0"
     },
     "peerDependencies": {
-        "eslint": "^8.56.0"
+        "eslint": "^9.9.0"
     }
 }
