@@ -20,17 +20,16 @@ const stylisticModificationConfig: FlatConfig = {
         '@stylistic/template-curly-spacing': ['error', 'always'],
         '@stylistic/arrow-parens': ['error', 'as-needed'],
         '@stylistic/brace-style': ['error', '1tbs', { 'allowSingleLine': true }],
-
-        /**
-         *'@stylistic/quotes': [
-         *    'error',
-         *    {
-         *        avoidEscape: true,
-         *    },
-         *],
-         */
-
+        '@stylistic/js/quotes': ['error', 'single'],
         '@stylistic/space-infix-ops': ['error', { int32Hint: true }],
+        '@stylistic/space-before-function-paren': [
+            'error',
+            {
+                anonymous: 'never',
+                named: 'never',
+                asyncArrow: 'always',
+            },
+        ],
     },
 };
 
@@ -40,6 +39,8 @@ const stylisticOptionalConfig: FlatConfig = {
         '@stylistic/line-comment-position': ['error'],
         '@stylistic/array-bracket-newline': ['error', 'consistent'],
         '@stylistic/array-bracket-spacing': 'error',
+        '@stylistic/js/function-call-argument-newline': ['error', 'consistent'],
+        '@stylistic/js/function-call-spacing': 'error',
         '@stylistic/function-paren-newline': ['error', 'consistent'],
         '@stylistic/generator-star-spacing': 'error',
         '@stylistic/implicit-arrow-linebreak': 'error',
@@ -49,6 +50,7 @@ const stylisticOptionalConfig: FlatConfig = {
             'error',
             140,
         ],
+        '@stylistic/js/multiline-comment-style': 'error',
         '@stylistic/newline-per-chained-call': 'error',
         '@stylistic/no-confusing-arrow': 'error',
         '@stylistic/no-extra-semi': 'error',

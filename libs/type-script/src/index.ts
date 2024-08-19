@@ -7,6 +7,7 @@ import stylisticConfig from './config/stylistic-config.js';
 import tseslintStylisticConfig from './config/tseslint-stylistic-config.js';
 import { Linter } from 'eslint';
 import FlatConfig = Linter.FlatConfig;
+import jsdocConfig from './config/jsdoc-config';
 
 const baseConfig = tseslint.config({
     name: 'team23/type-script/core/base',
@@ -63,6 +64,7 @@ const combinedConfig = tseslint.config(
             ...tseslintConfig,
             ...tseslintStylisticConfig,
             ...stylisticConfig,
+            ...jsdocConfig,
         ],
     },
     ...fileBasedModificationConfig
