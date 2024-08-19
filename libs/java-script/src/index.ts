@@ -3,7 +3,6 @@ import stylisticConfig from './config/stylistic-config.js';
 import jsdocConfig from './config/jsdoc-config.js';
 import jsConfig from './config/js-config.js';
 import tseslint from 'typescript-eslint';
-import importConfig from './config/import-config.js';
 
 const baseConfig = tseslint.config({
     name: 'team23/java-script/base',
@@ -22,7 +21,6 @@ const combinedConfig = tseslint.config({
         ...baseConfig,
         ...jsConfig,
         ...stylisticConfig,
-        ...importConfig,
         ...jsdocConfig,
     ],
 });
