@@ -1,18 +1,56 @@
 # Changelog
 
+All notable changes to this project will be documented in this file.
+
 ## v9.0.0
 
-### Breaking Change
+### Breaking Changes
 
-- Migrate eslint config format to flat config
-- Update linting dependencies to latest
-- Update peer dependencies
+#### Updated ESLint version to 9.0.0
 
-### Other changes
+- The minimum required version of ESLint has been updated from `^8.0.0` to `^9.9.0`. This is a significant update
+  that does require making changes to accommodate the new linting rules and features provided by ESLint 9.x.
+- A key feature introduced in ESLint 9.x is the required use
+  [of the new Flat Config format](https://eslint.org/docs/latest/use/configure/configuration-files).
+  Flat Config is a modern and streamlined approach to configuring ESLint, replacing the traditional `.eslintrc`
+  configuration files.
+- If you do want to know how to use this library with Flat Config, checkout its [README.md](README.md).
 
-- Split eslint configuration into different files
-- Removed duplicate rule declarations which were defined in recommended ruleset
-- use ESLint Stylistic for formatting rules
+#### Changes to rules
+
+- As part of the update, all ESLint rules have been reviewed and adjusted to align with our latest coding
+  guidelines and best practices.
+  This ensures that the linting rules we enforce are both relevant and effective in maintaining code quality across
+  all projects.
+- The upgrade to ESLint 9.x and associated plugins brought about changes in several existing rules.
+  Some rules have been deprecated, modified, or replaced with more up-to-date equivalents.
+  These changes reflect the latest developments in JavaScript standards and best practices, and may require you to
+  adjust your code to meet the new requirements.
+- Additionally, note that the basic configuration of rules has changed:
+    - We extend upon the recommended config from `@eslint/js`
+    - Since stylistic rules have been extracted from the eslint core to `@stylistic/eslint-plugin-js, we do use
+      this plugin and enable rules on per-use basis.
+- `eslint-plugin-import` has been removed since it causes too many issues and does not fully support flat config.
+
+### Changes
+
+- Updated the repository URL and structure to reflect the new project structure within a monorepo
+  at `https://github.com/team23/style-guide.git` under the `libs/java-script` directory.
+- Updated `homepage` URL to `https://github.com/team23/style-guide/libs/java-script`.
+- Enhanced the keywords in `package.json` to improve discoverability. New keywords
+  include `"eslint-config"` and `"js"`.
+- The license and documentation files have been explicitly listed in the `files` field
+  to ensure they are included in the published package.
+- The package now uses an `exports` field to define the entry points for different
+  module formats (`import`, `require`, `types`). This change might affect how the package is consumed in different
+  environments.
+- The testing framework `jest` has been removed from the project.
+- Added dependency `globals` to provide a standardized global variable configuration for ESLint.
+- `typescript-eslint`: Included to enable TypeScript support within ESLint.
+- `tsc-multi` was introduced to support usage in ESM and CommonJS projects.
+- The `files` field in `package.json` has been defined to include only the necessary files in the
+  npm package, improving the package's footprint.
+- `typescript-eslint` has been introduced as a dependency for type-safe rule configuration
 
 ## v8.3.1
 
