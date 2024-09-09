@@ -1,5 +1,5 @@
 import jsdoc from 'eslint-plugin-jsdoc';
-import { Linter } from 'eslint';
+import type { Linter } from 'eslint';
 
 const jsdocRecommendedConfig: Linter.Config = {
     name: 'team23/java-script/jsdoc/recommended',
@@ -22,6 +22,8 @@ const jsdocRecommendedModificationConfig: Linter.Config = {
                 startLines: 1,
             },
         ],
+        'jsdoc/require-returns-typ': 'off',
+        'jsdoc/require-param-typ': 'off',
     },
 };
 

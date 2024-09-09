@@ -1,12 +1,14 @@
-import { Linter } from 'eslint';
+import type { Linter } from 'eslint';
 import js from '@eslint/js';
-import { ESLintRules } from 'eslint/rules';
+import type { ESLintRules } from 'eslint/rules';
 
 const jsRecommendedConfig: Linter.Config<ESLintRules> = {
     name: 'team23/java-script/core/recommended',
     ...js.configs.recommended,
 };
 
+const complexity = 10;
+const eqeqeq = 2;
 const jsOptionalConfig: Linter.Config<ESLintRules> = {
     name: 'team23/java-script/core/optional',
     rules: {
@@ -14,12 +16,12 @@ const jsOptionalConfig: Linter.Config<ESLintRules> = {
         'arrow-body-style': 'error',
         'camelcase': 'error',
         'capitalized-comments': 'error',
-        'complexity': ['error', 10],
+        'complexity': ['error', complexity],
         'curly': 'error',
         'default-case': 'error',
         'default-case-last': 'error',
         'default-param-last': 'error',
-        'eqeqeq': [2, 'allow-null'],
+        'eqeqeq': [eqeqeq, 'allow-null'],
         'guard-for-in': 'error',
         'id-denylist': 'error',
         'id-match': 'error',

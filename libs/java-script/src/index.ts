@@ -3,14 +3,16 @@ import stylisticConfig from './config/stylistic-config.js';
 import jsdocConfig from './config/jsdoc-config.js';
 import jsConfig from './config/js-config.js';
 import tseslint from 'typescript-eslint';
-import { Linter } from 'eslint';
+import type { Linter } from 'eslint';
 
 interface ConfigOptions {
+
     /**
      * File glob patterns indicating the files that the configuration should be applied to.
+     *
      * @default ['**\/*.js', '**\/*.mjs']
      */
-    files?: Array<string>,
+    files?: Array<string>;
 }
 
 const setupConfig: Linter.Config = {
@@ -34,13 +36,20 @@ const setupConfig: Linter.Config = {
     },
     linterOptions: {
         reportUnusedDisableDirectives: true,
-    }
+    },
 };
 
+/**
+ * Creates an ESLint configuration tailored for JavaScript projects with optional settings.
+ *
+ * @param [options] - Optional configuration settings.
+ *
+ * @returns Array of ESLint configuration objects for Vue.js.
+ */
 function createJSEslintConfig(options?: ConfigOptions): Array<Linter.Config> {
     const {
         files = ['**/*.js', '**/*.mjs'],
-    } = options || {};
+    } = options ?? {};
 
     return tseslint.config(
         setupConfig,
@@ -58,4 +67,4 @@ function createJSEslintConfig(options?: ConfigOptions): Array<Linter.Config> {
 export {
     type ConfigOptions,
     createJSEslintConfig,
-}
+};

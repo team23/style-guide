@@ -1,6 +1,7 @@
-import { Linter } from 'eslint';
+import type { Linter } from 'eslint';
 import stylisticJs from '@stylistic/eslint-plugin-js';
 
+const maxLength = 140;
 const stylisticConfig: Linter.Config = {
     name: 'team23/java-script/stylisticJs/optional',
     plugins: {
@@ -35,7 +36,7 @@ const stylisticConfig: Linter.Config = {
         '@stylistic/js/lines-around-comment': 'error',
         '@stylistic/js/max-len': [
             'error',
-            140,
+            maxLength,
         ],
         '@stylistic/js/max-statements-per-line': 'error',
         '@stylistic/js/multiline-comment-style': 'error',
@@ -53,7 +54,7 @@ const stylisticConfig: Linter.Config = {
         '@stylistic/js/no-whitespace-before-property': 'error',
         '@stylistic/js/object-curly-newline': 'error',
         '@stylistic/js/object-curly-spacing': ['error', 'always'],
-        '@stylistic/js/object-property-newline': ['error', { 'allowAllPropertiesOnSameLine': true }],
+        '@stylistic/js/object-property-newline': ['error', { allowAllPropertiesOnSameLine: true }],
         '@stylistic/js/operator-linebreak': 'error',
         '@stylistic/js/padding-line-between-statements': 'error',
         '@stylistic/js/quote-props': ['error', 'as-needed'],
