@@ -1,6 +1,6 @@
 {
     "name": "@team23/eslint-config-team23-standard",
-    "version": "9.0.0-rc5",
+    "version": "9.0.0",
     "description": "A set of eslint rules used by TEAM23 for standard js projects",
     "keywords": [
         "eslint",
@@ -35,11 +35,11 @@
         "default": "./dist/mjs/index.cjs"
     },
     "dependencies": {
-        "@eslint/js": "^9.9.0",
-        "@stylistic/eslint-plugin-js": "^2.6.4",
+        "@eslint/js": "^9.10.0",
+        "@stylistic/eslint-plugin-js": "^2.7.2",
         "eslint-plugin-jsdoc": "^50.2.2",
         "globals": "^15.9.0",
-        "typescript-eslint": "^8.1.0"
+        "typescript-eslint": "^8.4.0"
     },
     "devDependencies": {
         "@types/eslint": "^9.6.0",
