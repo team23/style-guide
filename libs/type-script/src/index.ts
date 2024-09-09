@@ -10,13 +10,13 @@ import jsdocConfig from './config/jsdoc-config';
 interface ConfigOptions {
     /**
      * File glob patterns indicating the files that the configuration should be applied to.
-     * @default ["**\/*.?([cm])t", "**\/*.?([cm])tsx"]
+     * @default ['**\/*.?([cm])t', '**\/*.?([cm])tsx']
      */
     files?: Array<string>;
     /**
      * Optional file extensions for non TypeScript languages, e.g. vue.
      * Will automatically be added to linted files if not overwritten.
-     * @example ["vue"]
+     * @example ['vue']
      */
     fileExtensions?: Array<string>;
     /**
@@ -26,31 +26,31 @@ interface ConfigOptions {
     tsconfigPath?: string;
 }
 
-const GLOB_TS = "**/*.?([cm])ts";
-const GLOB_TSX = "**/*.?([cm])tsx";
+const GLOB_TS = '**/*.?([cm])ts';
+const GLOB_TSX = '**/*.?([cm])tsx';
 
 const fileBasedModificationConfigs: Array<Linter.Config> = [
     {
-        name: "team23/type-script/core/file-based/cypress",
-        files: ["cypress.config.ts", "cypress.**.config.ts"],
+        name: 'team23/type-script/core/file-based/cypress',
+        files: ['cypress.config.ts', 'cypress.**.config.ts'],
         rules: {
-            "no-console": "off",
+            'no-console': 'off',
         },
     },
     {
-        name: "team23/type-script/core/file-based/page-object",
-        files: ["*.po.ts"],
+        name: 'team23/type-script/core/file-based/page-object',
+        files: ['*.po.ts'],
         rules: {
-            "@typescript-eslint/explicit-function-return-type": "off",
+            '@typescript-eslint/explicit-function-return-type': 'off',
         },
     },
     {
-        name: "team23/type-script/core/file-based/mocks",
-        files: ["*.spec.ts", "*.spec.tsx", "**/__mocks__/**/*.ts", "**/__mocks__/**/*.tsx"],
+        name: 'team23/type-script/core/file-based/mocks',
+        files: ['*.spec.ts', '*.spec.tsx', '**/__mocks__/**/*.ts', '**/__mocks__/**/*.tsx'],
         rules: {
-            "@typescript-eslint/no-magic-numbers": "off",
-            "@typescript-eslint/no-empty-function": "off",
-            "max-lines": "off",
+            '@typescript-eslint/no-magic-numbers': 'off',
+            '@typescript-eslint/no-empty-function': 'off',
+            'max-lines': 'off',
         },
     },
 ];
@@ -68,17 +68,17 @@ function createTSEslintConfig(options?: ConfigOptions): Array<Linter.Config> {
     ];
 
     const setupConfig: Linter.Config = {
-        name: "team23/type-script/setup",
-        ignores: ["polyfills.ts", "jest.config.ts", "dist/**", "node_modules/**"],
+        name: 'team23/type-script/setup',
+        ignores: ['polyfills.ts', 'jest.config.ts', 'dist/**', 'node_modules/**'],
         plugins: {
             // @ts-expect-error tseslint uses own not so strict type
-            "@typescript-eslint": tseslint.plugin,
+            '@typescript-eslint': tseslint.plugin,
         },
         languageOptions: {
             // @ts-expect-error
             parser: tseslint.parser,
             parserOptions: {
-                sourceType: "module",
+                sourceType: 'module',
                 parser: tseslint.parser,
                 extraFileExtensions: fileExtensions.map(extension => `.${extension}`),
                 projectService: {

@@ -3,7 +3,7 @@ import { Linter } from 'eslint';
 
 // remove preconfigured base setup since we use our own.
 const strictTypeCheckedConfigWithoutSetup = tseslint.configs.strictTypeChecked.filter(
-    config => config.name !== "typescript-eslint/base",
+    config => config.name !== 'typescript-eslint/base',
 );
 
 const strictTypeCheckedModificationConfig: Linter.Config = {

@@ -17,7 +17,7 @@ const setupConfig: Linter.Config = {
     name: 'team23/java-script/setup',
     ignores: ['dist/', 'node_modules/', '*.min.js'],
     languageOptions: {
-        sourceType: "module",
+        sourceType: 'module',
         ecmaVersion: 2022,
         globals: {
             ...globals.browser,
@@ -25,7 +25,7 @@ const setupConfig: Linter.Config = {
             ...globals.node,
         },
         parserOptions: {
-            sourceType: "module",
+            sourceType: 'module',
             ecmaFeatures: {
                 jsx: true,
             },
