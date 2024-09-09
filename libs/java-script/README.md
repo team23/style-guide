@@ -17,19 +17,19 @@ To use the shareable config, import the package inside an `eslint.config.js` fil
 
 ```ts
 // eslint.config.js (ES Module)
-import team23Standard from "@team23/eslint-config-team23-standard";
+import { createJSEslintConfig } from "@team23/eslint-config-team23-standard";
 
 export default [
-    ...team23Standard,
+    ...createJSEslintConfig(),
 ];
 ```
 
 ```js
 // eslint.config.js (CommonJS)
-const team23Standard = require('@team23/eslint-config-team23-standard');
+const { createJSEslintConfig } = require('@team23/eslint-config-team23-standard');
 
 module.exports = [
-    ...team23Standard.default,
+    ...createJSEslintConfig(),
 ];
 ```
 
@@ -39,10 +39,10 @@ You can override settings from the shareable config by adding them directly into
 file after importing the shareable config. For example:
 
 ```ts
-import team23Standard from "@team23/eslint-config-team23-standard";
+import { createJSEslintConfig } from "@team23/eslint-config-team23-standard";
 
 export default [
-    team23Standard,
+    ...createJSEslintConfig(),
     {
         files: ['*.js'],
         rules: {
