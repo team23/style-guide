@@ -32,6 +32,6 @@ const stylisticTypeCheckedModificationConfig: Linter.Config = {
 };
 
 export default [
-    ...tseslint.configs.stylisticTypeChecked,
+    ...stylisticTypeCheckedConfigWithoutSetup,
     stylisticTypeCheckedModificationConfig,
 ];

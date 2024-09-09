@@ -139,7 +139,6 @@ const optionalConfig: Linter.Config = {
         '@typescript-eslint/no-unsafe-unary-minus': 'error',
         'no-use-before-define': 'off',
         '@typescript-eslint/no-use-before-define': 'error',
-        '@typescript-eslint/no-useless-assignment': 'error',
         '@typescript-eslint/no-useless-empty-export': 'error',
         '@typescript-eslint/prefer-enum-initializers': 'error',
         '@typescript-eslint/prefer-find': 'error',
@@ -152,7 +151,7 @@ const optionalConfig: Linter.Config = {
 };
 
 export default [
-    ...tseslint.configs.strictTypeChecked,
+    ...strictTypeCheckedConfigWithoutSetup,
     strictTypeCheckedModificationConfig,
     optionalConfig,
 ];
