@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v18.0.2
+
+- Fix homepage url in package.json
+
 ## v18.0.0
 
 ### Breaking Changes

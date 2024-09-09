@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## v9.0.3
+
+- Fix homepage url in package.json
+- Adjust keywords in package.json
+
 ## v9.0.2
 
 - Changed jsdoc configuration to `flat/recommended-typescript-flavor-error`
