@@ -1,16 +1,16 @@
 {
     "name": "@team23/eslint-config-team23-angular",
-    "version": "18.0.0-rc1",
+    "version": "18.0.2",
     "description": "A set of eslint rules used by TEAM23 for angular projects",
     "keywords": [
         "eslint",
         "eslintconfig",
-        "angular",
-        "TEAM23"
+        "TEAM23",
+        "angular"
     ],
     "author": "TEAM23 GmbH",
     "license": "MIT",
-    "homepage": "https://github.com/team23/style-guide/libs/angular",
+    "homepage": "https://github.com/team23/style-guide/tree/main/libs/angular",
     "repository": {
         "type": "git",
         "url": "https://github.com/team23/style-guide.git",
