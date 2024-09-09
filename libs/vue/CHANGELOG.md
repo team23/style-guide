@@ -34,6 +34,7 @@ All notable changes to this project will be documented in this file.
   adjust your code to meet the new requirements.
 - We extend upon the flat recommended rule config from `eslint-plugin-vue`.
 - Remove TypeScript specific packages.
+- `vuejs-accessibility` is no longer enabled by default
 
 ### Changes
 
