@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v9.0.2
+
+- Changed jsdoc configuration to `flat/recommended-typescript-error`
+
 ## v9.0.1
 
 - Lint config

@@ -6,15 +6,13 @@ const jsdocRecommendedConfig: Linter.Config = {
     plugins: {
         jsdoc,
     },
-    ...jsdoc.configs['flat/recommended'],
+    ...jsdoc.configs['flat/recommended-typescript-error'],
 };
 
 const jsdocRecommendedModificationConfig: Linter.Config = {
     name: 'team23/type-script/jsdoc/recommended-modification',
     rules: {
-        'jsdoc/check-alignment': 'error',
         'jsdoc/check-indentation': 'error',
-        'jsdoc/no-types': 'error',
         'jsdoc/tag-lines': [
             'error',
             'any',
@@ -22,8 +20,6 @@ const jsdocRecommendedModificationConfig: Linter.Config = {
                 startLines: 1,
             },
         ],
-        'jsdoc/require-returns-typ': 'off',
-        'jsdoc/require-param-typ': 'off',
     },
 };
 
