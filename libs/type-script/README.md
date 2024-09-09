@@ -15,21 +15,26 @@ To use the shareable config, import the package inside an `eslint.config.js` fil
 
 ```ts
 // eslint.config.js (ES Module)
-import team23TypeScript from "@team23/eslint-config-team23-ts";
+import { createTSEslintConfig } from "@team23/eslint-config-team23-ts";
 
 export default [
-    ...team23TypeScript,
+    ...createTSEslintConfig(),
 ];
 ```
 
 ```js
 // eslint.config.js (CommonJS)
-const team23TypeScript = require('@team23/eslint-config-team23-ts');
+const { createTSEslintConfig } = require('@team23/eslint-config-team23-ts');
 
 module.exports = [
-    ...team23TypeScript.default,
+    ...createTSEslintConfig(),
 ];
 ```
+
+## Additional settings
+
+You can pass additional options to the `createTSEslintConfig` factory function. Checkout its type definitions
+for further information.
 
 ## Overriding Settings
 
@@ -38,11 +43,10 @@ file after importing the shareable config. For example:
 
 ```js
 // eslint.config.js
-import team23TypeScript from "@team23/eslint-config-team23-ts";
+import { createTSEslintConfig } from "@team23/eslint-config-team23-ts";
 
 export default [
-    ...team23TypeScript,
-
+    ...createTSEslintConfig(),
     // Any settings added here will override team23TypeScript
     {
         rules: {
@@ -61,13 +65,13 @@ While the Nx config can be used this way in parallel with the team23 TypeScript 
 
 ```js
 // eslint.config.js
-import team23TypeScript from "@team23/eslint-config-team23-ts";
+import { createTSEslintConfig } from "@team23/eslint-config-team23-ts";
 
 // Prepare compat following the migration guide
 // [...]
 
 export default [
-    ...team23TypeScript,
+    ...createTSEslintConfig(),
 
     ...compat
         .extends('plugin:@nx/javascript')
