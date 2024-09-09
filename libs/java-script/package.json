@@ -1,16 +1,17 @@
 {
     "name": "@team23/eslint-config-team23-standard",
-    "version": "9.0.2",
+    "version": "9.0.3",
     "description": "A set of eslint rules used by TEAM23 for standard js projects",
     "keywords": [
         "eslint",
-        "eslint-config",
+        "eslintconfig",
         "TEAM23",
-        "js"
+        "js",
+        "javascript"
     ],
     "author": "TEAM23 GmbH",
     "license": "MIT",
-    "homepage": "https://github.com/team23/style-guide/libs/java-script",
+    "homepage": "https://github.com/team23/style-guide/tree/main/libs/java-script",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/team23/style-guide.git",
