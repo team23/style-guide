@@ -3,8 +3,10 @@
 ## Overview
 
 This repository contains the TEAM23 configuration for linting and styling rules.
-It includes configurations for ESLint (JavaScript, TypeScript and Vue.js).
+It includes configurations for ESLint (JavaScript, TypeScript, Vue.js and Angular).
 These configurations help maintain code quality and consistency across TEAM23's projects.
+
+Checkout the independent README.md files for more information on how to install and use.
 
 ## Debug eslint configurations
 
