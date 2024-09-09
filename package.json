@@ -1,15 +1,30 @@
 {
-  "name": "style-guide",
-  "version": "0.0.0",
-  "license": "MIT",
-  "scripts": {},
-  "private": true,
-  "dependencies": {},
-  "devDependencies": {
-    "@nx/js": "18.2.4",
-    "nx": "18.2.4"
-  },
-  "workspaces": [
-    "packages/*"
-  ]
+    "name": "style-guide",
+    "version": "1.0.0",
+    "license": "MIT",
+    "scripts": {},
+    "private": true,
+    "type": "module",
+    "dependencies": {
+        "tslib": "^2.3.0"
+    },
+    "devDependencies": {
+        "@nx/js": "19.6.5",
+        "@swc-node/register": "~1.10.9",
+        "@swc/core": "~1.7.24",
+        "@swc/helpers": "~0.5.2",
+        "@team23/eslint-config-team23-ts": "^9.0.1",
+        "@types/node": "18.19.50",
+        "eslint": "9.9.0",
+        "nx": "19.6.5",
+        "ts-node": "10.9.2",
+        "typescript": "~5.5.4",
+        "verdaccio": "^5.32.1"
+    },
+    "workspaces": [
+        "packages/*"
+    ],
+    "nx": {
+        "includedScripts": []
+    }
 }

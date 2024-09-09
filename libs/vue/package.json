@@ -1,0 +1,48 @@
+{
+    "name": "@team23/eslint-config-team23-vue",
+    "version": "5.0.1",
+    "description": "A set of eslint rules used by TEAM23 for Vue 3 TypeScript projects",
+    "keywords": [
+        "eslint",
+        "eslintconfig",
+        "TEAM23",
+        "vue"
+    ],
+    "author": "TEAM23 GmbH",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/team23/style-guide.git",
+        "directory": "libs/vue"
+    },
+    "scripts": {
+        "build": "rm -rf ./dist/* && npx tsc-multi --force"
+    },
+    "files": [
+        "./dist/**/*",
+        "./*.md",
+        "./package.json",
+        "./LICENSE",
+        "!./tsconfig*.json",
+        "!./dist/**/*.tsbuildinfo"
+    ],
+    "type": "module",
+    "exports": {
+        "types": "./dist/types/index.d.ts",
+        "import": "./dist/mjs/index.mjs",
+        "require": "./dist/cjs/index.cjs",
+        "default": "./dist/mjs/index.cjs"
+    },
+    "dependencies": {
+        "eslint-plugin-vue": "^9.28.0",
+        "typescript-eslint": "^8.4.0"
+    },
+    "devDependencies": {
+        "@types/eslint": "^9.6.1",
+        "tsc-multi": "^1.1.0",
+        "tslib": "^2.7.0"
+    },
+    "peerDependencies": {
+        "eslint": "^9.9.0"
+    }
+}
