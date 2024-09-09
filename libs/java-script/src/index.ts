@@ -3,26 +3,59 @@ import stylisticConfig from './config/stylistic-config.js';
 import jsdocConfig from './config/jsdoc-config.js';
 import jsConfig from './config/js-config.js';
 import tseslint from 'typescript-eslint';
+import { Linter } from 'eslint';
 
-const baseConfig = tseslint.config({
-    name: 'team23/java-script/base',
+interface ConfigOptions {
+    /**
+     * File glob patterns indicating the files that the configuration should be applied to.
+     * @default ['**\/*.js', '**\/*.mjs']
+     */
+    files?: Array<string>,
+}
+
+const setupConfig: Linter.Config = {
+    name: 'team23/java-script/setup',
     ignores: ['dist/', 'node_modules/', '*.min.js'],
     languageOptions: {
+        sourceType: "module",
+        ecmaVersion: 2022,
         globals: {
             ...globals.browser,
             ...globals.es2021,
+            ...globals.node,
+        },
+        parserOptions: {
+            sourceType: "module",
+            ecmaFeatures: {
+                jsx: true,
+            },
+            ecmaVersion: 2022,
         },
     },
-});
+    linterOptions: {
+        reportUnusedDisableDirectives: true,
+    }
+};
 
-const combinedConfig = tseslint.config({
-    files: ['**/*.js', '**/*.jsx'],
-    extends: [
-        ...baseConfig,
-        ...jsConfig,
-        ...stylisticConfig,
-        ...jsdocConfig,
-    ],
-});
+function createJSEslintConfig(options?: ConfigOptions): Array<Linter.Config> {
+    const {
+        files = ['**/*.js', '**/*.mjs'],
+    } = options || {};
 
-export default combinedConfig;
+    return tseslint.config(
+        setupConfig,
+        {
+            files,
+            extends: [
+                ...jsConfig,
+                ...stylisticConfig,
+                ...jsdocConfig,
+            ],
+        },
+    ) as Array<Linter.Config>;
+}
+
+export {
+    type ConfigOptions,
+    createJSEslintConfig,
+}
