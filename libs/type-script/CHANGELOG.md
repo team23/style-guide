@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## v9.0.1
+
+- Lint config
+- Add 'jsdoc/require-returns-typ': 'off' and 'jsdoc/require-param-typ': 'off'
+
 ## v9.0.0
 
 ### Breaking Changes
