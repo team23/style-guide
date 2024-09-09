@@ -1,24 +1,27 @@
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import tseslint from 'typescript-eslint';
 import tseslintConfig from './config/tseslint-config.js';
 import stylisticConfig from './config/stylistic-config.js';
 import tseslintStylisticConfig from './config/tseslint-stylistic-config.js';
-import { Linter } from 'eslint';
+import type { Linter } from 'eslint';
 import jsdocConfig from './config/jsdoc-config';
 
 interface ConfigOptions {
+
     /**
      * File glob patterns indicating the files that the configuration should be applied to.
+     *
      * @default ['**\/*.?([cm])t', '**\/*.?([cm])tsx']
      */
     files?: Array<string>;
+
     /**
      * Optional file extensions for non TypeScript languages, e.g. vue.
      * Will automatically be added to linted files if not overwritten.
+     *
      * @example ['vue']
      */
     fileExtensions?: Array<string>;
+
     /**
      * Optional path to a TypeScript configuration file to use for the slower default project.
      * See https://typescript-eslint.io/blog/announcing-typescript-eslint-v8/#project-service.
@@ -55,16 +58,23 @@ const fileBasedModificationConfigs: Array<Linter.Config> = [
     },
 ];
 
+/**
+ * Creates an ESLint configuration tailored for TypeScript projects with optional settings.
+ *
+ * @param [options] - Optional configuration settings.
+ *
+ * @returns Array of ESLint configuration objects.
+ */
 function createTSEslintConfig(options?: ConfigOptions): Array<Linter.Config> {
     const {
         fileExtensions = [],
         tsconfigPath = undefined,
-    } = options || {};
+    } = options ?? {};
 
     const files = options?.files ?? [
         GLOB_TS,
         GLOB_TSX,
-        ...fileExtensions.map(extension => `**/*.${extension}`),
+        ...fileExtensions.map(extension => `**/*.${ extension }`),
     ];
 
     const setupConfig: Linter.Config = {
@@ -75,12 +85,12 @@ function createTSEslintConfig(options?: ConfigOptions): Array<Linter.Config> {
             '@typescript-eslint': tseslint.plugin,
         },
         languageOptions: {
-            // @ts-expect-error
+            // @ts-expect-error typing mismatch: tseslint provides extended parser
             parser: tseslint.parser,
             parserOptions: {
                 sourceType: 'module',
                 parser: tseslint.parser,
-                extraFileExtensions: fileExtensions.map(extension => `.${extension}`),
+                extraFileExtensions: fileExtensions.map(extension => `.${ extension }`),
                 projectService: {
                     allowDefaultProject: ['./*js'],
                     defaultProject: tsconfigPath,
@@ -88,7 +98,7 @@ function createTSEslintConfig(options?: ConfigOptions): Array<Linter.Config> {
                 tsconfigRootDir: process.cwd(),
             },
         },
-    }
+    };
 
     return tseslint.config(
         // do not set with extends, parser will not be configured correctly
@@ -102,7 +112,7 @@ function createTSEslintConfig(options?: ConfigOptions): Array<Linter.Config> {
                 ...jsdocConfig,
             ],
         },
-        ...fileBasedModificationConfigs
+        ...fileBasedModificationConfigs,
     ) as Array<Linter.Config>;
 }
 

@@ -1,5 +1,5 @@
 import stylistic from '@stylistic/eslint-plugin';
-import { Linter } from 'eslint';
+import type { Linter } from 'eslint';
 
 const stylisticRecommendedConfig: Linter.Config = {
     name: 'team23/type-script/stylistic/recommended',
@@ -18,7 +18,7 @@ const stylisticModificationConfig: Linter.Config = {
         '@stylistic/multiline-ternary': ['error', 'always-multiline'],
         '@stylistic/template-curly-spacing': ['error', 'always'],
         '@stylistic/arrow-parens': ['error', 'as-needed'],
-        '@stylistic/brace-style': ['error', '1tbs', { 'allowSingleLine': true }],
+        '@stylistic/brace-style': ['error', '1tbs', { allowSingleLine: true }],
         '@stylistic/quotes': ['error', 'single'],
         '@stylistic/space-infix-ops': ['error', { int32Hint: true }],
         '@stylistic/space-before-function-paren': [
@@ -32,6 +32,7 @@ const stylisticModificationConfig: Linter.Config = {
     },
 };
 
+const maxLength = 140;
 const stylisticOptionalConfig: Linter.Config = {
     name: 'team23/type-script/stylistic/optional',
     rules: {
@@ -47,14 +48,14 @@ const stylisticOptionalConfig: Linter.Config = {
         '@stylistic/lines-around-comment': 'error',
         '@stylistic/max-len': [
             'error',
-            140,
+            maxLength,
         ],
         '@stylistic/multiline-comment-style': 'error',
         '@stylistic/newline-per-chained-call': 'error',
         '@stylistic/no-confusing-arrow': 'error',
         '@stylistic/no-extra-semi': 'error',
         '@stylistic/object-curly-newline': 'error',
-        '@stylistic/object-property-newline': ['error', { 'allowAllPropertiesOnSameLine': true }],
+        '@stylistic/object-property-newline': ['error', { allowAllPropertiesOnSameLine: true }],
         '@stylistic/padding-line-between-statements': 'error',
         '@stylistic/semi-style': 'error',
         '@stylistic/switch-colon-spacing': 'error',

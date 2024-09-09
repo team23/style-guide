@@ -1,5 +1,5 @@
 import jsdoc from 'eslint-plugin-jsdoc';
-import { Linter } from 'eslint';
+import type { Linter } from 'eslint';
 
 const jsdocRecommendedConfig: Linter.Config = {
     name: 'team23/type-script/jsdoc/recommended',

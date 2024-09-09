@@ -1,5 +1,5 @@
 import tseslint from 'typescript-eslint';
-import { Linter } from 'eslint';
+import type { Linter } from 'eslint';
 
 // remove preconfigured base setup since we use our own.
 const stylisticTypeCheckedConfigWithoutSetup = tseslint.configs.stylisticTypeChecked.filter(
