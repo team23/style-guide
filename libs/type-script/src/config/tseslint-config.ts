@@ -1,7 +1,11 @@
 import tseslint from 'typescript-eslint';
 import { Linter } from 'eslint';
 
-const strictTypeCheckedModificationConfig: FlatConfig = {
+// remove preconfigured base setup since we use our own.
+const strictTypeCheckedConfigWithoutSetup = tseslint.configs.strictTypeChecked.filter(
+    config => config.name !== "typescript-eslint/base",
+);
+
 const strictTypeCheckedModificationConfig: Linter.Config = {
     name: 'team23/type-script/core/strict',
     rules: {

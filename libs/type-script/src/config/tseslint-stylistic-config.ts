@@ -1,7 +1,11 @@
 import tseslint from 'typescript-eslint';
 import { Linter } from 'eslint';
 
-const stylisticTypeCheckedModificationConfig: FlatConfig = {
+// remove preconfigured base setup since we use our own.
+const stylisticTypeCheckedConfigWithoutSetup = tseslint.configs.stylisticTypeChecked.filter(
+    config => config.name !== "typescript-eslint/base",
+);
+
 const stylisticTypeCheckedModificationConfig: Linter.Config = {
     name: 'team23/type-script/stylistic/type-checked-modification',
     rules: {
