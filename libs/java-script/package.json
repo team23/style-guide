@@ -1,6 +1,6 @@
 {
     "name": "@team23/eslint-config-team23-standard",
-    "version": "9.0.1",
+    "version": "9.0.2",
     "description": "A set of eslint rules used by TEAM23 for standard js projects",
     "keywords": [
         "eslint",
