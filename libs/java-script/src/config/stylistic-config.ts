@@ -1,9 +1,7 @@
 import { Linter } from 'eslint';
-import type { RuleOptions } from '@stylistic/eslint-plugin-js';
 import stylisticJs from '@stylistic/eslint-plugin-js';
-import FlatConfig = Linter.FlatConfig;
 
-const stylisticConfig: FlatConfig | { rules: RuleOptions } = {
+const stylisticConfig: Linter.Config = {
     name: 'team23/java-script/stylisticJs/optional',
     plugins: {
         '@stylistic/js': stylisticJs,

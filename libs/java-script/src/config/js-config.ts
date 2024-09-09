@@ -1,13 +1,13 @@
 import { Linter } from 'eslint';
-import FlatConfig = Linter.FlatConfig;
 import js from '@eslint/js';
+import { ESLintRules } from 'eslint/rules';
 
-const jsRecommendedConfig: FlatConfig = {
+const jsRecommendedConfig: Linter.Config<ESLintRules> = {
     name: 'team23/java-script/core/recommended',
     ...js.configs.recommended,
 };
 
-const jsOptionalConfig: FlatConfig = {
+const jsOptionalConfig: Linter.Config<ESLintRules> = {
     name: 'team23/java-script/core/optional',
     rules: {
         'accessor-pairs': 'error',
@@ -23,6 +23,7 @@ const jsOptionalConfig: FlatConfig = {
         'guard-for-in': 'error',
         'id-denylist': 'error',
         'id-match': 'error',
+        // @ts-expect-error wrong typing
         'max-classes-per-file': ['error', { ignoreExpressions: true }],
         'max-lines': [
             'error',
@@ -83,6 +84,7 @@ const jsOptionalConfig: FlatConfig = {
                 detectObjects: false,
                 ignore: [-1, 1, 0],
                 ignoreArrayIndexes: false,
+                // @ts-expect-error wrong typing
                 ignoreDefaultValues: true,
             },
         ],
