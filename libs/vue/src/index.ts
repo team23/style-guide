@@ -1,61 +1,77 @@
-import { Linter } from 'eslint';
-import FlatConfig = Linter.FlatConfig;
-import globals from "globals";
-import vueConfig from './config/vue-config.js';
-import vueParser from 'vue-eslint-parser';
-import tseslint from 'typescript-eslint';
+import { Linter } from "eslint";
+import vueConfig from "./config/vue-config.js";
+import vueParser from "vue-eslint-parser";
+import tseslint from "typescript-eslint";
+// @ts-expect-error no typings
+import pluginVue from "eslint-plugin-vue";
 
-const basicConfig: FlatConfig = {
-    name: 'team23/vue/base',
-    ignores: [
-        'polyfills.ts',
-        'jest.config.ts',
-        'dist/**',
-        'node_modules/**',
-    ],
-    languageOptions: {
-        parser: vueParser,
-        parserOptions: {
-            extraFileExtensions: ['.vue'],
-            parser: {
-                js: 'espree',
-                jsx: 'espree',
-                ts: tseslint.parser,
-                tsx: tseslint.parser,
-            },
-            sourceType: 'module',
-            ecmaFeatures: {
-                jsx: true,
-            },
-            project: ['tsconfig.?*.json'],
+interface ConfigOptions {
+    /**
+     * File types indicating which files the configuration should be applied to.
+     * @default ["**\/*.vue"]
+     */
+    files?: Array<string>;
+}
+
+const GLOB_VUE = "**/*.vue";
+
+function createVueEslintConfig(options: ConfigOptions): Array<Linter.Config> {
+    const { files = [GLOB_VUE] } = options || {};
+
+    const setupConfig: Linter.Config = {
+        name: "team23/vue/setup",
+        plugins: {
+            vue: pluginVue,
         },
-        globals: {
-            ...globals.browser,
-            ...globals.es2021,
+        // This allows Vue plugin to work with auto imports
+        // https://github.com/vuejs/eslint-plugin-vue/pull/2422
+        languageOptions: {
+            sourceType: "module",
+            globals: {
+                computed: "readonly",
+                defineEmits: "readonly",
+                defineExpose: "readonly",
+                defineProps: "readonly",
+                onMounted: "readonly",
+                onUnmounted: "readonly",
+                reactive: "readonly",
+                ref: "readonly",
+                shallowReactive: "readonly",
+                shallowRef: "readonly",
+                toRef: "readonly",
+                toRefs: "readonly",
+                watch: "readonly",
+                watchEffect: "readonly",
+            },
+            parser: vueParser,
+            parserOptions: {
+                ecmaFeatures: {
+                    jsx: true,
+                },
+                extraFileExtensions: [".vue"],
+                parser: tseslint.parser,
+            },
         },
-    },
+        processor: pluginVue.processors['.vue'],
+    };
+
+    return tseslint.config(
+        // do not set with extends, parser will not be configured correctly
+        setupConfig,
+        {
+            files,
+            extends: [...vueConfig],
+        },
+        ...fileBasedModificationConfig
+    ) as Array<Linter.Config>;
 }
 
 const fileBasedModificationConfig = tseslint.config({
-    name: 'team23/type-script/core/file-based/vite',
-    files: [
-        'vite.config.ts',
-        'vitest.config.ts',
-    ],
+    name: "team23/type-script/core/file-based/vite",
+    files: ["vite.config.ts", "vitest.config.ts"],
     rules: {
-        'import/no-default-export': 'off',
+        "import/no-default-export": "off",
     },
 });
 
-const combinedConfig = tseslint.config(
-    {
-        files: ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.cts', '**/*.vue'],
-        extends: [
-            basicConfig,
-            ...vueConfig,
-        ]
-    },
-    ...fileBasedModificationConfig
-);
-
-export default combinedConfig as Array<FlatConfig>;
+export { createVueEslintConfig };
