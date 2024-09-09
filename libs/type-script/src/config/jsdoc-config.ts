@@ -22,6 +22,8 @@ const jsdocRecommendedModificationConfig: Linter.Config = {
                 startLines: 1,
             },
         ],
+        'jsdoc/require-returns-typ': 'off',
+        'jsdoc/require-param-typ': 'off',
     },
 };
 
