@@ -1,8 +1,8 @@
 import tseslint from 'typescript-eslint';
 import { Linter } from 'eslint';
-import FlatConfig = Linter.FlatConfig;
 
 const stylisticTypeCheckedModificationConfig: FlatConfig = {
+const stylisticTypeCheckedModificationConfig: Linter.Config = {
     name: 'team23/type-script/stylistic/type-checked-modification',
     rules: {
         '@typescript-eslint/array-type': [

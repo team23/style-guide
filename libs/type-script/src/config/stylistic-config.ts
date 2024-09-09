@@ -1,16 +1,15 @@
 import stylistic from '@stylistic/eslint-plugin';
 import { Linter } from 'eslint';
-import FlatConfig = Linter.FlatConfig;
 
-const stylisticRecommendedConfig: FlatConfig = {
+const stylisticRecommendedConfig: Linter.Config = {
     name: 'team23/type-script/stylistic/recommended',
     ...stylistic.configs.customize({
         indent: 4,
         semi: true,
-    }) as FlatConfig,
+    }) as Linter.Config,
 };
 
-const stylisticModificationConfig: FlatConfig = {
+const stylisticModificationConfig: Linter.Config = {
     name: 'team23/type-script/stylistic/modification',
     rules: {
         // may cause performance issues with large codebase
@@ -33,7 +32,7 @@ const stylisticModificationConfig: FlatConfig = {
     },
 };
 
-const stylisticOptionalConfig: FlatConfig = {
+const stylisticOptionalConfig: Linter.Config = {
     name: 'team23/type-script/stylistic/optional',
     rules: {
         '@stylistic/line-comment-position': ['error'],

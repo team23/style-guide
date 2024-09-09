@@ -1,8 +1,8 @@
 import tseslint from 'typescript-eslint';
 import { Linter } from 'eslint';
-import FlatConfig = Linter.FlatConfig;
 
 const strictTypeCheckedModificationConfig: FlatConfig = {
+const strictTypeCheckedModificationConfig: Linter.Config = {
     name: 'team23/type-script/core/strict',
     rules: {
         '@typescript-eslint/no-floating-promises': 'off',
@@ -31,7 +31,7 @@ const strictTypeCheckedModificationConfig: FlatConfig = {
     },
 };
 
-const optionalConfig: FlatConfig = {
+const optionalConfig: Linter.Config = {
     name: 'team23/type-script/core/optional',
     rules: {
         '@typescript-eslint/explicit-function-return-type': [
