@@ -1,6 +1,6 @@
 {
     "name": "@team23/eslint-config-team23-vue",
-    "version": "5.0.0",
+    "version": "5.0.1",
     "description": "A set of eslint rules used by TEAM23 for Vue 3 TypeScript projects",
     "keywords": [
         "eslint",
