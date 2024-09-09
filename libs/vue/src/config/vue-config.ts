@@ -1,19 +1,22 @@
-import { Linter } from 'eslint';
+import type { Linter } from 'eslint';
 // @ts-expect-error no typings
 import pluginVue from 'eslint-plugin-vue';
 
 // remove preconfigured base setup since we use our own.
-const vueRecommendedConfigWithoutSetup = pluginVue.configs['flat/recommended'].filter(
-    (config: Linter.Config) => config.name !== 'vue:base:setup' && config.name !== 'vue:base:setup-for-vue'
+// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+const vueRecommendedConfigWithoutSetup = (pluginVue.configs['flat/recommended'] as Array<Linter.Config>).filter(
+    (config: Linter.Config) => config.name !== 'vue:base:setup' && config.name !== 'vue:base:setup-for-vue',
 );
 
+const indent = 4;
 const vueModificationConfig: Linter.Config = {
     name: 'team23/vue/core/modification',
     rules: {
-        'vue/html-indent': ['error', 4],
+        'vue/html-indent': ['error', indent],
     },
 };
 
+const htmlCommentIdent = 4;
 const vueOptionalConfig: Linter.Config = {
     name: 'team23/vue/core/optional',
     rules: {
@@ -51,7 +54,7 @@ const vueOptionalConfig: Linter.Config = {
         'vue/enforce-style-attribute': 'error',
         'vue/html-comment-content-newline': 'error',
         'vue/html-comment-content-spacing': 'error',
-        'vue/html-comment-indent': ['error', 4],
+        'vue/html-comment-indent': ['error', htmlCommentIdent],
         'vue/no-empty-component-block': 'error',
         'vue/no-multiple-objects-in-class': 'error',
         'vue/no-ref-object-reactivity-loss': 'warn',
@@ -74,5 +77,5 @@ const vueOptionalConfig: Linter.Config = {
 export default [
     ...vueRecommendedConfigWithoutSetup,
     vueModificationConfig,
-    vueOptionalConfig
+    vueOptionalConfig,
 ];
