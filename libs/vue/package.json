@@ -1,6 +1,6 @@
 {
     "name": "@team23/eslint-config-team23-vue",
-    "version": "5.0.0-rc9",
+    "version": "5.0.0",
     "description": "A set of eslint rules used by TEAM23 for Vue 3 TypeScript projects",
     "keywords": [
         "eslint",
@@ -34,14 +34,15 @@
         "default": "./dist/mjs/index.cjs"
     },
     "dependencies": {
-        "eslint-plugin-vue": "^9.27.0",
-        "typescript-eslint": "^8.1.0"
+        "eslint-plugin-vue": "^9.28.0",
+        "typescript-eslint": "^8.4.0"
     },
     "devDependencies": {
+        "@types/eslint": "^9.6.1",
         "tsc-multi": "^1.1.0",
-        "tslib": "^2.6.3"
+        "tslib": "^2.7.0"
     },
     "peerDependencies": {
-        "eslint": "9.9.0"
+        "eslint": "^9.9.0"
     }
 }
