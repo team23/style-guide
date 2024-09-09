@@ -1,7 +1,7 @@
-import team23TypeScript from "@team23/eslint-config-team23-ts";
+import { createTSEslintConfig } from "@team23/eslint-config-team23-ts";
 
 export default [
-    ...team23TypeScript,
+    ...createTSEslintConfig(),
     {
         files: ['**/eslint.config.js', '**/src/**/*.ts'],
         rules: {
