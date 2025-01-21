@@ -46,6 +46,6 @@
         "tsc-multi": "^1.1.0"
     },
     "peerDependencies": {
-        "eslint": "^9.16.0"
+        "eslint": "^8.57.0 || ^9.9.0"
     }
 }
