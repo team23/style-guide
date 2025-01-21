@@ -28,7 +28,6 @@ const typescriptConfig = tseslint.config({
         '@angular-eslint/directive-selector': 'error',
         '@angular-eslint/no-attribute-decorator': 'error',
         '@angular-eslint/no-conflicting-lifecycle': 'error',
-        '@angular-eslint/no-host-metadata-property': 'error',
         '@angular-eslint/no-input-prefix': 'error',
         '@angular-eslint/no-input-rename': 'error',
         '@angular-eslint/no-inputs-metadata-property': 'error',
@@ -45,6 +44,7 @@ const typescriptConfig = tseslint.config({
         '@angular-eslint/use-component-view-encapsulation': 'error',
         '@angular-eslint/use-lifecycle-interface': 'error',
         '@angular-eslint/use-pipe-transform-interface': 'error',
+        '@angular-eslint/prefer-signals': ['error'],
     },
 });
 

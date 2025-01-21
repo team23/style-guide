@@ -26,6 +26,7 @@ Please use **one** of these scopes when fitting:
 - **java-script**: changes affect [java-script](libs/java-script)
 - **type-script**: changes affect [type-script](libs/type-script)
 - **vue**: changes affect [vue](libs/vue)
+- **angular**: changes affect [vue](libs/angular)
 
 ## Pull request
 

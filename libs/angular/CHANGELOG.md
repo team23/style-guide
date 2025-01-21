@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## v19.0.0
+
+### Angular
+- update angular packages to v19.0.0 (#10)
+- update typescript-eslint packages to v8.18.0
+- update dependency eslint to v9.16.0
+- eslint-plugin: remove deprecated no-host-metadata-property rule ([#2113](https://github.com/angular-eslint/angular-eslint/pull/2113))
+- eslint-plugin: add prefer-signals rule to exported config ([#2150](https://github.com/angular-eslint/angular-eslint/pull/2150))
+
 ## v18.0.2
 
 - Fix homepage url in package.json
