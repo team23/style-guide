@@ -4,7 +4,6 @@ All notable changes to this project will be documented in this file.
 
 ## v19.0.0
 
-### Angular
 - update angular packages to v19.0.0 (#10)
 - update typescript-eslint packages to v8.18.0
 - update dependency eslint to v9.16.0
