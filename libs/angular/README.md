@@ -77,12 +77,3 @@ export default [
         })),
 ];
 ```
-
-## Development
-
-### Creating a new version after rule changes
-
-1. Update CHANGELOG.md.
-2. Run npm version [<newversion> | major | minor | patch] -m "feat(core): <versionmessage>".
-3. Push commits and tags.
-4. Run npm publish --access public to publish the new version to npm.
