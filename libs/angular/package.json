@@ -32,7 +32,7 @@
         "types": "./dist/types/index.d.ts",
         "import": "./dist/mjs/index.mjs",
         "require": "./dist/cjs/index.cjs",
-        "default": "./dist/mjs/index.cjs"
+        "default": "./dist/mjs/index.mjs"
     },
     "dependencies": {
         "angular-eslint": "^19.0.2",
