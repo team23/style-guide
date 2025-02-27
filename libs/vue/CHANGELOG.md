@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## v6.0.0
+
+### Breaking Changes
+
+- The minimum required version of ESLint has been updated to 9.21.0
+
+### Changes
+
+- Update eslint-plugin-vue to 9.32.0
+- Update typescript-eslint to 8.25.0
+
 ## v5.0.2
 
 - Fix homepage url in package.json
