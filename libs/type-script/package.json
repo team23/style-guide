@@ -36,16 +36,15 @@
         "default": "./dist/mjs/index.cjs"
     },
     "dependencies": {
-        "@stylistic/eslint-plugin": "^2.7.2",
-        "eslint-plugin-jsdoc": "^50.2.2",
+        "@stylistic/eslint-plugin": "2.13.0",
+        "eslint-plugin-jsdoc": "^50.6.3",
         "tsc-multi": "^1.1.0",
-        "typescript-eslint": "^8.4.0"
+        "typescript-eslint": "^8.25.0"
     },
     "devDependencies": {
-        "@types/eslint": "^9.6.1",
-        "@types/eslint__js": "^8.42.3"
+        "@types/eslint": "^9.6.1"
     },
     "peerDependencies": {
-        "eslint": "9.9.0"
+        "eslint": "9.21.0"
     }
 }
