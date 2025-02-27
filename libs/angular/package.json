@@ -35,17 +35,16 @@
         "default": "./dist/mjs/index.cjs"
     },
     "dependencies": {
-        "angular-eslint": "^19.0.2",
-        "typescript-eslint": "^8.18.0"
+        "angular-eslint": "^19.1.0",
+        "typescript-eslint": "^8.25.0"
     },
     "devDependencies": {
-        "@angular/core": "^19.0.0",
-        "@types/eslint": "^8.56.11",
+        "@angular/core": "^19.2.0",
+        "@types/eslint": "^9.6.1",
         "@types/eslint__eslintrc": "^2.1.2",
-        "@types/eslint__js": "^8.42.3",
         "tsc-multi": "^1.1.0"
     },
     "peerDependencies": {
-        "eslint": "^9.16.0"
+        "eslint": "^9.21.0"
     }
 }
