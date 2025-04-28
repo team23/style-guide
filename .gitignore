@@ -5,6 +5,10 @@ dist
 tmp
 /out-tsc
 
+# debugging with bun
+bun.lock
+config.js
+
 # dependencies
 node_modules
 
@@ -39,6 +43,7 @@ testem.log
 Thumbs.db
 
 .nx
+migrations.json
 
 # Compiler artifacts
 /libs/*/*.tsbuildinfo

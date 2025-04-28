@@ -12,20 +12,41 @@ Checkout the independent README.md files for more information on how to install 
 
 ### config-inspector
 
-Use the official config-inspector to inspect and understand the flat config.
-
-```shell
-bun build ./src/index.ts --target=node --outfile eslint.config.js
-```
-
-```shell
-npx @eslint/config-inspector
-```
-
-You may need to install bun:
+You may need to install bun and jiti:
 
 ```shell
 npm install --global bun
+
+bun install
+```
+
+Now you can build the config:
+
+```shell
+bun build ./src/index.ts --target=node --outfile config.js
+```
+
+In some cases you may need to include external dependencies
+
+```shell
+bun build ./src/index.ts --target=node --outfile test.js --external eslint-plugin-vue
+```
+
+Now create an eslint.config.file and import from the outfile as described in the libraries README.md.
+For example:
+
+```ts
+import { createVueEslintConfig } from "./test.js";
+
+export default [
+    ...createVueEslintConfig(),
+];
+```
+
+Use the official config-inspector to inspect and understand the flat config.
+
+```shell
+npx @eslint/config-inspector
 ```
 
 ### Use --print-config

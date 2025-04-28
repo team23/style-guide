@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## v10.0.0
+
+### Breaking Changes
+
+- The minimum required version of ESLint has been updated to 9.21.0
+
+### Changes
+
+- Update @stylistic/eslint-plugin to 4.1.0
+- migrate to ESM-only, requires ESLint v9+
+
 ## v9.0.3
 
 - Fix homepage url in package.json

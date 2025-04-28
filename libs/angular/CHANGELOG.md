@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## v20.0.0
+
+### Breaking Changes
+
+- The minimum required version of ESLint has been updated to 9.21.0
+
+### Changes
+
+- Update angular-eslint to 19.1.0
+- Update typescript-eslint to 8.25.0
+- Update @angular/core to 19.2.0
+- Update @types/eslint to 9.6.1
+
 ## v19.0.0
 
 ### ⚠️ Breaking Changes

@@ -15,19 +15,19 @@ To use the shareable config, import the package inside an `eslint.config.js` fil
 
 ```ts
 // eslint.config.js (ES Module)
-import team23Vue from "@team23/eslint-config-team23-vue";
+import { createVueEslintConfig } from "@team23/eslint-config-team23-vue";
 
 export default [
-    ...team23Vue,
+    ...createVueEslintConfig(),
 ];
 ```
 
 ```js
 // eslint.config.js (CommonJS)
-const team23Vue = require('@team23/eslint-config-team23-vue');
+const { createVueEslintConfig } = require('@team23/eslint-config-team23-vue');
 
 module.exports = [
-    ...team23Vue.default,
+    ...createVueEslintConfig(),
 ];
 ```
 

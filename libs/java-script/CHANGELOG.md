@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## v10.0.0
+
+### Breaking Changes
+
+- The minimum required version of ESLint has been updated to 9.21.0
+
+### Changes
+
+- Update @eslint/js to 9.21.0
+- Update @stylistic/eslint-plugin-js to ^4.1.0
+- Update eslint-plugin-jsdoc to 50.6.3
+- Update globals to 16.0.0
+- Update typescript-eslint to 8.25.0
+
 ## v9.0.3
 
 - Fix homepage url in package.json

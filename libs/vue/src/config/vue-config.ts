@@ -1,9 +1,7 @@
 import type { Linter } from 'eslint';
-// @ts-expect-error no typings
 import pluginVue from 'eslint-plugin-vue';
 
 // remove preconfigured base setup since we use our own.
-// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
 const vueRecommendedConfigWithoutSetup = (pluginVue.configs['flat/recommended'] as Array<Linter.Config>).filter(
     (config: Linter.Config) => config.name !== 'vue:base:setup' && config.name !== 'vue:base:setup-for-vue',
 );
