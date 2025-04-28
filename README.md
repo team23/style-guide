@@ -17,7 +17,7 @@ You may need to install bun and jiti:
 ```shell
 npm install --global bun
 
-bun add -g jiti
+bun add jiti
 ```
 
 Now you can build the config:
