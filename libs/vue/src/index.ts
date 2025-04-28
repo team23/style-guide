@@ -2,7 +2,6 @@ import type { Linter } from 'eslint';
 import vueConfig from './config/vue-config.js';
 import vueParser from 'vue-eslint-parser';
 import tseslint from 'typescript-eslint';
-// @ts-expect-error no typings
 import pluginVue from 'eslint-plugin-vue';
 
 interface ConfigOptions {
@@ -38,7 +37,6 @@ function createVueEslintConfig(options?: ConfigOptions): Array<Linter.Config> {
     const setupConfig: Linter.Config = {
         name: 'team23/vue/setup',
         plugins: {
-            // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
             vue: pluginVue,
         },
 
@@ -73,7 +71,7 @@ function createVueEslintConfig(options?: ConfigOptions): Array<Linter.Config> {
                 parser: tseslint.parser,
             },
         },
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access,@typescript-eslint/no-unsafe-assignment
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         processor: pluginVue.processors['.vue'],
     };
 
