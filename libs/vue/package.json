@@ -40,6 +40,7 @@
     },
     "devDependencies": {
         "@types/eslint": "^9.6.1",
+        "jiti": "^2.4.2",
         "tsc-multi": "^1.1.0",
         "tslib": "^2.8.1"
     },

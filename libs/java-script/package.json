@@ -45,6 +45,7 @@
     "devDependencies": {
         "@types/eslint": "^9.6.1",
         "eslint": "^9.21.0",
+        "jiti": "^2.4.2",
         "tsc-multi": "^1.1.0"
     },
     "peerDependencies": {
