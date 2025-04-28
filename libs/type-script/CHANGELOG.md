@@ -11,7 +11,7 @@ All notable changes to this project will be documented in this file.
 ### Changes
 
 - Update @stylistic/eslint-plugin to 4.1.0
-  - migrate to ESM-only, requires ESLint v9+
+- migrate to ESM-only, requires ESLint v9+
 
 ## v9.0.3
 
