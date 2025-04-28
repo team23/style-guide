@@ -39,6 +39,7 @@ testem.log
 Thumbs.db
 
 .nx
+migrations.json
 
 # Compiler artifacts
 /libs/*/*.tsbuildinfo
