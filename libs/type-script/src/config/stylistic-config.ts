@@ -6,7 +6,7 @@ const stylisticRecommendedConfig: Linter.Config = {
     ...stylistic.configs.customize({
         indent: 4,
         semi: true,
-    }) as Linter.Config,
+    }),
 };
 
 const stylisticModificationConfig: Linter.Config = {
