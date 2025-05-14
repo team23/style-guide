@@ -3,7 +3,7 @@ import tseslintConfig from './config/tseslint-config.js';
 import stylisticConfig from './config/stylistic-config.js';
 import tseslintStylisticConfig from './config/tseslint-stylistic-config.js';
 import type { Linter } from 'eslint';
-import jsdocConfig from './config/jsdoc-config';
+import jsdocConfig from './config/jsdoc-config.js';
 
 interface ConfigOptions {
 
