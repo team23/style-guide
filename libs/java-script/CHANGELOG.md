@@ -2,10 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## v10.0.1
+
+- Remove left-over CommonJS build files
+- Add missing breaking change information for release v10.0.0
+
 ## v10.0.0
 
 ### Breaking Changes
 
+- Only ESM is supported from now on
 - The minimum required version of ESLint has been updated to 9.21.0
 
 ### Changes
