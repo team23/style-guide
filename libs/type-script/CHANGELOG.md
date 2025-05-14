@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## v10.0.2
+
+- Update documentation
+- Add missing import file suffix
+
 ## v10.0.1
 
 - Remove left-over CommonJS build files
