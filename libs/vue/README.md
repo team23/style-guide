@@ -22,15 +22,6 @@ export default [
 ];
 ```
 
-```js
-// eslint.config.js (CommonJS)
-const { createVueEslintConfig } = require('@team23/eslint-config-team23-vue');
-
-module.exports = [
-    ...createVueEslintConfig(),
-];
-```
-
 ## Overriding Settings
 
 You can override settings from the shareable config by adding them directly into your eslint.config.js
