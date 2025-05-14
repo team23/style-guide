@@ -23,16 +23,15 @@
         "./dist/**/*",
         "./*.md",
         "./package.json",
-        "./LICENSE",
-        "!./tsconfig*.json",
-        "!./dist/**/*.tsbuildinfo"
+        "./LICENSE"
     ],
     "type": "module",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
     "exports": {
-        "types": "./dist/types/index.d.ts",
-        "import": "./dist/mjs/index.mjs",
-        "require": "./dist/cjs/index.cjs",
-        "default": "./dist/mjs/index.mjs"
+        "types": "./dist/index.d.ts",
+        "import": "./dist/index.js",
+        "default": "./dist/index.js"
     },
     "dependencies": {
         "angular-eslint": "^19.1.0",
