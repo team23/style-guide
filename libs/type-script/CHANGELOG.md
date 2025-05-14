@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v10.0.3
+
+- Add missing build files
+
 ## v10.0.2
 
 - Update documentation
