@@ -17,28 +17,23 @@
         "url": "https://github.com/team23/style-guide.git",
         "directory": "libs/type-script"
     },
-    "scripts": {
-        "build": "rm -rf ./dist/* && npx tsc-multi --force"
-    },
     "files": [
         "./dist/**/*",
         "./*.md",
         "./package.json",
-        "./LICENSE",
-        "!./tsconfig*.json",
-        "!./dist/**/*.tsbuildinfo"
+        "./LICENSE"
     ],
     "type": "module",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
     "exports": {
-        "types": "./dist/types/index.d.ts",
-        "import": "./dist/mjs/index.mjs",
-        "require": "./dist/cjs/index.cjs",
-        "default": "./dist/mjs/index.cjs"
+        "types": "./dist/index.d.ts",
+        "import": "./dist/index.js",
+        "default": "./dist/index.js"
     },
     "dependencies": {
         "@stylistic/eslint-plugin": "4.1.0",
         "eslint-plugin-jsdoc": "^50.6.3",
-        "tsc-multi": "^1.1.0",
         "typescript-eslint": "^8.25.0"
     },
     "devDependencies": {
