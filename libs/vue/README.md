@@ -47,12 +47,3 @@ export default [
 
 - If your project relies on internationalization, you may want to add [vue/no-bare-strings-in-template](https://eslint.vuejs.org/rules/no-bare-strings-in-template) to your config.
 - It may be helpful to enable [vue/require-prop-comment](https://eslint.vuejs.org/rules/require-prop-comment) to document component interfaces.
-
-## Development
-
-### Creating a new version after rule changes
-
-1. Update CHANGELOG.md.
-2. Run npm version [<newversion> | major | minor | patch] -m "feat(core): <versionmessage>".
-3. Push commits and tags.
-4. Run npm publish --access public to publish the new version to npm.
