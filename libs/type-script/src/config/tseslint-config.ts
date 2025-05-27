@@ -58,7 +58,6 @@ const optionalConfig: Linter.Config = {
                 },
             },
         ],
-        '@typescript-eslint/member-ordering': 'error',
         '@typescript-eslint/naming-convention': [
             'error',
             {
