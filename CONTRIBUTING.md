@@ -23,11 +23,11 @@ Please follow the [TEAM23 SE commit standard](https://confluence.team23.de/displ
 Please use **one** of these scopes when fitting:
 
 - No scope is used: changes affect the entire repository
+- **angular**: changes affect [angular](libs/angular)
+- **css**: changes affect [css](libs/css)
 - **java-script**: changes affect [java-script](libs/java-script)
 - **type-script**: changes affect [type-script](libs/type-script)
 - **vue**: changes affect [vue](libs/vue)
-- **angular**: changes affect [angular](libs/angular)
-- **css**: changes affect [css](libs/css)
 
 ## Pull request
 
