@@ -1,0 +1,34 @@
+{
+    "name": "scss",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "libs/scss/src",
+    "projectType": "library",
+    "release": {
+        "version": {
+            "generatorOptions": {
+                "packageRoot": "dist/{projectRoot}",
+                "currentVersionResolver": "git-tag"
+            }
+        }
+    },
+    "tags": [],
+    "targets": {
+        "build": {
+            "executor": "@nx/js:tsc",
+            "outputs": [
+                "{options.outputPath}"
+            ],
+            "options": {
+                "rootDir": "{projectRoot}/src",
+                "outputPath": "{projectRoot}/dist",
+                "main": "{projectRoot}/src/index.ts",
+                "tsConfig": "{projectRoot}/tsconfig.lib.json"
+            }
+        },
+        "nx-release-publish": {
+            "options": {
+                "packageRoot": "{projectRoot}/dist"
+            }
+        }
+    }
+}
