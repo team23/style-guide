@@ -1,0 +1,89 @@
+/* Disallowed at-rule: @debug */
+@debug "This is a debug message"; /* Should trigger at-rule-disallowed-list */
+
+/* Root variables */
+:root {
+    --primary-color: #007bff !important; /* Should trigger declaration-no-important */
+    --secondary-color: #6c757d;
+    --font-family: 'Arial, sans-serif';
+}
+
+/* Block: Header with invalid class name (uppercase letter) */
+.Header { /* Should trigger selector-class-pattern */
+    background-color: var(--primary-color);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-family), serif !important; /* Should trigger declaration-no-important */
+}
+
+/* Element with invalid class name (camelCase) */
+.header__Logo { /* Should trigger selector-class-pattern */
+    width: 150px;
+}
+
+/* Selector with more than 3 compound selectors */
+.header__nav-link .icon .svg .path { /* Should trigger selector-max-compound-selectors */
+    fill: #fff;
+}
+
+/* Using ID selector, which is disallowed */
+#main-header { /* Should trigger selector-max-id */
+    background-color: var(--secondary-color);
+}
+
+/* Invalid use of !important */
+.form__input {
+    padding: 8px !important; /* Should trigger declaration-no-important */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: var(--font-family), serif;
+}
+
+/* Exceeding max-nesting-depth (depth of 5) */
+.container {
+    .header {
+        .nav {
+            .item {
+                .link {
+                    color: blue; /* Should trigger max-nesting-depth */
+                }
+            }
+        }
+    }
+}
+
+/* Disallowed unknown function */
+.button {
+    background-color: darken(var(--primary-color), 10%); /* Should trigger function-no-unknown if 'darken' is not recognized */
+    color: #fff;
+}
+
+/* Using !important in a nested rule */
+.header__nav-link:hover {
+    text-decoration: underline !important; /* Should trigger declaration-no-important */
+}
+
+/* Selector with too many compound selectors */
+.footer .container .row .col .content { /* Should trigger selector-max-compound-selectors */
+    padding: 20px;
+}
+
+/* Using unknown at-rule */
+@custom-media --small-viewport (max-width: 768px); /* Should trigger at-rule-no-unknown */
+
+/* Selector with invalid characters */
+.header__nav@link { /* Should trigger selector-class-pattern */
+    color: #fff;
+}
+
+/* Multiple ID selectors */
+#header #nav { /* Should trigger selector-max-id */
+    display: flex;
+}
+
+/* Invalid class pattern with uppercase and special characters */
+.navBar__Item { /* Should trigger selector-class-pattern */
+    list-style: none;
+}
