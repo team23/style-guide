@@ -26,6 +26,7 @@ Please use **one** of these scopes when fitting:
 - **angular**: changes affect [angular](libs/angular)
 - **css**: changes affect [css](libs/css)
 - **java-script**: changes affect [java-script](libs/java-script)
+- **scss**: changes affect [scss](libs/scss)
 - **type-script**: changes affect [type-script](libs/type-script)
 - **vue**: changes affect [vue](libs/vue)
 
