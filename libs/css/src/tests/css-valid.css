@@ -1,0 +1,57 @@
+/* Importing external styles */
+@import url('styles/reset.css');
+@import url('styles/typography.css');
+
+/* Root variables */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --font-family: 'Arial, sans-serif';
+}
+
+/* Block: header */
+.header {
+    background-color: var(--primary-color);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-family), serif;
+}
+
+.header__logo {
+    width: 150px;
+}
+
+.header__nav-link {
+    color: #fff;
+    text-decoration: none;
+    transition: text-decoration 0.3s ease;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.form__input,
+.form__textarea,
+.form__select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: var(--font-family), serif;
+}
+
+/* Responsive Design */
+@media (width <= 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .header__navigation {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

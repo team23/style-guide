@@ -16,6 +16,9 @@
         "url": "git+https://github.com/team23/style-guide.git",
         "directory": "libs/css"
     },
+    "scripts": {
+        "test": "vitest run"
+    },
     "files": [
         "./dist/**/*",
         "./*.md",
@@ -34,7 +37,8 @@
         "stylelint-config-standard": "^38.0.0"
     },
     "devDependencies": {
-        "stylelint": "^16.19.1"
+        "stylelint": "^16.19.1",
+        "vitest": "^3.1.4"
     },
     "peerDependencies": {
         "stylelint": "^16.19.1"
