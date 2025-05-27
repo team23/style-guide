@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## v10.1.0
+
+- Update dependencies
+- Remove rule `'@typescript-eslint/member-ordering`, since it caused problems with different tec-stacks. If you want to enable
+  `'@typescript-eslint/member-ordering`, just set it to error in your eslint-config.
+
 ## v10.0.3
 
 - Add missing build files
