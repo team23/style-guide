@@ -18,10 +18,6 @@ These configurations help maintain code quality and consistency across TEAM23's 
 
 Checkout the independent README.md files for more information on how to install and use.
 
-## How to install and use
-
-Check any documentation for packages contained in this monorepo.
-
 ## Debug eslint configurations
 
 ### config-inspector
