@@ -3,8 +3,8 @@ import config from '../index';
 import fs from 'fs';
 import stylelint, { type LinterResult } from 'stylelint';
 
-const validCss = fs.readFileSync('./src/tests/css-valid.css', 'utf-8');
-const invalidCss = fs.readFileSync('./src/tests/css-invalid.css', 'utf-8');
+const validCss = fs.readFileSync('./src/tests/valid.css', 'utf-8');
+const invalidCss = fs.readFileSync('./src/tests/invalid.css', 'utf-8');
 
 const expectedWarnings = [
     'Unexpected unknown at-rule "@debug" (at-rule-no-unknown)',
