@@ -1,3 +1,7 @@
+# 6.1.0
+
+- Update dependency `@team23/stylelint-config-team23-standard` from `v5.0.0` to `v6.0.0`
+
 # 6.0.0
 
 Library has been moved to `style-guide` mono-repository. Files and project structure have been updated accordingly.

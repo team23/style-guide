@@ -1,6 +1,6 @@
 {
     "name": "@team23/stylelint-config-team23-scss",
-    "version": "6.0.0",
+    "version": "6.1.0",
     "description": "A set of stylelint rules used by TEAM23 for standard scss projects",
     "keywords": [
         "stylelint",
@@ -35,7 +35,7 @@
         "default": "./dist/index.js"
     },
     "dependencies": {
-        "@team23/stylelint-config-team23-standard": "^5.0.0",
+        "@team23/stylelint-config-team23-standard": "^6.0.0",
         "stylelint-config-standard-scss": "^15.0.1"
     },
     "devDependencies": {
