@@ -1,7 +1,7 @@
 {
     "name": "@team23/stylelint-config-team23-scss",
     "version": "6.0.0",
-    "description": "A set of stylelint rules used by TEAM23 for standard css projects",
+    "description": "A set of stylelint rules used by TEAM23 for standard scss projects",
     "keywords": [
         "stylelint",
         "stylelint-config",
