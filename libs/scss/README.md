@@ -29,7 +29,7 @@ For example, to change the `selector-max-id` rule to allow one id selector in ru
 
 ```json
 {
-    "extends": "@team23/stylelint-config-team23-standard",
+    "extends": "@team23/stylelint-config-team23-scss",
     "rules": {
         "selector-max-id": 1
     }
