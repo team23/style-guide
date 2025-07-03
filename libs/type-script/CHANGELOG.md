@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v10.1.1
+
+- Add missing files
+
 ## v10.1.0
 
 - Update dependencies
