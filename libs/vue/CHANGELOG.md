@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## v7.0.0
+
+- Update `eslint-plugin-vue` to `10.4.0`. For all breaking changes [see this changelog](https://github.com/vuejs/eslint-plugin-vue/releases/tag/v10.0.0).
+- Update `typescript-eslint` to `8.39.0`
+
 ## v6.0.1
 
 - Remove left-over CommonJS build files
