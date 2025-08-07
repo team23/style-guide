@@ -1,3 +1,8 @@
+# 6.2.0
+
+- Update minimal required `stylelint` version to `16.23.0`
+- Update dependency `@team23/stylelint-config-team23-standard` to `v6.1.0`
+
 # 6.1.0
 
 - Update dependency `@team23/stylelint-config-team23-standard` from `v5.0.0` to `v6.0.0`
