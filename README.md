@@ -39,14 +39,14 @@ bun build ./src/index.ts --target=node --outfile config.js
 In some cases you may need to include external dependencies
 
 ```shell
-bun build ./src/index.ts --target=node --outfile test.js --external eslint-plugin-vue
+bun build ./src/index.ts --target=node --outfile config.js --external eslint-plugin-vue
 ```
 
-Now create an eslint.config.file and import from the outfile as described in the libraries README.md.
+Now create an eslint.config.js and import from the outfile as described in the libraries README.md.
 For example:
 
 ```ts
-import { createVueEslintConfig } from "./test.js";
+import { createVueEslintConfig } from "./config.js";
 
 export default [
     ...createVueEslintConfig(),
