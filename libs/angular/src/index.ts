@@ -17,6 +17,10 @@ const fileBasedModificationConfig = tseslint.config({
  * @returns Array of ESLint configuration objects.
  */
 function createAngularEslintConfig(): Array<FlatConfig> {
-    return tseslint.config(...angularConfig, ...fileBasedModificationConfig) as Array<FlatConfig>;
+    return tseslint.config(
+        ...angularConfig,
+        ...fileBasedModificationConfig,
+    ) as Array<FlatConfig>;
 }
+
 export { createAngularEslintConfig };
