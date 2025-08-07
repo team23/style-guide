@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## v20.1.0
+
+- Update angular-eslint to 20.1.1
+- Update typescript-eslint to 8.39.0
+- Update angular-core to 20.1.6
+- Update @types/eslint to 9.6.1
+- Update jiti to 2.5.1
+
+This update supports Angular v20 and mainly includes these changes:
+- add prefer-inject to recommended
+- remove (component|directive)-class-suffix from recommended
+
 ## v20.0.1
 
 - Remove left-over CommonJS build files
