@@ -80,6 +80,7 @@ function createTSEslintConfig(options?: ConfigOptions): Array<Linter.Config> {
     const setupConfig: Linter.Config = {
         name: 'team23/type-script/setup',
         ignores: ['polyfills.ts', 'jest.config.ts', 'dist/**', 'node_modules/**'],
+        files,
         plugins: {
             // @ts-expect-error tseslint uses own not so strict type
             '@typescript-eslint': tseslint.plugin,
