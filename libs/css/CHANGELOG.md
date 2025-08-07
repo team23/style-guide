@@ -1,3 +1,7 @@
+# 6.1.0
+
+- Update minimal required `stylelint` version to `16.23.0`
+
 # 6.0.0
 
 Library has been moved to `style-guide` mono-repository. Files and project structure have been updated accordingly.
