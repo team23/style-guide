@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v10.2.1
+
+- Fix: Apply file configuration to `team23/type-script/setup`
+
 ## v10.2.0
 
 - Update `@stylistic/eslint-plugin` to `5.2.2`
