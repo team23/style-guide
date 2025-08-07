@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## v10.2.0
+
+- Update `@stylistic/eslint-plugin` to `5.2.2`
+- Update `eslint-plugin-jsdoc` to `52.0.4`
+- Update `typescript-eslint` to `8.39.0`
+
 ## v10.1.1
 
 - Add missing files
