@@ -32,13 +32,13 @@
         "default": "./dist/index.js"
     },
     "dependencies": {
-        "@stylistic/eslint-plugin": "4.4.0",
-        "eslint-plugin-jsdoc": "^50.6.17",
-        "typescript-eslint": "^8.32.1"
+        "@stylistic/eslint-plugin": "5.2.2",
+        "eslint-plugin-jsdoc": "^52.0.4",
+        "typescript-eslint": "^8.39.0"
     },
     "devDependencies": {
         "@types/eslint": "^9.6.1",
-        "jiti": "^2.4.2"
+        "jiti": "^2.5.1"
     },
     "peerDependencies": {
         "eslint": "^9.21.0"
