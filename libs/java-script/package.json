@@ -32,18 +32,18 @@
         "default": "./dist/index.js"
     },
     "dependencies": {
-        "@eslint/js": "^9.21.0",
-        "@stylistic/eslint-plugin-js": "^4.1.0",
-        "eslint-plugin-jsdoc": "^50.6.3",
-        "globals": "^16.0.0",
-        "typescript-eslint": "^8.25.0"
+        "@eslint/js": "^9.32.0",
+        "@stylistic/eslint-plugin-js": "^4.4.1",
+        "eslint-plugin-jsdoc": "^52.0.4",
+        "globals": "^16.3.0",
+        "typescript-eslint": "^8.39.0"
     },
     "devDependencies": {
         "@types/eslint": "^9.6.1",
-        "eslint": "^9.21.0",
-        "jiti": "^2.4.2"
+        "eslint": "^9.32.0",
+        "jiti": "^2.5.1"
     },
     "peerDependencies": {
-        "eslint": "^9.21.0"
+        "eslint": "^9.32.0"
     }
 }
