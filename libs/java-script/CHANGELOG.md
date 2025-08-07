@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## v10.1.0
+
+- The minimum required version of ESLint has been updated to 9.32.0
+- Update @eslint/js to 9.32.0
+- Update @stylistic/eslint-plugin-js to ^4.4.0
+- Update eslint-plugin-jsdoc to 52.0.4
+- Update globals to 16.3.0
+- Update typescript-eslint to 8.39.0
+
 ## v10.0.1
 
 - Remove left-over CommonJS build files
