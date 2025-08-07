@@ -35,16 +35,16 @@
         "default": "./dist/index.js"
     },
     "dependencies": {
-        "@team23/stylelint-config-team23-standard": "^6.0.0",
+        "@team23/stylelint-config-team23-standard": "^6.1.0",
         "stylelint-config-standard-scss": "^15.0.1"
     },
     "devDependencies": {
-        "postcss": "^8.5.3",
-        "stylelint": "^16.19.1",
-        "vitest": "^3.1.4"
+        "postcss": "^8.5.6",
+        "stylelint": "^16.23.0",
+        "vitest": "^3.2.4"
     },
     "peerDependencies": {
-        "stylelint": "^16.19.1"
+        "stylelint": "^16.23.0"
     },
     "peerDependenciesMeta": {
         "postcss": {
