@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v10.2.2
+
+- Fix: remove broken eslint rule @stylistic/func-call-spacing (#23)
+
 ## v10.2.1
 
 - Fix: Apply file configuration to `team23/type-script/setup`
