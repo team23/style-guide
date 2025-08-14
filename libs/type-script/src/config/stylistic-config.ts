@@ -59,7 +59,6 @@ const stylisticOptionalConfig: Linter.Config = {
         '@stylistic/padding-line-between-statements': 'error',
         '@stylistic/semi-style': 'error',
         '@stylistic/switch-colon-spacing': 'error',
-        '@stylistic/func-call-spacing': 'error',
         '@stylistic/wrap-regex': 'error',
     },
 };
