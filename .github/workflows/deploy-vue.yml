@@ -1,0 +1,14 @@
+name: Publish
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - libs/vue/package.json
+
+jobs:
+  publish-vue:
+    uses: ./.github/workflows/deploy.yml
+    secrets: inherit
+    with:
+      package: libs/vue

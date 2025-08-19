@@ -1,0 +1,14 @@
+name: Publish
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - libs/scss/package.json
+
+jobs:
+  publish-scss:
+    uses: ./.github/workflows/deploy.yml
+    secrets: inherit
+    with:
+      package: libs/scss

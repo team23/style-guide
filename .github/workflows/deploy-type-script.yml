@@ -1,0 +1,14 @@
+name: Publish
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - libs/type-script/package.json
+
+jobs:
+  publish-type-script:
+    uses: ./.github/workflows/deploy.yml
+    secrets: inherit
+    with:
+      package: libs/type-script
