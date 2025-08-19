@@ -1,0 +1,31 @@
+name: Publish
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish-angular:
+    uses: ./.github/workflows/deploy.yml
+    with:
+      package: libs/angular
+  publish-css:
+    uses: ./.github/workflows/deploy.yml
+    with:
+      package: libs/css
+  publish-java-script:
+    uses: ./.github/workflows/deploy.yml
+    with:
+      package: libs/java-script
+  publish-scss:
+    uses: ./.github/workflows/deploy.yml
+    with:
+      package: libs/scss
+  publish-type-script:
+    uses: ./.github/workflows/deploy.yml
+    with:
+      package: libs/type-script
+  publish-vue:
+    uses: ./.github/workflows/deploy.yml
+    with:
+      package: libs/vue
