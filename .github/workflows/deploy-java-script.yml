@@ -1,4 +1,4 @@
-name: Publish
+name: Publish JavaScript
 on:
   push:
     branches:
@@ -7,7 +7,7 @@ on:
       - libs/java-script/package.json
 
 jobs:
-  publish-java-script:
+  deploy-java-script:
     uses: ./.github/workflows/deploy.yml
     secrets: inherit
     with:

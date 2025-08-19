@@ -1,4 +1,4 @@
-name: Publish
+name: Deploy Angular
 on:
   push:
     branches:
@@ -7,7 +7,7 @@ on:
       - libs/angular/package.json
 
 jobs:
-  publish-angular:
+  deploy-angular:
     uses: ./.github/workflows/deploy.yml
     secrets: inherit
     with:

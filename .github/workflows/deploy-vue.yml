@@ -1,4 +1,4 @@
-name: Publish
+name: Publish Vue
 on:
   push:
     branches:
@@ -7,7 +7,7 @@ on:
       - libs/vue/package.json
 
 jobs:
-  publish-vue:
+  deploy-vue:
     uses: ./.github/workflows/deploy.yml
     secrets: inherit
     with:

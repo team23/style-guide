@@ -1,4 +1,4 @@
-name: Publish
+name: Publish TypeScript
 on:
   push:
     branches:
@@ -7,7 +7,7 @@ on:
       - libs/type-script/package.json
 
 jobs:
-  publish-type-script:
+  deploy-type-script:
     uses: ./.github/workflows/deploy.yml
     secrets: inherit
     with:
