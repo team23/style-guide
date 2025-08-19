@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v10.1.1
+
+No changes
+
 ## v10.1.0
 
 - The minimum required version of ESLint has been updated to 9.32.0
