@@ -5,21 +5,11 @@ on:
       - main
 
 jobs:
-  publish-angular:
-    uses: ./.github/workflows/deploy.yml
-    secrets: inherit
-    with:
-      package: libs/angular
   publish-css:
     uses: ./.github/workflows/deploy.yml
     secrets: inherit
     with:
       package: libs/css
-  publish-java-script:
-    uses: ./.github/workflows/deploy.yml
-    secrets: inherit
-    with:
-      package: libs/java-script
   publish-scss:
     uses: ./.github/workflows/deploy.yml
     secrets: inherit

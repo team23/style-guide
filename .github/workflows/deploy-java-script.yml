@@ -1,0 +1,14 @@
+name: Publish
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - libs/java-script/package.json
+
+jobs:
+  publish-java-script:
+    uses: ./.github/workflows/deploy.yml
+    secrets: inherit
+    with:
+      package: libs/java-script

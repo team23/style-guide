@@ -1,0 +1,14 @@
+name: Publish
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - libs/angular/package.json
+
+jobs:
+  publish-angular:
+    uses: ./.github/workflows/deploy.yml
+    secrets: inherit
+    with:
+      package: libs/angular
