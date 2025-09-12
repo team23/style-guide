@@ -39,7 +39,7 @@ const stylisticConfig: Linter.Config = {
             maxLength,
         ],
         '@stylistic/max-statements-per-line': 'error',
-        '@stylistic/multiline-comment-style': 'error',
+        '@stylistic/multiline-comment-style': 'off',
         '@stylistic/multiline-ternary': ['error', 'always-multiline'],
         '@stylistic/new-parens': 'error',
         '@stylistic/newline-per-chained-call': 'error',
