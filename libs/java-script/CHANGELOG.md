@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## v10.1.6
+
+- Migrate '@stylistic/eslint-plugin-js' to '@stylistic/eslint-plugin' (#25)
+- Disable '@stylistic/multiline-comment-style' rule for smoother DX
+
 ## v10.1.5
 
 No changes

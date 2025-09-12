@@ -50,7 +50,7 @@ const stylisticOptionalConfig: Linter.Config = {
             'error',
             maxLength,
         ],
-        '@stylistic/multiline-comment-style': 'error',
+        '@stylistic/multiline-comment-style': 'off',
         '@stylistic/newline-per-chained-call': 'error',
         '@stylistic/no-confusing-arrow': 'error',
         '@stylistic/no-extra-semi': 'error',
