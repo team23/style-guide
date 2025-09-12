@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v10.2.3
+
+- Disable '@stylistic/multiline-comment-style' rule for smoother DX
+
 ## v10.2.2
 
 - Fix: remove broken eslint rule @stylistic/func-call-spacing (#23)
