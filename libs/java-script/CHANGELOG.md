@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v10.2.0
+
+- Migrate '@stylistic/eslint-plugin-js' to '@stylistic/eslint-plugin' (#25)
+
 ## v10.1.5
 
 No changes
