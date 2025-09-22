@@ -22,7 +22,11 @@ export default [
 ];
 ```
 
-Note: If you want to lint typescript files, it is available as a separate package: `@team23/eslint-config-team23-ts`.
+Note: If you want to lint typescript files, it is available as a separate package: `@team23/eslint-config-team23-ts`. Additional configuration is required there:
+```
+createJSEslintConfig({ files: ['**/*.js', '**/*.mjs', '**/*.vue'] }),
+createTSEslintConfig({ fileExtensions: ['vue'] }),
+```
 
 ## Overriding Settings
 
