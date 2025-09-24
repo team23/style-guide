@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v20.1.1
+
+- change "@typescript-eslint/unbound-method" to allow static functions for Angular internals (e.g. Validations.require)
+
 ## v20.1.0
 
 - Update angular-eslint to 20.1.1

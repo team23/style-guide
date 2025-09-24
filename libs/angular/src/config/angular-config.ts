@@ -45,6 +45,7 @@ const typescriptConfig = tseslint.config({
         '@angular-eslint/use-lifecycle-interface': 'error',
         '@angular-eslint/use-pipe-transform-interface': 'error',
         '@angular-eslint/prefer-signals': ['error'],
+        "@typescript-eslint/unbound-method": ["error", { ignoreStatic: true }],
     },
 });
 
