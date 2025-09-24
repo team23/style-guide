@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v10.1.8
+
+- Fix: remove broken eslint rule @stylistic/func-call-spacing (#23)
+
 ## v10.1.7
 
 - Migrate '@stylistic/eslint-plugin-js' to '@stylistic/eslint-plugin' (#25)
