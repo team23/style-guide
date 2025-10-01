@@ -32,6 +32,7 @@ const strictTypeCheckedModificationConfig: Linter.Config = {
         '@typescript-eslint/no-confusing-void-expression': 'off',
         '@typescript-eslint/no-unsafe-enum-comparison': 'off',
         '@typescript-eslint/non-nullable-type-assertion-style': 'off',
+        '@typescript-eslint/no-unnecessary-type-parameters': 'off',
     },
 };
 
