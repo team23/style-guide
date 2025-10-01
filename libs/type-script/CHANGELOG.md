@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v10.2.4
+
+- disable @typescript-eslint/no-unnecessary-type-parameters to allow only typed parameters
+
 ## v10.2.3
 
 - Disable '@stylistic/multiline-comment-style' rule for smoother DX
