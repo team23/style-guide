@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## v7.0.1
+
+- Disable `@typescript-eslint/no-unsafe-assignment` to ensure compatibility with vue 3.5
+- Disable `@typescript-eslint/no-unsafe-argument` to ensure compatibility with vue 3.5
+
 ## v7.0.0
 
 - Update `eslint-plugin-vue` to `10.4.0`. For all breaking changes [see this changelog](https://github.com/vuejs/eslint-plugin-vue/releases/tag/v10.0.0).

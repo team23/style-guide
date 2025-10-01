@@ -1,5 +1,6 @@
 import type { Linter } from 'eslint';
 import vueConfig from './config/vue-config.js';
+import tsConfig from './config/tseslint-config.js';
 import vueParser from 'vue-eslint-parser';
 import tseslint from 'typescript-eslint';
 import pluginVue from 'eslint-plugin-vue';
@@ -15,6 +16,8 @@ interface ConfigOptions {
 }
 
 const GLOB_VUE = '**/*.vue';
+const GLOB_TS = '**/*.?([cm])ts';
+const GLOB_TSX = '**/*.?([cm])tsx';
 
 const fileBasedModificationConfig = tseslint.config({
     name: 'team23/type-script/core/file-based/vite',
@@ -33,6 +36,10 @@ const fileBasedModificationConfig = tseslint.config({
  */
 function createVueEslintConfig(options?: ConfigOptions): Array<Linter.Config> {
     const { files = [GLOB_VUE] } = options ?? {};
+    const tsFiles = [
+        GLOB_TS,
+        GLOB_TSX,
+    ];
 
     const setupConfig: Linter.Config = {
         name: 'team23/vue/setup',
@@ -81,6 +88,10 @@ function createVueEslintConfig(options?: ConfigOptions): Array<Linter.Config> {
         {
             files,
             extends: [...vueConfig],
+        },
+        {
+            files: tsFiles,
+            extends: [...tsConfig],
         },
         ...fileBasedModificationConfig,
     ) as Array<Linter.Config>;
