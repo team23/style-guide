@@ -2,9 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## v10.2.5
+
+- Disable '@stylistic/function-paren-newline' to allow readable formattings
+
 ## v10.2.4
 
-- disable @typescript-eslint/no-unnecessary-type-parameters to allow only typed parameters
+- Disable @typescript-eslint/no-unnecessary-type-parameters to allow only typed parameters
 
 ## v10.2.3
 

@@ -41,7 +41,7 @@ const stylisticOptionalConfig: Linter.Config = {
         '@stylistic/array-bracket-spacing': 'error',
         '@stylistic/function-call-argument-newline': ['error', 'consistent'],
         '@stylistic/function-call-spacing': 'error',
-        '@stylistic/function-paren-newline': ['error', 'consistent'],
+        '@stylistic/function-paren-newline': ['off'],
         '@stylistic/generator-star-spacing': 'error',
         '@stylistic/implicit-arrow-linebreak': 'error',
         '@stylistic/linebreak-style': 'error',
