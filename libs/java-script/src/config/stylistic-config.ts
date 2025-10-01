@@ -22,7 +22,7 @@ const stylisticConfig: Linter.Config = {
         '@stylistic/eol-last': 'error',
         '@stylistic/function-call-argument-newline': ['error', 'consistent'],
         '@stylistic/function-call-spacing': 'error',
-        '@stylistic/function-paren-newline': ['error', 'consistent'],
+        '@stylistic/function-paren-newline': ['off'],
         '@stylistic/generator-star-spacing': 'error',
         '@stylistic/implicit-arrow-linebreak': 'error',
         // may cause performance issues with large codebase

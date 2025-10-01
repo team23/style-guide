@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## v10.1.9
+
+- Disable 'jsdoc/require-jsdoc' for meaningful function comments
+- Disable 'jsdoc/require-param' for lightweight function comments
+- Disable 'jsdoc/require-returns' for lightweight function comments
+- Disable '@stylistic/function-paren-newline' to allow readable formattings
+
 ## v10.1.8
 
 - Fix: remove broken eslint rule @stylistic/func-call-spacing (#23)
