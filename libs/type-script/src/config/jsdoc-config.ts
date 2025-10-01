@@ -20,6 +20,12 @@ const jsdocRecommendedModificationConfig: Linter.Config = {
                 startLines: 1,
             },
         ],
+        'jsdoc/require-returns-typ': 'off',
+        'jsdoc/require-param-type': 'off',
+        'jsdoc/require-param': 'off',
+        'jsdoc/require-returns': 'off',
+        'jsdoc/require-property-type': 'off',
+        'jsdoc/require-jsdoc': 'off',
     },
 };
 

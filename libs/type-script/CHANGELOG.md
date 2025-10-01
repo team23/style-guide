@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## v10.2.6
+
+- Disable 'jsdoc/require-jsdoc' for meaningful function comments
+- Disable 'jsdoc/require-param' for lightweight function comments
+- Disable 'jsdoc/require-returns' for lightweight function comments
+- Disable '@stylistic/function-paren-newline' to allow readable formattings
+
 ## v10.2.5
 
 - Disable '@stylistic/function-paren-newline' to allow readable formattings
