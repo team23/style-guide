@@ -41,7 +41,7 @@
         "eslint": "^9.21.0",
         "jiti": "^2.5.1",
         "tslib": "^2.8.1",
-        "vitest": "^2.1.8"
+        "vitest": "^3.2.4"
     },
     "peerDependencies": {
         "eslint": "^9.21.0"
