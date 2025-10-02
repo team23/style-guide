@@ -1,0 +1,14 @@
+name: Test CSS
+on:
+  push
+#    branches:
+#      - main
+#    paths:
+#      - libs/css/**
+
+jobs:
+  test-css:
+    uses: ./.github/workflows/test.yml
+    secrets: inherit
+    with:
+      package: libs/css

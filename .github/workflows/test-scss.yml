@@ -1,0 +1,14 @@
+name: Test SCSS
+on:
+  push
+#    branches:
+#      - main
+#    paths:
+#      - libs/scss/**
+
+jobs:
+  test-css:
+    uses: ./.github/workflows/test.yml
+    secrets: inherit
+    with:
+      package: libs/scss

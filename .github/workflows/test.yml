@@ -1,0 +1,24 @@
+name: Test
+on:
+  workflow_call:
+    inputs:
+      package:
+        required: true
+        type: string
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js for NPM
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
+          registry-url: 'https://registry.npmjs.org'
+      - name: Install package dependencies
+        run: cd ${{ inputs.package }} && npm ci
+      - name: Test package
+        run: cd ${{ inputs.package }} && npm test
