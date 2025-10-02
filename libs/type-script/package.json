@@ -38,9 +38,15 @@
     },
     "devDependencies": {
         "@types/eslint": "^9.6.1",
-        "jiti": "^2.5.1"
+        "eslint": "^9.21.0",
+        "jiti": "^2.5.1",
+        "vitest": "^2.1.8"
     },
     "peerDependencies": {
         "eslint": "^9.21.0"
+    },
+    "scripts": {
+        "test": "vitest run",
+        "test:watch": "vitest"
     }
 }
