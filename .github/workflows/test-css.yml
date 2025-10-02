@@ -1,8 +1,6 @@
 name: Test CSS
 on:
   push:
-    branches:
-      - main
     paths:
       - libs/css/**
 
