@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v10.1.10
+
+- Disable 'sort-imports'
+
 ## v10.1.9
 
 - Disable 'jsdoc/require-jsdoc' for meaningful function comments
