@@ -15,7 +15,7 @@ const jsOptionalConfig: Linter.Config<ESLintRules> = {
         'accessor-pairs': 'error',
         'arrow-body-style': 'error',
         'camelcase': 'error',
-        'capitalized-comments': 'error',
+        'capitalized-comments': 'off',
         'complexity': ['error', complexity],
         'curly': 'error',
         'default-case': 'error',

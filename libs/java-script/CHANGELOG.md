@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v10.1.11
+
+- Disable 'capitalized-comments'
+
 ## v10.1.10
 
 - Disable 'sort-imports'
