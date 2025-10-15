@@ -39,4 +39,4 @@ jobs:
         run: cd ${{ inputs.package }} && npx --yes nx build
       - name: Publish
         if: steps.check.outputs.changed == 'true'
-        run: cd ${{ inputs.package }} && npm publish --access public
+        run: cd ${{ inputs.package }} && npm publish --provenance --access public
