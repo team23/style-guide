@@ -6,13 +6,8 @@ on:
     paths:
       - libs/css/package.json
 
-permissions:
-  id-token: write  # Required for OIDC
-  contents: read
-
 jobs:
   deploy-css:
     uses: ./.github/workflows/deploy.yml
     with:
-      environment: CSS
       package: libs/css

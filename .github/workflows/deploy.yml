@@ -5,29 +5,30 @@ on:
       package:
         required: true
         type: string
-      environment:
-        required: true
-        type: string
 
 jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
-    environment: ${{ inputs.environment }}
+    permissions:
+      id-token: write  # Required for OIDC
+      contents: read
+    environment: npmjs
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Set up Node.js for NPM
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22.x
-          registry-url: 'https://registry.npmjs.org'
       - name: Check version changes
         uses: EndBug/version-check@v2.1.5
         id: check
         with:
           diff-search: true
           file-name: ${{ inputs.package }}/package.json
+      - name: Set up Node.js for NPM
+        if: steps.check.outputs.changed == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
+          registry-url: 'https://registry.npmjs.org'
       - name: Install global dependencies
         if: steps.check.outputs.changed == 'true'
         run: npm ci
