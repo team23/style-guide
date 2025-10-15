@@ -13,6 +13,6 @@ permissions:
 jobs:
   deploy-css:
     uses: ./.github/workflows/deploy.yml
-    environment: CSS
     with:
+      environment: CSS
       package: libs/css
