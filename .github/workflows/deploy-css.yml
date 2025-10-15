@@ -13,6 +13,6 @@ permissions:
 jobs:
   deploy-css:
     uses: ./.github/workflows/deploy.yml
-    secrets: inherit
+    environment: CSS
     with:
       package: libs/css

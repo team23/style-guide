@@ -35,8 +35,4 @@ jobs:
         run: cd ${{ inputs.package }} && npx --yes nx build
       - name: Publish
         if: steps.check.outputs.changed == 'true'
-        uses: JS-DevTools/npm-publish@v3
-        with:
-          package: ${{ inputs.package }}/package.json
-          token: ${{ secrets.NPM_TOKEN }}
-          access: 'public'
+        run: cd ${{ inputs.package }} && npm publish --access public
