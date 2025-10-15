@@ -1,12 +1,4 @@
-# 6.1.3
-
-No changes
-
-# 6.1.2
-
-No changes
-
-# 6.1.1
+# 6.1.4 - 6.1.1
 
 No changes
 
