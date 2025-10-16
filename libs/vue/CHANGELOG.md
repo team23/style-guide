@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v7.0.2
+
+No changes
+
 ## v7.0.1
 
 - Disable `@typescript-eslint/no-unsafe-assignment` to ensure compatibility with vue 3.5
