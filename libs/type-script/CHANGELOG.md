@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v10.2.7
+
+No changes
+
 ## v10.2.6
 
 - Disable 'jsdoc/require-jsdoc' for meaningful function comments

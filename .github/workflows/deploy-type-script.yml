@@ -9,6 +9,5 @@ on:
 jobs:
   deploy-type-script:
     uses: ./.github/workflows/deploy.yml
-    secrets: inherit
     with:
       package: libs/type-script
