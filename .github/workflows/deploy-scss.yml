@@ -1,4 +1,4 @@
-name: Publish CSS
+name: Publish SCSS
 on:
   push:
     branches:
@@ -9,6 +9,5 @@ on:
 jobs:
   deploy-scss:
     uses: ./.github/workflows/deploy.yml
-    secrets: inherit
     with:
       package: libs/scss
