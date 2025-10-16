@@ -7,6 +7,5 @@ on:
 jobs:
   test-css:
     uses: ./.github/workflows/test.yml
-    secrets: inherit
     with:
       package: libs/scss
