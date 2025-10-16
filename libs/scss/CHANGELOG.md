@@ -1,3 +1,7 @@
+# 6.2.1
+
+No changes
+
 # 6.2.0
 
 - Update minimal required `stylelint` version to `16.23.0`
