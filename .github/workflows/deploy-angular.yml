@@ -1,4 +1,4 @@
-name: Deploy Angular
+name: Publish Angular
 on:
   push:
     branches:
