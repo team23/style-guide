@@ -9,6 +9,5 @@ on:
 jobs:
   deploy-java-script:
     uses: ./.github/workflows/deploy.yml
-    secrets: inherit
     with:
       package: libs/java-script
