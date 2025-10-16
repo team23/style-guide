@@ -5,6 +5,9 @@ on:
       package:
         required: true
         type: string
+      env:
+        required: true
+        type: string
 
 jobs:
   deploy:
@@ -13,7 +16,7 @@ jobs:
     permissions:
       id-token: write  # Required for OIDC
       contents: read
-    environment: npmjs
+    environment: ${{ inputs.env }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4

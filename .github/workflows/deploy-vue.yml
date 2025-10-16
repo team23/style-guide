@@ -11,3 +11,4 @@ jobs:
     uses: ./.github/workflows/deploy.yml
     with:
       package: libs/vue
+      env: Vue
