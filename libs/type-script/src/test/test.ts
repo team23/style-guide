@@ -2,6 +2,7 @@
 const badVariable = 123; // Should trigger @stylistic/line-comment-position
 
 // Should trigger @typescript-eslint/no-unused-vars
+// @ts-ignore
 const unusedVar = 'unused';
 
 // Should trigger @typescript-eslint/no-explicit-any, @typescript-eslint/explicit-function-return-type
@@ -24,4 +25,7 @@ const badArray = [
 // Should trigger @stylistic/max-len
 const veryLongLine = 'This is a very long line that should trigger the max-len rule because it exceeds the maximum allowed length of 140 characters and should cause a linting error';
 
-export { badFunction, badObject, badArray, veryLongLine, badVariable };
+const list: Array<string> = [];
+const value = list[0] as string;
+
+export { badFunction, badObject, badArray, veryLongLine, badVariable, value };

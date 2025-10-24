@@ -60,6 +60,7 @@ const stylisticOptionalConfig: Linter.Config = {
         '@stylistic/semi-style': 'error',
         '@stylistic/switch-colon-spacing': 'error',
         '@stylistic/wrap-regex': 'error',
+        '@typescript-eslint/non-nullable-type-assertion-style': 'off',
     },
 };
 

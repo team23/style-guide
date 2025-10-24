@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { ESLint } from 'eslint';
 import { createTSEslintConfig } from '../index.js';
+import LintResult = ESLint.LintResult;
 
 describe('ESLint Configuration Tests', () => {
     it('should lint test.ts file and catch expected errors', async () => {
@@ -12,7 +13,7 @@ describe('ESLint Configuration Tests', () => {
 
         // Lint the test file
         const results = await eslint.lintFiles(['src/test/test.ts']);
-        const result = results[0];
+        const result = results[0] as LintResult;
 
         // Verify that linting errors were found
         expect(result.messages.length).toBeGreaterThan(0);
@@ -34,6 +35,8 @@ describe('ESLint Configuration Tests', () => {
         expect(errorMessages).toContain('@typescript-eslint/no-magic-numbers');
         expect(errorMessages).toContain('@stylistic/semi');
         expect(errorMessages).toContain('@stylistic/max-len');
+
+        console.log('# errorMessages:\n', errorMessages);
 
         expect(errorMessages.length).toBe(13);
     });
