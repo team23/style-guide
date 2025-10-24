@@ -5,7 +5,7 @@ on:
       - libs/scss/**
 
 jobs:
-  test-css:
+  test-scss:
     uses: ./.github/workflows/test.yml
     with:
       package: libs/scss

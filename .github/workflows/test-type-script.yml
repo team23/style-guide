@@ -5,7 +5,7 @@ on:
       - libs/type-script/**
 
 jobs:
-  test-css:
+  test-type-script:
     uses: ./.github/workflows/test.yml
     with:
       package: libs/type-script
