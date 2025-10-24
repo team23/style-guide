@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v10.2.10
+
+No changes
+
 ## v10.2.9
 
 - Fix disabled @typescript-eslint/non-nullable-type-assertion-style
