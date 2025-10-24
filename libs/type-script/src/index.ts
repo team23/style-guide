@@ -82,11 +82,11 @@ function createTSEslintConfig(options?: ConfigOptions): Array<Linter.Config> {
         ignores: ['polyfills.ts', 'jest.config.ts', 'dist/**', 'node_modules/**'],
         files,
         plugins: {
-            // @ts-expect-error tseslint uses own not so strict type
+            // @ts-ignore tseslint uses own not so strict type
             '@typescript-eslint': tseslint.plugin,
         },
         languageOptions: {
-            // @ts-expect-error typing mismatch: tseslint provides extended parser
+            // @ts-ignore typing mismatch: tseslint provides extended parser
             parser: tseslint.parser,
             parserOptions: {
                 sourceType: 'module',
