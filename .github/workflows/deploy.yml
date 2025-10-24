@@ -43,7 +43,7 @@ jobs:
         run: cd ${{ inputs.package }} && npm ci
       - name: Build package
         if: steps.check.outputs.changed == 'true'
-        run: cd ${{ inputs.package }} && npx --yes nx build --excludeTaskDependencies
+        run: cd ${{ inputs.package }} && npx --yes nx@21 build --excludeTaskDependencies
       - name: Publish
         if: steps.check.outputs.changed == 'true'
         run: cd ${{ inputs.package }} && npm publish --provenance --access public
