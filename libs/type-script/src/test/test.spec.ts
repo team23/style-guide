@@ -23,6 +23,7 @@ describe('ESLint Configuration Tests', () => {
 
         // Verify some key rules are triggered
         expect(errorMessages).toContain('@stylistic/line-comment-position');
+        expect(errorMessages).toContain( '@typescript-eslint/ban-ts-comment');
         expect(errorMessages).toContain('@typescript-eslint/no-unused-vars');
         expect(errorMessages).toContain('@typescript-eslint/explicit-function-return-type');
         expect(errorMessages).toContain('@typescript-eslint/no-explicit-any');
@@ -36,8 +37,6 @@ describe('ESLint Configuration Tests', () => {
         expect(errorMessages).toContain('@stylistic/semi');
         expect(errorMessages).toContain('@stylistic/max-len');
 
-        console.log('# errorMessages:\n', errorMessages);
-
-        expect(errorMessages.length).toBe(13);
+        expect(errorMessages.length).toBe(14);
     });
 });
