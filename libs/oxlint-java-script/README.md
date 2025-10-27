@@ -34,14 +34,14 @@ You can generate an oxlint configuration programmatically. There are several way
 #### Using npx with jiti (recommended for development)
 
 ```bash
-npm install -D @team23/oxlint-config-team23-standard
+npx --yes nx build --excludeTaskDependencies
 npx jiti generate-config.ts
 ```
 
 #### Using tsx (TypeScript runner)
 
 ```bash
-npm install -D tsx
+npx --yes nx build --excludeTaskDependencies
 npx tsx generate-config.ts
 ```
 

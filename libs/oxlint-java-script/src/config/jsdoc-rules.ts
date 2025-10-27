@@ -2,8 +2,9 @@
  * JSDoc rules configuration for oxlint
  * Migrated from eslint-plugin-jsdoc
  */
+import type { OxlintRules } from '../types';
 
-export const jsdocRulesConfig = {
+export const jsdocRulesConfig: OxlintRules = {
     // JSDoc validation rules
     'jsdoc/check-alignment': 'error',
     'jsdoc/check-indentation': 'error',

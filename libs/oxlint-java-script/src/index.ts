@@ -95,7 +95,6 @@ function createJSOxlintConfigFile(options?: ConfigOptions): string {
 }
 
 export {
-    type ConfigOptions,
     type OxlintConfig,
     createJSOxlintConfig,
     createJSOxlintConfigFile,

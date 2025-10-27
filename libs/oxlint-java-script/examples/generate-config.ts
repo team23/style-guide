@@ -9,7 +9,7 @@
  */
 
 import { writeFileSync } from 'fs';
-import { createJSOxlintConfig, createJSOxlintConfigFile } from '../src/index';
+import { createJSOxlintConfigFile } from '../dist/index';
 
 // Example: Generate configuration object
 console.log('Generating oxlint configuration object...');

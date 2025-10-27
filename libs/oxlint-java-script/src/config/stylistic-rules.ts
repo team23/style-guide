@@ -4,10 +4,11 @@
  * Many stylistic rules are handled by formatters like Prettier or Biome.
  * This file maintains the stylistic preferences from the original ESLint config.
  */
+import type { OxlintRules } from '../types';
 
 const maxLength = 140;
 
-export const stylisticRulesConfig = {
+export const stylisticRulesConfig: OxlintRules = {
     // Note: Oxlint may not support all stylistic rules as it focuses on correctness.
     // Consider using a formatter like Prettier or Biome for stylistic consistency.
     // The following rules are included for reference and compatibility where supported.

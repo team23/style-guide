@@ -1,3 +1,5 @@
+import type { OxlintRules } from '../types';
+
 /**
  * JavaScript core rules configuration for oxlint
  * Migrated from ESLint configuration
@@ -5,7 +7,7 @@
 const complexity = 10;
 const eqeqeq = 2;
 
-export const jsRulesConfig = {
+export const jsRulesConfig: OxlintRules = {
     'accessor-pairs': 'error',
     'arrow-body-style': 'error',
     'camelcase': 'error',
