@@ -1,6 +1,6 @@
 {
     "name": "@team23/oxlint-config-team23-standard",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "A set of oxlint rules used by TEAM23 for standard JavaScript projects",
     "keywords": [
         "oxlint",
