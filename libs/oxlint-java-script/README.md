@@ -12,10 +12,6 @@ This package provides an oxlint configuration that mirrors the ESLint rules from
 npm install --save-dev @team23/oxlint-config-team23-standard oxlint
 ```
 
-## Usage
-
-> 📖 **For detailed usage instructions, see [USAGE.md](./USAGE.md)**
-
 ### Quick Start
 
 Generate your `.oxlintrc.json` configuration file:
