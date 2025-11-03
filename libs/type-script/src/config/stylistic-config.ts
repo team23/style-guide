@@ -29,6 +29,7 @@ const stylisticModificationConfig: Linter.Config = {
                 asyncArrow: 'always',
             },
         ],
+        '@stylistic/operator-linebreak': ['error', 'before', { overrides: { '=': 'ignore' } }],
     },
 };
 

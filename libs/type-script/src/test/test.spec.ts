@@ -36,7 +36,9 @@ describe('ESLint Configuration Tests', () => {
         expect(errorMessages).toContain('@typescript-eslint/no-magic-numbers');
         expect(errorMessages).toContain('@stylistic/semi');
         expect(errorMessages).toContain('@stylistic/max-len');
+        expect(errorMessages).toContain('@typescript-eslint/naming-convention');
+        expect(errorMessages).toContain('@typescript-eslint/consistent-type-exports');
 
-        expect(errorMessages.length).toBe(14);
+        expect(errorMessages.length).toBe(16);
     });
 });

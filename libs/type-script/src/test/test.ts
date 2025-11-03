@@ -28,9 +28,11 @@ const veryLongLine = 'This is a very long line that should trigger the max-len r
 const list: Array<string> = [];
 const value = list[0] as string;
 
+// Should trigger @typescript-eslint/naming-convention
 type values =
     | '1'
     | '2'
     | '3';
 
+// Should trigger @typescript-eslint/consistent-type-exports
 export { badFunction, badObject, badArray, veryLongLine, badVariable, value, values };
