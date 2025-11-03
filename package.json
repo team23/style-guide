@@ -13,7 +13,7 @@
         "@swc-node/register": "~1.11.1",
         "@swc/core": "~1.11.29",
         "@swc/helpers": "~0.5.17",
-        "@team23/eslint-config-team23-ts": "^10.1.0",
+        "@team23/eslint-config-team23-ts": "^10.2.11",
         "@types/node": "24.9.2",
         "eslint": "9.39.0",
         "nx": "21.6.5",
