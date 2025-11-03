@@ -5,7 +5,7 @@ on:
       - libs/java-script/**
 
 jobs:
-  test-type-script:
+  test-java-script:
     uses: ./.github/workflows/test.yml
     with:
       package: libs/java-script
