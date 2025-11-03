@@ -9,7 +9,7 @@
         "tslib": "^2.8.1"
     },
     "devDependencies": {
-        "@nx/js": "21.6.5",
+        "@nx/js": "22.0.2",
         "@swc-node/register": "~1.11.1",
         "@swc/core": "~1.11.29",
         "@swc/helpers": "~0.5.17",
