@@ -28,4 +28,9 @@ const veryLongLine = 'This is a very long line that should trigger the max-len r
 const list: Array<string> = [];
 const value = list[0] as string;
 
-export { badFunction, badObject, badArray, veryLongLine, badVariable, value };
+type values =
+    | '1'
+    | '2'
+    | '3';
+
+export { badFunction, badObject, badArray, veryLongLine, badVariable, value, values };

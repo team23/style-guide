@@ -1,0 +1,11 @@
+name: Test JavaScript
+on:
+  push:
+    paths:
+      - libs/java-script/**
+
+jobs:
+  test-type-script:
+    uses: ./.github/workflows/test.yml
+    with:
+      package: libs/java-script
