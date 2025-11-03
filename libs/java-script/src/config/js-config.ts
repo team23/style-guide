@@ -25,7 +25,6 @@ const jsOptionalConfig: Linter.Config<ESLintRules> = {
         'guard-for-in': 'error',
         'id-denylist': 'error',
         'id-match': 'error',
-        // @ts-expect-error wrong typing
         'max-classes-per-file': ['error', { ignoreExpressions: true }],
         'max-lines': [
             'error',
@@ -86,7 +85,6 @@ const jsOptionalConfig: Linter.Config<ESLintRules> = {
                 detectObjects: false,
                 ignore: [-1, 1, 0],
                 ignoreArrayIndexes: false,
-                // @ts-expect-error wrong typing
                 ignoreDefaultValues: true,
             },
         ],
