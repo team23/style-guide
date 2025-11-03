@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v10.1.14
+
+No changes
+
 ## v10.1.13
 
 - Disable 'sort-keys' rule to allow context based sorting
