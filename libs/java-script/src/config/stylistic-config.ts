@@ -54,7 +54,7 @@ const stylisticConfig: Linter.Config = {
         '@stylistic/object-curly-newline': 'error',
         '@stylistic/object-curly-spacing': ['error', 'always'],
         '@stylistic/object-property-newline': ['error', { allowAllPropertiesOnSameLine: true }],
-        '@stylistic/operator-linebreak': 'error',
+        '@stylistic/operator-linebreak': ['error', 'before', { overrides: { '=': 'ignore' } }],
         '@stylistic/padding-line-between-statements': 'error',
         '@stylistic/quote-props': ['error', 'as-needed'],
         '@stylistic/quotes': ['error', 'single'],

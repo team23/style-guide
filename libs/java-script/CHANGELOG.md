@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## v10.1.13
+
+- Disable 'sort-keys' rule to allow context based sorting
+- Disable '@stylistic/operator-linebreak' rule to allow better type formatting
+
 ## v10.1.12
 
 No changes

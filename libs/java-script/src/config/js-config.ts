@@ -139,7 +139,7 @@ const jsOptionalConfig: Linter.Config<ESLintRules> = {
         'prefer-template': 'error',
         'radix': 'error',
         'sort-imports': 'off',
-        'sort-keys': 'error',
+        'sort-keys': 'off',
         'sort-vars': 'error',
         'symbol-description': 'error',
         'yoda': 'error',
