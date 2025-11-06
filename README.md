@@ -1,51 +1,86 @@
-# Style Guide
+# TEAM23 Style Guide
+
+> Unified linting and styling configurations for maintaining code quality and consistency across TEAM23 projects.
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Supported Tools](#supported-tools)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Debugging ESLint Configurations](#debugging-eslint-configurations)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Overview
 
-This repository contains the TEAM23 configuration for linting and styling rules.
+This repository provides TEAM23's standardized configuration for linting and code styling tools. These configurations ensure consistent code quality, formatting, and best practices across all team projects.
 
-It includes configurations for ESLint:
-- JavaScript
-- TypeScript
-- Vue.js
-- Angular
+## Supported Tools
 
-and Stylelint:
-- css
-- scss
+### ESLint Configurations
 
-These configurations help maintain code quality and consistency across TEAM23's projects.
+- **JavaScript** - Core JavaScript linting rules
+- **TypeScript** - Type-safe JavaScript with TypeScript-specific rules
+- **Vue.js** - Vue.js framework-specific linting
+- **Angular** - Angular framework-specific linting
 
-Checkout the independent README.md files for more information on how to install and use.
+### Stylelint Configurations
 
-## Debug eslint configurations
+- **CSS** - Standard CSS linting rules
+- **SCSS** - Sass/SCSS preprocessor linting rules
 
-### config-inspector
+## Installation
 
-You may need to install bun and jiti:
+Refer to the individual README.md files in each configuration directory for specific installation instructions:
 
-```shell
+- `/libs/javascript/README.md`
+- `/libs/typescript/README.md`
+- `/libs/vue/README.md`
+- `/libs/angular/README.md`
+- `/libs/css/README.md`
+- `/libs/scss/README.md`
+
+## Usage
+
+Each configuration package includes detailed usage instructions in its respective README.md file. Generally, you'll install the package and reference it in your project's linting configuration file.
+
+For framework-specific setup and examples, please consult the documentation in each subdirectory.
+
+## Debugging ESLint Configurations
+
+### Prerequisites
+
+Install the required global dependencies:
+
+```bash
 npm install --global bun
-
 bun install
 ```
 
-Now you can build the config:
+### Method 1: Using Config Inspector (Recommended)
 
-```shell
+The ESLint Config Inspector provides a visual interface to explore and understand your flat config setup.
+
+#### Step 1: Build the Configuration
+
+Build the TypeScript configuration into a JavaScript file:
+
+```bash
 bun build ./src/index.ts --target=node --outfile config.js
 ```
 
-In some cases you may need to include external dependencies
+If you encounter issues with external dependencies, include them explicitly:
 
-```shell
+```bash
 bun build ./src/index.ts --target=node --outfile config.js --external eslint-plugin-vue
 ```
 
-Now create an eslint.config.js and import from the outfile as described in the libraries README.md.
-For example:
+#### Step 2: Create a Test Configuration
 
-```ts
+Create an `eslint.config.js` file and import your built configuration:
+
+```javascript
 import { createVueEslintConfig } from "./config.js";
 
 export default [
@@ -53,19 +88,62 @@ export default [
 ];
 ```
 
-Use the official config-inspector to inspect and understand the flat config.
+#### Step 3: Launch Config Inspector
 
-```shell
+Run the official ESLint Config Inspector:
+
+```bash
 npx @eslint/config-inspector
 ```
 
-### Use --print-config
+This will open an interactive browser interface where you can:
+- Visualize the configuration hierarchy
+- See which rules apply to specific files
+- Understand plugin interactions
+- Debug configuration conflicts
 
-You can additionally use the `--print-config` CLI option to view the final configuration that will be used for a file. Note that only
-configuration options applied to this file will be outputted.
+### Method 2: Using --print-config
 
-You may want to use a bundler like bun to compile and bundle all files:
+For a quick inspection of the final configuration applied to a specific file, use the `--print-config` CLI option.
 
-```
+**Note:** This only outputs configuration options that apply to the specified file.
+
+#### Example with Bun Bundler
+
+```bash
 bun --bun eslint -c index.ts --print-config test.js > out.json
 ```
+
+This generates a JSON file containing the complete configuration for `test.js`, which you can inspect directly.
+
+#### Use Cases
+
+- Verify which rules are active for a specific file
+- Debug why certain rules aren't applying
+- Compare configurations across different file types
+- Generate documentation of active rules
+
+## Contributing
+
+We welcome contributions to improve our style configurations! Please follow these guidelines:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/improvement`)
+3. Make your changes with clear commit messages
+4. Test your changes thoroughly
+5. Submit a pull request with a detailed description
+
+## License
+
+MIT 2025
+
+## Support
+
+For questions, issues, or suggestions:
+- Open an issue in this repository
+- Contact the TEAM23 development team
+- Check the individual README files for specific configuration questions
+
+---
+
+**Maintained by TEAM23** | [Website](https://team23.de)
