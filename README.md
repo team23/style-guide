@@ -34,12 +34,12 @@ This repository provides TEAM23's standardized configuration for linting and cod
 
 Refer to the individual README.md files in each configuration directory for specific installation instructions:
 
-- `/libs/javascript/README.md`
-- `/libs/typescript/README.md`
-- `/libs/vue/README.md`
-- `/libs/angular/README.md`
-- `/libs/css/README.md`
-- `/libs/scss/README.md`
+- [JavaScript](`/libs/java-script/README.md`)
+- [TypeScript](`/libs/type-script/README.md`)
+- [Vue](`/libs/vue/README.md`)
+- [Angular](`/libs/angular/README.md`)
+- [CSS](`/libs/css/README.md`)
+- [SCSS](`/libs/scss/README.md`)
 
 ## Usage
 
