@@ -38,7 +38,7 @@
         "typescript-eslint": "^8.39.0"
     },
     "devDependencies": {
-        "@angular/core": "^20.1.6",
+        "@angular/core": "^21.0.1",
         "@types/eslint": "^9.6.1",
         "jiti": "^2.5.1",
         "tsc-multi": "^1.1.0"
