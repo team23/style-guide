@@ -34,7 +34,7 @@
         "default": "./dist/index.js"
     },
     "dependencies": {
-        "angular-eslint": "^20.1.1",
+        "angular-eslint": "^21.0.1",
         "typescript-eslint": "^8.39.0"
     },
     "devDependencies": {
