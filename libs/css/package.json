@@ -37,10 +37,10 @@
         "stylelint-config-standard": "^39.0.0"
     },
     "devDependencies": {
-        "stylelint": "^16.23.0",
+        "stylelint": "^17.1.0",
         "vitest": "^4.0.6"
     },
     "peerDependencies": {
-        "stylelint": "^16.23.0"
+        "stylelint": "^17.1.0"
     }
 }
