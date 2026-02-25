@@ -36,7 +36,7 @@
     },
     "dependencies": {
         "@team23/stylelint-config-team23-standard": "^6.1.0",
-        "stylelint-config-standard-scss": "^16.0.0"
+        "stylelint-config-standard-scss": "^17.0.0"
     },
     "devDependencies": {
         "postcss": "^8.5.6",
