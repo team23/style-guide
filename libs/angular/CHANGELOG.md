@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## v21.0.1
+
+- Fix `Enabling "project" does nothing when "projectService" is enabled`
 ## v21.0.0
 
 - Update angular to 21
