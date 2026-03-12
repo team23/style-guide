@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v21.0.0
+
+- Update angular to 21
+
 ## v20.1.3 - v20.1.2
 
 No changes
