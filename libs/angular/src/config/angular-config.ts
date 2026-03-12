@@ -14,8 +14,7 @@ const typescriptConfig = tseslint.config({
     },
     languageOptions: {
         parserOptions: {
-            project: ['tsconfig.?*.json'],
-            createDefaultProgram: true,
+            projectService: true,
         },
     },
     rules: {
