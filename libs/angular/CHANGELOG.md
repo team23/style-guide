@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v22.0.4
+
+- Add support for `eslint@^10.0.0`
+
 ## v22.0.0
 
 ### ⚠️ Breaking Changes
