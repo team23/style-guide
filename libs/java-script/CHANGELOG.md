@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v10.2.0
+
+- Update `eslint` peer dependency to support ESLint v10 (`^10.5.0`)
+
 ## v10.1.15 - v10.1.14
 
 No changes
