@@ -57,8 +57,11 @@ const jsOptionalConfig: Linter.Config<ESLintRules> = {
                     'dirxml',
                     'error',
                     'groupCollapsed',
+                    // @ts-expect-error wrong typing
                     'Console',
+                    // @ts-expect-error wrong typing
                     'profile',
+                    // @ts-expect-error wrong typing
                     'profileEnd',
                     'timeStamp',
                 ],
