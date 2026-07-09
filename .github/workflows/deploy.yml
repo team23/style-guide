@@ -32,6 +32,9 @@ jobs:
         with:
           node-version: '22'
           registry-url: 'https://registry.npmjs.org'
+      - name: Update npm
+        if: steps.check.outputs.changed == 'true'
+        run: npm install -g npm@11.18.0  # >= 11.5.1 required for OIDC trusted publishing + provenance
       - name: Install global dependencies
         if: steps.check.outputs.changed == 'true'
         run: npm ci
@@ -40,7 +43,7 @@ jobs:
         run: cd ${{ inputs.package }} && npm ci
       - name: Build package
         if: steps.check.outputs.changed == 'true'
-        run: cd ${{ inputs.package }} && npx --yes nx@21 build --excludeTaskDependencies
+        run: cd ${{ inputs.package }} && npx --yes nx@22 build --excludeTaskDependencies
       - name: Publish
         if: steps.check.outputs.changed == 'true'
         run: cd ${{ inputs.package }} && npm publish --provenance --access public
