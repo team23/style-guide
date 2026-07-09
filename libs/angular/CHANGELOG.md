@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## v22.0.0
+
+### ⚠️ Breaking Changes
+
+- Update to support Angular 22
+- Update `angular-eslint` to `^22.0.0`
+- Update `@angular/core` to `^22.0.6`
+- Update `typescript-eslint` to `^8.63.0`
+- Remove `@angular-eslint/no-conflicting-lifecycle` rule from the config — it was deprecated and removed in `angular-eslint` v22
+- `@angular-eslint/prefer-on-push-component-change-detection` behaviour changed upstream: omitting `changeDetection` now means `OnPush` in Angular v22, so the rule only reports components that opt out of `OnPush` (e.g. `ChangeDetectionStrategy.Default`)
+- Support for ESLint v8 and the legacy `.eslintrc` format has been dropped by `angular-eslint`; ESLint `^9.21.0` (flat config) remains required
+
 ## v21.0.1
 
 - Fix `Enabling "project" does nothing when "projectService" is enabled`
