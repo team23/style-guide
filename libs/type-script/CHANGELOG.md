@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v10.3.0
+
+- Update `eslint` peer dependency to support ESLint v10 (`^10.1.0`)
+
 ## v10.2.12
 
 - Disable '@stylistic/operator-linebreak' rule to allow better type formatting
