@@ -26,7 +26,6 @@ const typescriptConfig = tseslint.config({
         '@angular-eslint/directive-class-suffix': ['error', { suffixes: ['Directive'] }],
         '@angular-eslint/directive-selector': 'error',
         '@angular-eslint/no-attribute-decorator': 'error',
-        '@angular-eslint/no-conflicting-lifecycle': 'error',
         '@angular-eslint/no-input-prefix': 'error',
         '@angular-eslint/no-input-rename': 'error',
         '@angular-eslint/no-inputs-metadata-property': 'error',
