@@ -34,13 +34,6 @@ export default {
          */
         'scss/at-function-pattern': '^[a-z]+([a-z0-9-]+[a-z0-9]+)?$',
 
-        'scss/at-import-no-partial-leading-underscore': null,
-
-        /**
-         * Specify blacklist of disallowed file extensions for partial names in @import commands.
-         */
-        'scss/at-import-partial-extension-blacklist': null,
-
         /**
          * Require or disallow parentheses in argumentless @mixin calls.
          */
