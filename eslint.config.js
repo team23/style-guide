@@ -2,6 +2,9 @@ import { createTSEslintConfig } from '@team23/eslint-config-team23-ts';
 import { createJSEslintConfig } from '@team23/eslint-config-team23-standard';
 
 export default [
+    {
+        ignores: ['**/dist/**', '.nx/**', '**/tmp/**'],
+    },
     ...createJSEslintConfig(),
     ...createTSEslintConfig(),
     {
