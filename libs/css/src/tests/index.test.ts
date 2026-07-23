@@ -7,21 +7,19 @@ const validCss = fs.readFileSync('./src/tests/valid.css', 'utf-8');
 const invalidCss = fs.readFileSync('./src/tests/invalid.css', 'utf-8');
 
 const expectedWarnings = [
-    'Unexpected unknown at-rule "@debug" (at-rule-no-unknown)',
-    'Unexpected !important (declaration-no-important)',
-    'Unexpected !important (declaration-no-important)',
-    'Unexpected !important (declaration-no-important)',
-    'Unexpected !important (declaration-no-important)',
+    'Unknown at-rule "@debug" (at-rule-no-unknown)',
+    'Disallowed !important (declaration-no-important)',
+    'Disallowed !important (declaration-no-important)',
+    'Disallowed !important (declaration-no-important)',
+    'Disallowed !important (declaration-no-important)',
     'Selector should be written in lowercase with hyphens or underscores (selector-class-pattern)',
     'Selector should be written in lowercase with hyphens or underscores (selector-class-pattern)',
     'Selector should be written in lowercase with hyphens or underscores (selector-class-pattern)',
     'Selector should be written in lowercase with hyphens or underscores (selector-class-pattern)',
-    'Expected ".header__nav-link .icon .svg .path" to have no more than 3 compound selectors (selector-max-compound-selectors)',
-    'Expected ".item" to have no more than 3 compound selectors (selector-max-compound-selectors)',
-    'Expected ".link" to have no more than 3 compound selectors (selector-max-compound-selectors)',
-    'Expected ".footer .container .row .col .content" to have no more than 3 compound selectors (selector-max-compound-selectors)',
-    'Expected "#main-header" to have no more than 0 ID selectors (selector-max-id)',
-    'Expected "#header #nav" to have no more than 0 ID selectors (selector-max-id)',
+    'Too many compound selectors in ".header__nav-link .icon .svg .path", maximum 3 (selector-max-compound-selectors)',
+    'Too many compound selectors in ".footer .container .row .col .content", maximum 3 (selector-max-compound-selectors)',
+    'Too many ID selectors in "#main-header", maximum 0 (selector-max-id)',
+    'Too many ID selectors in "#header #nav", maximum 0 (selector-max-id)',
 ];
 
 describe('flags no warnings with valid css', () => {
@@ -59,7 +57,7 @@ describe('flags warnings with invalid css', () => {
 
     it('should flag the correct number of warnings', async () => result.then(
         data => {
-            const expectedWarningCount = 16;
+            const expectedWarningCount = 14;
             expect(data.results[0].warnings.length).toBe(expectedWarningCount);
         },
     ));

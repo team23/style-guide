@@ -1,3 +1,20 @@
+# 7.0.0
+
+- Removed: `stylelint` less than `17.0.0` from peer dependencies. This introduces the following changes:
+    - CommonJS Node.js API removed in favor of ESM
+    - Node.js less than 20.19.0 is no longer supported
+    - The GitHub output formatter has been removed
+    - `resolveNestedSelectors` option removed from `selector-class-pattern`; `checkContextFunctionalPseudoClasses`
+      option removed from `selector-max-id`
+    - Default `fix` mode behaviour is now stricter
+    - `selector-max-compound-selectors`, `*-specificity` and related selector rules now correctly scope standard
+      CSS nesting instead of resolving to the full ancestor chain, so some previously-flagged nested selectors no
+      longer trigger warnings
+    - Rule message wording changed for several rules (e.g. `selector-max-compound-selectors`, `selector-max-id`,
+      `declaration-no-important`, `at-rule-no-unknown`)
+- Updated dep: `stylelint-config-standard` from `39.0.1` to `40.0.0`
+- Update `vitest` to `4.1.10`
+
 # 6.1.9 - 6.1.1
 
 No changes
