@@ -29,7 +29,9 @@ const jsdocRecommendedModificationConfig: Linter.Config = {
     },
 };
 
-export default [
+const jsdocConfig: Array<Linter.Config> = [
     jsdocRecommendedConfig,
     jsdocRecommendedModificationConfig,
 ];
+
+export default jsdocConfig;

@@ -65,8 +65,10 @@ const stylisticOptionalConfig: Linter.Config = {
     },
 };
 
-export default [
+const stylisticConfig: Array<Linter.Config> = [
     stylisticRecommendedConfig,
     stylisticModificationConfig,
     stylisticOptionalConfig,
 ];
+
+export default stylisticConfig;

@@ -3,6 +3,7 @@ import tseslintConfig from './config/tseslint-config.js';
 import stylisticConfig from './config/stylistic-config.js';
 import tseslintStylisticConfig from './config/tseslint-stylistic-config.js';
 import type { Linter } from 'eslint';
+import { defineConfig } from 'eslint/config';
 import jsdocConfig from './config/jsdoc-config.js';
 
 interface ConfigOptions {
@@ -68,7 +69,7 @@ const fileBasedModificationConfigs: Array<Linter.Config> = [
 function createTSEslintConfig(options?: ConfigOptions): Array<Linter.Config> {
     const {
         fileExtensions = [],
-        tsconfigPath = undefined,
+        tsconfigPath,
     } = options ?? {};
 
     const files = options?.files ?? [
@@ -101,7 +102,7 @@ function createTSEslintConfig(options?: ConfigOptions): Array<Linter.Config> {
         },
     };
 
-    return tseslint.config(
+    return defineConfig(
         // do not set with extends, parser will not be configured correctly
         setupConfig,
         {
@@ -114,7 +115,7 @@ function createTSEslintConfig(options?: ConfigOptions): Array<Linter.Config> {
             ],
         },
         ...fileBasedModificationConfigs,
-    ) as Array<Linter.Config>;
+    );
 }
 
 export {
