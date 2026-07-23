@@ -72,8 +72,10 @@ const vueOptionalConfig: Linter.Config = {
     },
 };
 
-export default [
+const vueConfig: Array<Linter.Config> = [
     ...vueRecommendedConfigWithoutSetup,
     vueModificationConfig,
     vueOptionalConfig,
 ];
+
+export default vueConfig;

@@ -1,4 +1,5 @@
 import type { Linter } from 'eslint';
+import { defineConfig } from 'eslint/config';
 import vueConfig from './config/vue-config.js';
 import tsConfig from './config/tseslint-config.js';
 import vueParser from 'vue-eslint-parser';
@@ -19,7 +20,7 @@ const GLOB_VUE = '**/*.vue';
 const GLOB_TS = '**/*.?([cm])ts';
 const GLOB_TSX = '**/*.?([cm])tsx';
 
-const fileBasedModificationConfig = tseslint.config({
+const fileBasedModificationConfig = defineConfig({
     name: 'team23/type-script/core/file-based/vite',
     files: ['vite.config.ts', 'vitest.config.ts'],
     rules: {
@@ -82,7 +83,7 @@ function createVueEslintConfig(options?: ConfigOptions): Array<Linter.Config> {
         processor: pluginVue.processors['.vue'],
     };
 
-    return tseslint.config(
+    return defineConfig(
         // do not set with extends, parser will not be configured correctly
         setupConfig,
         {
@@ -94,7 +95,7 @@ function createVueEslintConfig(options?: ConfigOptions): Array<Linter.Config> {
             extends: [...tsConfig],
         },
         ...fileBasedModificationConfig,
-    ) as Array<Linter.Config>;
+    );
 }
 
 export { createVueEslintConfig };
