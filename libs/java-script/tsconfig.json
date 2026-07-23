@@ -7,13 +7,14 @@
         "noPropertyAccessFromIndexSignature": true,
         "noImplicitReturns": true,
         "noFallthroughCasesInSwitch": true,
-        "allowSyntheticDefaultImports": true
+        "allowSyntheticDefaultImports": true,
+        "types": ["eslint", "node"]
     },
     "files": [],
     "include": [],
     "references": [
         {
             "path": "./tsconfig.lib.json"
-        },
+        }
     ]
 }

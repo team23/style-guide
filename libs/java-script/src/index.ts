@@ -2,7 +2,7 @@ import globals from 'globals';
 import stylisticConfig from './config/stylistic-config.js';
 import jsdocConfig from './config/jsdoc-config.js';
 import jsConfig from './config/js-config.js';
-import tseslint from 'typescript-eslint';
+import { defineConfig } from 'eslint/config';
 import type { Linter } from 'eslint';
 
 interface ConfigOptions {
@@ -51,7 +51,7 @@ function createJSEslintConfig(options?: ConfigOptions): Array<Linter.Config> {
         files = ['**/*.js', '**/*.mjs'],
     } = options ?? {};
 
-    return tseslint.config(
+    return defineConfig(
         setupConfig,
         {
             files,
@@ -61,7 +61,7 @@ function createJSEslintConfig(options?: ConfigOptions): Array<Linter.Config> {
                 ...jsdocConfig,
             ],
         },
-    ) as Array<Linter.Config>;
+    );
 }
 
 export {
