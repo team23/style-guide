@@ -5,10 +5,9 @@
             "node"
         ],
         "declaration": true,
-        "composite": true,
-        "strict": true
+        "composite": true
     },
     "include": [
         "test/**/*.ts"
-    ],
+    ]
 }

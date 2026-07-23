@@ -1,9 +1,9 @@
-import tseslint from 'typescript-eslint';
+import { defineConfig } from 'eslint/config';
 import angularConfig from './config/angular-config.js';
 import { Linter } from 'eslint';
 import FlatConfig = Linter.Config;
 
-const fileBasedModificationConfig = tseslint.config({
+const fileBasedModificationConfig = defineConfig({
     name: 'team23/angular/core/file-based/routes',
     files: ['**/*.routes.ts'],
     rules: {
@@ -17,10 +17,10 @@ const fileBasedModificationConfig = tseslint.config({
  * @returns Array of ESLint configuration objects.
  */
 function createAngularEslintConfig(): Array<FlatConfig> {
-    return tseslint.config(
+    return defineConfig(
         ...angularConfig,
         ...fileBasedModificationConfig,
-    ) as Array<FlatConfig>;
+    );
 }
 
 export { createAngularEslintConfig };

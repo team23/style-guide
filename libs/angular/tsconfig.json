@@ -7,7 +7,9 @@
         "noPropertyAccessFromIndexSignature": true,
         "noImplicitReturns": true,
         "noFallthroughCasesInSwitch": true,
-        "allowSyntheticDefaultImports": true
+        "allowSyntheticDefaultImports": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true
     },
     "files": [],
     "include": [],
@@ -17,6 +19,6 @@
         },
         {
             "path": "./tsconfig.test.json"
-        },
+        }
     ]
 }

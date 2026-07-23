@@ -34,14 +34,14 @@
         "default": "./dist/index.js"
     },
     "dependencies": {
-        "angular-eslint": "^22.0.0",
-        "typescript-eslint": "^8.63.0"
+        "angular-eslint": "^22.1.0",
+        "typescript-eslint": "^8.65.0"
     },
     "devDependencies": {
         "@angular/core": "^22.0.6",
         "@types/eslint": "^9.6.1",
-        "eslint": "^10.5.0",
-        "jiti": "^2.5.1",
+        "eslint": "^10.7.0",
+        "jiti": "^2.7.0",
         "tsc-multi": "^1.1.0"
     },
     "peerDependencies": {

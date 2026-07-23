@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## v22.1.0
+
+- Update `angular-eslint` to `22.1.0`
+- Update `typescript-eslint` to `8.65.0`
+- Update `jiti` to `2.7.0`
+- Migrate from `typescript-eslint`'s deprecated `tseslint.config()` helper to ESLint's own `defineConfig()`
+
 ## v22.0.4
 
 - Add support for `eslint@^10.0.0`
