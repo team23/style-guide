@@ -9,18 +9,18 @@
         "tslib": "^2.8.1"
     },
     "devDependencies": {
-        "@nx/js": "22.7.5",
+        "@nx/js": "23.1.0",
         "@swc-node/register": "~1.11.1",
-        "@swc/core": "~1.15.41",
+        "@swc/core": "~1.15.46",
         "@swc/helpers": "~0.5.23",
-        "@team23/eslint-config-team23-ts": "^10.2.12",
-        "@team23/eslint-config-team23-standard": "^10.1.15",
+        "@team23/eslint-config-team23-ts": "^10.3.2",
+        "@team23/eslint-config-team23-standard": "^10.2.2",
         "@types/node": "25.9.1",
-        "eslint": "9.39.4",
-        "nx": "22.7.5",
+        "eslint": "10.7.0",
+        "nx": "23.1.0",
         "ts-node": "10.9.2",
         "typescript": "6.0.3",
-        "verdaccio": "^6.7.2"
+        "verdaccio": "^6.8.0"
     },
     "workspaces": [
         "packages/*"

@@ -1,7 +1,7 @@
-import tseslint from 'typescript-eslint';
+import { defineConfig } from 'eslint/config';
 import angulareslint from 'angular-eslint';
 
-const typescriptConfig = tseslint.config({
+const typescriptConfig = defineConfig({
     name: 'team23/angular/core/typescript',
     files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx'],
     extends: angulareslint.configs.tsRecommended,
@@ -43,11 +43,11 @@ const typescriptConfig = tseslint.config({
         '@angular-eslint/use-lifecycle-interface': 'error',
         '@angular-eslint/use-pipe-transform-interface': 'error',
         '@angular-eslint/prefer-signals': ['error'],
-        "@typescript-eslint/unbound-method": ["error", { ignoreStatic: true }],
+        '@typescript-eslint/unbound-method': ['error', { ignoreStatic: true }],
     },
 });
 
-const templateConfig = tseslint.config({
+const templateConfig = defineConfig({
     name: 'team23/angular/core/template',
     files: ['**/*.html'],
     extends: angulareslint.configs.templateRecommended,

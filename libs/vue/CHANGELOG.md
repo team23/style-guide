@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## v7.1.0
+
+- Add support for `eslint@^10.0.0`
+- Update `eslint-plugin-vue` to `10.10.0`
+- Update `typescript-eslint` to `8.65.0`
+- Update `jiti` to `2.7.0`
+- Migrate from `typescript-eslint`'s deprecated `tseslint.config()` helper to ESLint's own `defineConfig()`
+
 ## v7.0.3 - v7.0.2
 
 No changes

@@ -1,3 +1,16 @@
+# 7.0.0
+
+- Removed: `stylelint` less than `17.0.0` from peer dependencies. See `@team23/stylelint-config-team23-standard`
+  v7.0.0 changelog for the full list of changes this introduces.
+- Updated dep: `stylelint-config-standard-scss` from `16.0.0` to `17.0.0`. This introduces the following changes:
+    - Updated to `stylelint-config-standard@40.0.0`
+    - Updated to `stylelint-scss@7.0.0`, which removed the deprecated rules `scss/at-import-no-partial-leading-underscore`,
+      `scss/at-import-partial-extension-blacklist`, `scss/at-import-partial-extension-whitelist` and
+      `scss/at-import-partial-extension`. The first two were already disabled in this config; the now-unknown
+      rule references have been removed rather than left disabled.
+- Updated dep: `@team23/stylelint-config-team23-standard` to `v6.1.9`
+- Update `postcss` to `8.5.22`
+
 # 6.2.3 - 6.2.1
 
 No changes

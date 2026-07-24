@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## v10.3.0
+
+- Update `eslint` to `10.7.0`
+- Update `@eslint/js` to `10.0.1`
+- Update `@stylistic/eslint-plugin` to `5.10.0`
+- Update `eslint-plugin-jsdoc` to `63.2.0`
+- Update `globals` to `17.7.0`
+- Update `typescript-eslint` to `8.65.0`
+- Update `jiti` to `2.7.0`
+- Migrate from `typescript-eslint`'s deprecated `tseslint.config()` helper to ESLint's own `defineConfig()`
+
 ## v10.2.0
 
 - Update `eslint` peer dependency to support ESLint v10 (`^10.5.0`)
