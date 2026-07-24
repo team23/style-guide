@@ -8,7 +8,7 @@
       `scss/at-import-partial-extension-blacklist`, `scss/at-import-partial-extension-whitelist` and
       `scss/at-import-partial-extension`. The first two were already disabled in this config; the now-unknown
       rule references have been removed rather than left disabled.
-- Updated dep: `@team23/stylelint-config-team23-standard` to `v6.1.9`
+- Updated dep: `@team23/stylelint-config-team23-standard` to `v7.0.0`
 - Update `postcss` to `8.5.22`
 
 # 6.2.3 - 6.2.1
