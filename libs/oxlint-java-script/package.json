@@ -1,0 +1,44 @@
+{
+    "name": "@team23/oxlint-config-team23-standard",
+    "version": "0.0.2",
+    "description": "A set of oxlint rules used by TEAM23 for standard JavaScript projects",
+    "keywords": [
+        "oxlint",
+        "oxlintconfig",
+        "TEAM23",
+        "js",
+        "javascript",
+        "linter"
+    ],
+    "author": "TEAM23 GmbH",
+    "license": "MIT",
+    "homepage": "https://github.com/team23/style-guide/tree/main/libs/oxlint-java-script",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/team23/style-guide.git",
+        "directory": "libs/oxlint-java-script"
+    },
+    "files": [
+        "./dist/**/*",
+        "./examples/**/*",
+        "./*.md",
+        "./package.json",
+        "./LICENSE"
+    ],
+    "type": "module",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "exports": {
+        "types": "./dist/index.d.ts",
+        "import": "./dist/index.js",
+        "default": "./dist/index.js"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "jiti": "^2.5.1",
+        "oxlint": "^0.20.0"
+    },
+    "peerDependencies": {
+        "oxlint": "^0.20.0"
+    }
+}
