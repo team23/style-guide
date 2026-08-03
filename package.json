@@ -15,7 +15,7 @@
         "@swc/helpers": "~0.5.23",
         "@team23/eslint-config-team23-ts": "^10.4.0",
         "@team23/eslint-config-team23-standard": "^10.3.0",
-        "@types/node": "25.9.1",
+        "@types/node": "26.1.2",
         "eslint": "10.8.0",
         "nx": "23.1.0",
         "ts-node": "10.9.2",
