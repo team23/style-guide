@@ -20,7 +20,7 @@
         "nx": "23.1.0",
         "ts-node": "10.9.2",
         "typescript": "6.0.3",
-        "verdaccio": "^6.8.0"
+        "verdaccio": "^6.9.2"
     },
     "workspaces": [
         "packages/*"
