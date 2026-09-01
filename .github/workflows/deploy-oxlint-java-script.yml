@@ -1,0 +1,14 @@
+name: Publish Oxlint JavaScript
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - libs/oxlint-java-script/package.json
+
+jobs:
+  deploy-java-script:
+    uses: ./.github/workflows/deploy.yml
+    with:
+      package: libs/oxlint-java-script
+      env: JS
