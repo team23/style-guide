@@ -11,7 +11,7 @@
     "devDependencies": {
         "@nx/js": "23.1.0",
         "@swc-node/register": "~1.11.1",
-        "@swc/core": "~1.15.46",
+        "@swc/core": "~1.16.2",
         "@swc/helpers": "~0.5.23",
         "@team23/eslint-config-team23-ts": "^10.4.0",
         "@team23/eslint-config-team23-standard": "^10.3.0",
