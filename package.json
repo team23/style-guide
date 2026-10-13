@@ -9,7 +9,7 @@
         "tslib": "^2.8.1"
     },
     "devDependencies": {
-        "@nx/js": "23.2.1",
+        "@nx/js": "23.3.0",
         "@swc-node/register": "~1.11.1",
         "@swc/core": "~1.16.2",
         "@swc/helpers": "~0.5.23",
@@ -17,10 +17,10 @@
         "@team23/eslint-config-team23-standard": "^10.3.0",
         "@types/node": "26.6.3",
         "eslint": "10.8.0",
-        "nx": "23.1.0",
+        "nx": "23.3.0",
         "ts-node": "10.9.2",
         "typescript": "6.0.3",
-        "verdaccio": "^6.9.2"
+        "verdaccio": "^6.10.5"
     },
     "workspaces": [
         "packages/*"
